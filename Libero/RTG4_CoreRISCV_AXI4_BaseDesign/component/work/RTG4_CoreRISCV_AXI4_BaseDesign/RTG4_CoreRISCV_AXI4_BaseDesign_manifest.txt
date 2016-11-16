@@ -1,0 +1,73 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 SP2 (Version 11.7.2.2)
+
+Date      :  Wed Nov 16 21:21:47 2016
+Project   :  C:\proj\RISC-V\RTG4_DDR\SP2\RTG4_CoreRISCV_AXI4_BaseDesign
+Component :  RTG4_CoreRISCV_AXI4_BaseDesign
+Family    :  RTG4
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_ahbtoapbsm.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_apbaddrdata.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_penablescheduler.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_AHBMasterCtrl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_AXIOutReg.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_AXISlaveCtrl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_RAM_syncWrAsyncRd.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_WSTRBAddrOffset.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_WSTRBPopCntr.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_readByteCnt.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREAXITOAHBL/3.0.101/rtl/vlog/core/CoreAXItoAHBL_synchronizer.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREJTAGDEBUG/1.0.101/rtl/vlog/core/corejtagdebug.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/COREJTAGDEBUG/1.0.101/rtl/vlog/core/corejtagdebug_uj_jtag.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CORERISCV_AXI4/1.0.100/rtl/verilog/AsyncFifo.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CORERISCV_AXI4/1.0.100/rtl/verilog/CoreRISCV_AXI4.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CORERISCV_AXI4/1.0.100/rtl/verilog/DebugTransportModuleJtag.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CORERISCV_AXI4/1.0.100/rtl/verilog/Top.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_addrdec.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_defaultslavesm.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_masterstage.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_matrix4x16.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_slavearbiter.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAHBLite/5.2.100/rtl/vlog/core/coreahblite_slavestage.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreGPIO/3.1.101/rtl/vlog/core/coregpio.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/core/coretimer.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/User/GlueLogic/AXI_GLUE_LOGIC/1.0.7/vlog/AXI_glue_logic.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Clock_gen.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/CoreUART.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/CoreUARTapb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Rx_async.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Tx_async.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/core/fifo_256x8_rtg4.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4FCCC_0/RTG4_CoreRISCV_AXI4_BaseDesign_RTG4FCCC_0_RTG4FCCC.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/SgCore/RTG4FCCC/1.1.216/ccc_comps.v
+
+Stimulus files for all Simulation tools:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/mti/scripts/bfmtovec_compile.do
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/mti/scripts/coreuart_usertb_apb_master.bfm
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/mti/scripts/coreuart_usertb_include.bfm
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/mti/scripts/wave_vlog_amba.do
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/subsystem.bfm
+
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_ahbl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_ahblapb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_ahbslave.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_ahbslaveext.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_ahbtoapb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_apb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_apbslave.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_apbslaveext.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_apbtoapb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreUARTapb/5.5.101/rtl/vlog/amba_bfm/bfm_main.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/coreparameters.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/RTG4_CoreRISCV_AXI4_BaseDesign/CoreUARTapb_0/rtl/vlog/test/user/testbench.v
+
