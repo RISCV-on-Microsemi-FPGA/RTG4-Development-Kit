@@ -1,0 +1,16 @@
+Project Name: RTG4_CoreRISCV_AXI4_BaseDesign
+Location: C:\proj\RISC-V\RTG4_DDR\SP2\RTG4_CoreRISCV_AXI4_BaseDesign
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : RT4G150-1CG1657M
+Family         : RTG4
+Die            : RT4G150
+Package        : 1657 CG
+Speed          : -1
+Core Voltage   : 1.2
+Range          : MIL

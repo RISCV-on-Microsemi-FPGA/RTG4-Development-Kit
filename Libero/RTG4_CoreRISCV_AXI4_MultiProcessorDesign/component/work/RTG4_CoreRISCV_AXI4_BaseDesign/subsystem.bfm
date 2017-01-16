@@ -1,0 +1,103 @@
+#===========================================================
+# Created by Microsemi SmartDesign Mon Jan 16 12:35:15 2017
+#
+# Syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#-----------------------------------------------------------
+# Memory Map
+# Define name and base address of each resource.
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap DDR_EAST_0 0x80000000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+# 
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap MIRSLV2MIRMSTRBRIDGE_AHB_0 0x60000000;
+# memmap CoreUARTapb_0 0x70001000;
+# memmap CoreGPIO_IN 0x70002000;
+# memmap CoreTimer_0 0x70003000;
+# memmap CoreTimer_1 0x70004000;
+# memmap CoreGPIO_OUT 0x70005000;
+# memmap CORESPI_0 0x70006000;
+# memmap CoreGPIO_App_RST 0x70007000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+# # # # # # # # 
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap CoreUARTapb_1 0x70001000;
+# memmap CoreGPIO_1 0x70002000;
+# memmap CoreTimer_2 0x70003000;
+# memmap CoreTimer_3 0x70004000;
+# memmap CoreGPIO_0 0x70005000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+# # # # # 
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap DDR_WEST_0 0x80000000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+# 
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap FDDRC_0 0x00000000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
+
+
+#-----------------------------------------------------------
+# Secondary subsystems.  To test this subsystem, uncomment the following code.
+#-----------------------------------------------------------
+# memmap FDDRC_0_APB_SLAVE 0x00000000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+
