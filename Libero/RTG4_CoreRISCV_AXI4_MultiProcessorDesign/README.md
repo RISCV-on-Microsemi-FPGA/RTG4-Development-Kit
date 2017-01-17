@@ -1,13 +1,11 @@
 ### RTG4 CoreRISCV_AXI4 Multiprocessor Design
 
 ### Overview
-    This Libero SoC design implements a RISC-V multi-processor design for a Microsemi RTG4 FPGA. 
-    It includes a UART, GPIOs and timers.
+    This Libero SoC design implements a RISC-V multi-processor design for a Microsemi RTG4 FPGA. It includes a UART, GPIOs and timers.
 
 ### IP packages
     This design includes a number of IP packages that are not available by default from the Libero catalog. 
-    These packages are availalble from the [riscv-junk-drawer]
-    (https://github.com/RISCV-on-Microsemi-FPGA/riscv-junk-drawer/tree/master/IP-packages).
+    These packages are availalble from the [riscv-junk-drawer](https://github.com/RISCV-on-Microsemi-FPGA/riscv-junk-drawer/tree/master/IP-packages).
 
     USER_UserCore_MIRSLV2MIRMSTRBRIDGE_AHB_1.0.3.cpz is set up in this project as follows: 
     Master Drives upper 4 address bits  0
@@ -37,13 +35,13 @@
 ### User IO
 ### Control RISC-V
     SW_DEBUG_MODE       Control signal used to allow software debugging. 
-  			It will set up CoreBootStrap to bypass the copying of the executable memory from SPI into the processor memory.
+                        It will set up CoreBootStrap to bypass the copying of the executable memory from SPI into the processor memory.
     LEDs [8:5]          Debug LEDs.
     Switches [8:5]      Debug Switches.
     
 ### Application RISC-V
     APP_PROC_DEBUG      Control signal used to allow for individual processor debug. 
-			See How to debug the cores in SoftConsole v5.0 below. 
+                        See How to debug the cores in SoftConsole v5.0 below. 
     LEDs [4:1]          Debug LEDs.
     Switches [4:1]      Debug Switches.
     
@@ -51,8 +49,7 @@
 
     In the Libero Project each RISCV has its own IDCode, 0x55 and 0x56 in this design.
     To debug the design ensure that SW_DEBUG_MODE is asserted. 
-    Ensure  APP_PROC_DEBUG is asserted low when debugging the ControlRISCV and asserted high 
-    when debugging the ApplicationRISCV.
+    Ensure  APP_PROC_DEBUG is asserted low when debugging the ControlRISCV and asserted high when debugging the ApplicationRISCV.
     To debug the ControlRISCV: Open SoftConsole V5.0. 
         Select Run - Debug Configurations - Select your project - Open the Debugger tab. 
         In the Configure options, add  -- command "set UJ_JTAG_IRCODE 0x55" before --file board/microsemi-riscv.cfg
