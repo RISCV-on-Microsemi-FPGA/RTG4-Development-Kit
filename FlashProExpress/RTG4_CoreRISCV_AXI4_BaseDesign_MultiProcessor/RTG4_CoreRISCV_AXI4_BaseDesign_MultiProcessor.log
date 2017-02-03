@@ -1,0 +1,36 @@
+Software Version: 11.7.2.2
+creating folder: C:\Users\ciaran.lappin\Documents\Boards\RTG4\Multiprocessor_Design\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor
+programmer 'S201Z6SSZF' : FlashPro5
+Created new project 'C:\Users\ciaran.lappin\Documents\Boards\RTG4\Multiprocessor_Design\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor.pro'
+STAPL file 'C:\Users\ciaran.lappin\Documents\Boards\RTG4\Multiprocessor_Design\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor\RT4G150_1.stp' has been loaded successfully.
+DESIGN : RTG4_CoreRISCV_AXI4_BaseDesign;  CHECKSUM : 47D9;  ALG_VERSION : 2
+creating folder: C:\Users\ciaran.lappin\Documents\Boards\RTG4\Multiprocessor_Design\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor\projectData
+Software Version: 11.7.2.2
+STAPL file 'C:\Users\ciaran.lappin\Documents\Boards\RTG4\Multiprocessor_Design\RTG4_CoreRISCV_AXI4_BaseDesign_MultiProcessor\RT4G150_1.stp' has been loaded successfully.
+DESIGN : RTG4_CoreRISCV_AXI4_BaseDesign;  CHECKSUM : 47D9;  ALG_VERSION : 2
+programmer 'S201Z6SSZF' : FlashPro5
+
+Created FlashPro Express Job Project.
+programmer 'S201Z6SSZF' : Scan Chain...
+Warning: programmer 'S201Z6SSZF' : Vpump has been selected on programmer AND an externally provided Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer 'S201Z6SSZF' : Check Chain...
+programmer 'S201Z6SSZF' : Scan and Check Chain PASSED.
+programmer 'S201Z6SSZF' : device 'RT4G150' : Executing action PROGRAM
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT ISC_ENABLE_RESULT[32] = 00004604
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT CRCERR: [1] = 0
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT ECCRCVR: [1] = 0
+programmer 'S201Z6SSZF' : device 'RT4G150' : TEMPGRADE: ROOM
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT TEMP: [8] = 46
+programmer 'S201Z6SSZF' : device 'RT4G150' : Programming FPGA Array...
+programmer 'S201Z6SSZF' : device 'RT4G150' : ===================================================================================
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT DSN[128] = 00000000000000000153390c00060017
+programmer 'S201Z6SSZF' : device 'RT4G150' : ===================================================================================
+programmer 'S201Z6SSZF' : device 'RT4G150' : Finished: Fri Feb 03 10:44:23 2017 (Elapsed time 00:02:21)
+programmer 'S201Z6SSZF' : device 'RT4G150' : Executing action PROGRAM PASSED.
+programmer 'S201Z6SSZF' : Chain programming PASSED.
+Chain Programming Finished: Fri Feb 03 10:44:23 2017 (Elapsed time 00:02:21)
+
+                        o - o - o - o - o - o
+
+Project saved.
+Project closed.
