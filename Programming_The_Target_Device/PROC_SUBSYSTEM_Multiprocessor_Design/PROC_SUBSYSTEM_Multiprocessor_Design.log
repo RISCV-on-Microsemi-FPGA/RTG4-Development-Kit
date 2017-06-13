@@ -1,0 +1,39 @@
+Software Version: 11.8.0.26
+creating folder: C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design
+Created new project 'C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\PROC_SUBSYSTEM_Multiprocessor_Design.pro'
+STAPL file 'C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\RT4G150_1.stp' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : D105;  ALG_VERSION : 2
+creating folder: C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\projectData
+Software Version: 11.8.0.26
+STAPL file 'C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\RT4G150_1.stp' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : D105;  ALG_VERSION : 2
+
+Created FlashPro Express Job Project.
+Software Version: 11.8.0.26
+STAPL file 'C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\RT4G150_1.stp' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : D105;  ALG_VERSION : 2
+programmer 'S201Z6SSZF' : FlashPro5
+Opened 'C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\PROC_SUBSYSTEM_Multiprocessor_Design\PROC_SUBSYSTEM_Multiprocessor_Design.pro'
+programmer 'S201Z6SSZF' : Scan Chain...
+Warning: programmer 'S201Z6SSZF' : Vpump has been selected on programmer AND an externally provided Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer 'S201Z6SSZF' : Check Chain...
+programmer 'S201Z6SSZF' : Scan and Check Chain PASSED.
+programmer 'S201Z6SSZF' : device 'RT4G150' : Executing action PROGRAM
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT ISC_ENABLE_RESULT[32] = 00004704
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT CRCERR[1] = 0
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT ECCRCVR[1] = 0
+programmer 'S201Z6SSZF' : device 'RT4G150' : TEMPGRADE: ROOM
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT TEMP[8] = 47
+programmer 'S201Z6SSZF' : device 'RT4G150' : Programming FPGA Array...
+programmer 'S201Z6SSZF' : device 'RT4G150' : ===================================================================================
+programmer 'S201Z6SSZF' : device 'RT4G150' : EXPORT DSN[128] = 00000000000000000153390c00060017
+programmer 'S201Z6SSZF' : device 'RT4G150' : ===================================================================================
+programmer 'S201Z6SSZF' : device 'RT4G150' : Finished: Tue Jun 13 14:12:30 2017 (Elapsed time 00:02:30)
+programmer 'S201Z6SSZF' : device 'RT4G150' : Executing action PROGRAM PASSED.
+programmer 'S201Z6SSZF' : Chain programming PASSED.
+Chain Programming Finished: Tue Jun 13 14:12:30 2017 (Elapsed time 00:02:30)
+
+                        o - o - o - o - o - o
+
+Project saved.
+Project closed.
