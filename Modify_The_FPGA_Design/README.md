@@ -1,16 +1,11 @@
-================================================================================
-        RISCV_BaseDesign for the RTG4 Development Kit
-================================================================================
+#RISCV_BaseDesign for the RTG4 Development Kit
  
 This design is targeted at the RTG4 Development Kit. It uses
 the CoreRISCV_AXI4 as its soft processor.
   
---------------------------------------------------------------------------------
-    Memory map
---------------------------------------------------------------------------------
- 
-0x60000000: NVM Flash memory containing the RISC-V processor reset vector and
-            application code.
+
+#Memory Map 
+0x60000000: NVM Flash memory containing the RISC-V processor reset vector and            application code.
  
 0x70001000: CoreUART
 0x70002000: CoreGPIO inputs
