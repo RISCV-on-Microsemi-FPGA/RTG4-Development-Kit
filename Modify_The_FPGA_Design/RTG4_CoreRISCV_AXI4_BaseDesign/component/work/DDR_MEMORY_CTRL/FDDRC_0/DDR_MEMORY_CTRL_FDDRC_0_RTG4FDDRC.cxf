@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component> 
+<vendor></vendor>
+<library></library>
+<name>DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC</name>
+<version></version>
+<hwModel>
+<views>
+<view>
+<name>HDL</name>
+<fileSetRef>HDL_FILESET</fileSetRef>
+<fileSetRef>SYNPLIFY_SYNTHESIS_FILESET</fileSetRef>
+<fileSetRef>PRECISION_SYNTHESIS_FILESET</fileSetRef>
+</view>
+</views>
+</hwModel>
+<fileSets>
+<fileSet fileSetId="HDL_FILESET">
+<file>
+<name>DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC.v</name>
+<userFileType>verilogSource</userFileType>
+</file>
+</fileSet>
+<fileSet fileSetId="SYNPLIFY_SYNTHESIS_FILESET">
+<file>
+<name>DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC_syn.v</name>
+<userFileType>verilogSource</userFileType>
+</file>
+</fileSet>
+<fileSet fileSetId="PRECISION_SYNTHESIS_FILESET">
+<file>
+<name>DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC_pre.v</name>
+<userFileType>verilogSource</userFileType>
+</file>
+</fileSet>
+</fileSets>
+</component>

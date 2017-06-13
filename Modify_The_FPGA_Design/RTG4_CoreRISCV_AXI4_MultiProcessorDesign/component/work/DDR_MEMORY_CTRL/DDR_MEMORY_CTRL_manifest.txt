@@ -1,0 +1,42 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.7 SP2 (Version 11.7.2.2)
+
+Date      :  Wed Nov 16 15:40:05 2016
+Project   :  C:\proj\RISC-V\RTG4_DDR\SP2\RTG4_CoreRISCV_AXI4_BaseDesign
+Component :  DDR_MEMORY_CTRL
+Family    :  RTG4
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/coreparameters_tgi.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/acmtable.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/coreabc.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/debugblk.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructions.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructnvm_bb.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructram.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/iram512x9_rtl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram128x8_rtl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram256x16_rtl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram256x8_rtl.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ramblocks.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/support.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/DDR_MEMORY_CTRL.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/FDDRC_0/DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/FDDRC_0/DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/FDDRC_0/DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC_pre.v
+
+Stimulus files for all Simulation tools:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/test/apbmodel.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/test/testbench.v
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/test/testsupport.v
+
+Configuration files to be used for Power Analysis:
+    C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/component/work/DDR_MEMORY_CTRL/FDDRC_0/FDDR_init.reg
+
