@@ -4,7 +4,7 @@ Sample RISC-V Libero projects for the RTG4 Development Kit.
 ### Libero
 The Libero folder contains Libero SoC project(s) targeting the Microsemi RTG4 Development Kit.
 
-Please note that the RTG4 projects require Libero SoC version 11.7 SP2 or later.
+Please note that the RTG4 projects require Libero SoC version 11.8 or later.
 
 [Microsemi Libero SoC download page](http://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads)
 
