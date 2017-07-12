@@ -1,6 +1,6 @@
 set_component RTG4_CoreRISCV_AXI4_BaseDesign_RTG4FCCC_0_RTG4FCCC
 # Microsemi Corp.
-# Date: 2016-Nov-16 21:21:40
+# Date: 2017-Jul-12 18:43:56
 #
 
 create_clock -period 20 [ get_pins { CCC_INST/RCOSC_50MHZ } ]

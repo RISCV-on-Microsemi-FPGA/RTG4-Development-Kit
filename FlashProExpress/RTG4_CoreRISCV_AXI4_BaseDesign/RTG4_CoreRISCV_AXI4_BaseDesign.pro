@@ -1,6 +1,6 @@
 <project name="RTG4_CoreRISCV_AXI4_BaseDesign" version="1.1">
     <ProjectDirectory>
-        C:\proj\RISC-V\RTG4_DDR\SP2\FPExpress\RTG4_CoreRISCV_AXI4_BaseDesign
+        C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign
     </ProjectDirectory>
     <View>
         ChainView
@@ -9,7 +9,7 @@
         
     </LiberoTargetDevice>
     <LogFile>
-        C:\proj\RISC-V\RTG4_DDR\SP2\FPExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RTG4_CoreRISCV_AXI4_BaseDesign.log
+        C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RTG4_CoreRISCV_AXI4_BaseDesign.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -81,7 +81,7 @@
             </Custom>
             <Algo type="STAPL">
                 <filename>
-                    C:\proj\RISC-V\RTG4_DDR\SP2\FPExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RT4G150_1.stp
+                    C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RT4G150_1.stp
                 </filename>
                 <local>
                     projectData\RT4G150_1.stp

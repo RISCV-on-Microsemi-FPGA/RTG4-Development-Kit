@@ -1,0 +1,5 @@
+CKID0001:@|S:RTG4FCCC_0.CCC_INST@|E:reset_synchronizer_0.genblk1.reset_sync_reg[1]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:RTG4FCCC_0.CCC_INST@|E:DDR_MEMORY_CTRL_0.FDDRC_0.U0@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
+CKID0003:@|S:CORESPI_0.USPI.UCC.un1_resetn_rx_0@|E:CORESPI_0.USPI.UCC.stxs_txready_at_ssel@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 
+CKID0004:@|S:COREJTAGDEBUG_0.genblk1.UJ_JTAG_0.un1_duttck@|E:CORERISCV_AXI4_0.debugBusRespFifo.genblk2.rdAddrReg_r[1]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 
+CKID0005:@|S:COREJTAGDEBUG_0.genblk1.UJTAG_0@|E:COREJTAGDEBUG_0.genblk1.UJ_JTAG_0.pauselow@|F:@syn_sample_clock_path1==CKID0005@|M:ClockId0005 

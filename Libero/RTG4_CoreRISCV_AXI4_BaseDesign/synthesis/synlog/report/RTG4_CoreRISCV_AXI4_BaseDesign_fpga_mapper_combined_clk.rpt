@@ -1,0 +1,29 @@
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 16 clock pin(s) of sequential element(s)
+4 gated/generated clock tree(s) driving 5258 clock pin(s) of sequential element(s)
+0 instances converted, 5258 sequential instances remain driven by gated/generated clocks
+
+================================================= Non-Gated/Non-Generated Clocks =================================================
+Clock Tree ID     Driving Element                     Drive Element Type     Fanout     Sample Instance                           
+----------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0005       COREJTAGDEBUG_0.genblk1.UJTAG_0     UJTAG                  16         COREJTAGDEBUG_0.genblk1.UJ_JTAG_0.pauselow
+==================================================================================================================================
+================================================================================================== Gated/Generated Clocks ==================================================================================================
+Clock Tree ID     Driving Element                                  Drive Element Type     Fanout     Sample Instance                                              Explanation                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       RTG4FCCC_0.CCC_INST                              CCC                    4937       reset_synchronizer_0.genblk1.reset_sync_reg[1]               No gated clock conversion method for cell cell:ACG4.SLE   
+@K:CKID0002       RTG4FCCC_0.CCC_INST                              CCC                    128        DDR_MEMORY_CTRL_0.FDDRC_0.U0                                 No gated clock conversion method for cell cell:work.FDDR_W
+@K:CKID0003       CORESPI_0.USPI.UCC.un1_resetn_rx_0               CFG4                   1          CORESPI_0.USPI.UCC.stxs_txready_at_ssel                      No gated clock conversion method for cell cell:ACG4.SLE   
+@K:CKID0004       COREJTAGDEBUG_0.genblk1.UJ_JTAG_0.un1_duttck     CFG4                   192        CORERISCV_AXI4_0.debugBusRespFifo.genblk2.rdAddrReg_r[1]     No gated clock conversion method for cell cell:ACG4.SLE   
+============================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
