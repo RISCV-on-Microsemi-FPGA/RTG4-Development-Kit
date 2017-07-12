@@ -1,9 +1,0 @@
-_max_timing_slow_1.14V_125C met
-_min_timing_fast_1.26V_-55C met
-_max_timing_fast_1.26V_-55C not_run
-_min_timing_slow_1.14V_125C not_run
-_max_timing_violations_slow_1.14V_125C met
-_min_timing_violations_fast_1.26V_-55C met
-_max_timing_violations_fast_1.26V_-55C not_run
-_min_timing_violations_slow_1.14V_125C not_run
-_timing_constraints_coverage 95.42%
