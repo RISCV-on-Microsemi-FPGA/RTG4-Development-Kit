@@ -1,7 +1,7 @@
 data DESIGN RTG4_CoreRISCV_AXI4_BaseDesign
-data HPATH 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign'
-data CPATH 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io'
-data CDIR 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/constraint'
+data HPATH 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign'
+data CPATH 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io'
+data CDIR 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/constraint'
 data REGION_DEFCOLOR_EMPTY 2143322112
 data REGION_DEFCOLOR_INCLUSIVE 2147442270
 data REGION_DEFCOLOR_EXCLUSIVE 2143338688
@@ -18,14 +18,16 @@ data VCCI_1.8_VOLTR MIL
 data VCCI_2.5_VOLTR MIL
 data VCCI_3.3_VOLTR MIL
 data FLOW_TYPE NEW
-data AFL 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/COMPILE/RTG4_CoreRISCV_AXI4_BaseDesign.afl'
-data ADL 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.adl'
-data LOC 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/COMPILE/RTG4_CoreRISCV_AXI4_BaseDesign.loc'
-data SEG 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/COMPILE/RTG4_CoreRISCV_AXI4_BaseDesign.seg'
+data AFL 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.afl'
+data ADL 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.adl'
+data LOC 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.loc'
+data SEG 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.seg'
+data NMAT_PDC 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.nmatinit.pdc'
+data SMAT_SEG 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/designer/RTG4_CoreRISCV_AXI4_BaseDesign/RTG4_CoreRISCV_AXI4_BaseDesign.seg'
 
-data IO_PDC_0 'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io/user.pdc'
-data TARGET_IOPDC  'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io/user.pdc'
-data TARGET_FPPDC  'C:/proj/RISC-V/RTG4_DDR/SP2/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/fp/user.pdc'
+data IO_PDC_0 'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io/user.pdc'
+data TARGET_IOPDC  'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/io/user.pdc'
+data TARGET_FPPDC  'C:/Users/cyril.jean/Documents/GitHub/Cyril-Jean/RTG4-Development-Kit/Libero/RTG4_CoreRISCV_AXI4_BaseDesign/constraint/fp/user.pdc'
 data TARGET_DEVICES_FOR_MIGRATION 'PA4RT12000 '
 data RESTRICTPROBEPINS 1
 data RESTRICTSPIPINS 0
