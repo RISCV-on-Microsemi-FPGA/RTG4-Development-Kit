@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Wed Nov 16 21:21:39 2016
+// Created by Microsemi SmartDesign Wed Jul 12 18:43:53 2017
 // Parameters for CoreTimer
 //--------------------------------------------------------------------
 

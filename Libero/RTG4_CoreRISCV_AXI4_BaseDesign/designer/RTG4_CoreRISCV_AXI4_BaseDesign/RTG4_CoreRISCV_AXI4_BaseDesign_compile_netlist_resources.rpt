@@ -1,0 +1,234 @@
+Resource Report
+Microsemi Corporation - Microsemi Libero Software Release v11.8 (Version 11.8.0.26)
+Date: Wed Jul 12 18:49:39 2017
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | RTG4           |
+| Device                         | RT4G150        |
+| Package                        | 1657 CG        |
+| Speed Grade                    | -1             |
+| Temp                           | -55:25:125     |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      |                |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Topcell | RTG4_CoreRISCV_AXI4_BaseDesign                                                                                                                          |
+| Format  | EDIF                                                                                                                                                    |
+| Source  | C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\synthesis\RTG4_CoreRISCV_AXI4_BaseDesign.edn |
++---------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+-------+--------+------------+
+| Type                      | Used  | Total  | Percentage |
++---------------------------+-------+--------+------------+
+| 4LUT                      | 13259 | 151824 | 8.73       |
+| DFF                       | 7780  | 151824 | 5.12       |
+| I/O Register              | 0     | 2157   | 0.00       |
+| User I/O                  | 99    | 719    | 13.77      |
+| -- Single-ended I/O       | 89    | 719    | 12.38      |
+| -- Differential I/O Pairs | 5     | 359    | 1.39       |
+| RAM64x18                  | 64    | 210    | 30.48      |
+| RAM1K18                   | 8     | 209    | 3.83       |
+| MACC                      | 2     | 462    | 0.43       |
+| H-Chip Globals            | 8     | 48     | 16.67      |
+| CCC                       | 1     | 8      | 12.50      |
+| RCOSC_50MHZ               | 1     | 1      | 100.00     |
+| SYSRESET                  | 1     | 1      | 100.00     |
+| UJTAG                     | 1     | 1      | 100.00     |
+| SERDESIF Blocks           | 0     | 6      | 0.00       |
+| FDDR                      | 1     | 2      | 50.00      |
+| GRESET                    | 1     | 1      | 100.00     |
+| RGRESET                   | 4     | 206    | 1.94       |
++---------------------------+-------+--------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+-------+------+
+| Type                     | 4LUT  | DFF  |
++--------------------------+-------+------+
+| Fabric Logic             | 10595 | 5116 |
+| RAM64x18 Interface Logic | 2304  | 2304 |
+| RAM1K18 Interface Logic  | 288   | 288  |
+| MACC Interface Logic     | 72    | 72   |
+| Total Used               | 13259 | 7780 |
++--------------------------+-------+------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 35   |
+| 5      | 2    |
+| 6      | 2    |
+| 7      | 4    |
+| 8      | 6    |
+| 9      | 3    |
+| 10     | 1    |
+| 11     | 4    |
+| 14     | 1    |
+| 15     | 1    |
+| 16     | 1    |
+| 17     | 6    |
+| 23     | 1    |
+| 30     | 3    |
+| 32     | 6    |
+| 33     | 5    |
+| 49     | 1    |
+| 58     | 2    |
+| 64     | 1    |
+| 65     | 1    |
+| Total  | 86   |
++--------+------+
+
+Detailed MACC Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 1    |
+| Total  | 1    |
++--------+------+
+
+I/O Function
++--------------------------------------+--------------+-------------+-----------------+
+| Type                                 | w/o register | w/ register | w/ DDR register |
++--------------------------------------+--------------+-------------+-----------------+
+| Input I/O                            | 13           | 0           | 0               |
+| Output I/O                           | 40           | 0           | 0               |
+| Bidirectional I/O                    | 36           | 0           | 0               |
+| Differential Input I/O Pairs         | 0            | 0           | 0               |
+| Differential Output I/O Pairs        | 1            | 0           | 0               |
+| Differential Bidirectional I/O Pairs | 4            | 0           | 0               |
++--------------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++-------------------------------+--------+--------+-------+--------+---------------+
+| I/O Standard                  | Vddi   | Vref   | Input | Output | Bidirectional |
++-------------------------------+--------+--------+-------+--------+---------------+
+| LVCMOS25                      |  2.50v |  N/A   |  11   |  12    |  0            |
+| SSTL15I (Input/Bidirectional) |  1.50v |  0.75v |  2    |  0     |  44           |
+| SSTL15I (Output)              |  1.50v |  N/A   |  0    |  30    |  0            |
++-------------------------------+--------+--------+-------+--------+---------------+
+
+I/O Placement
++----------+-------+------------+
+| Type     | Count | Percentage |
++----------+-------+------------+
+| Locked   |  76   | 76.77%     |
+| Placed   |  0    | 0.00%      |
+| UnPlaced |  23   | 23.23%     |
++----------+-------+------------+
+
+Nets assigned to chip global resources
++--------+---------+------------------------------------------------------------+
+| Fanout | Type    | Name                                                       |
++--------+---------+------------------------------------------------------------+
+| 4937   | INT_NET | Net   : RTG4FCCC_0_GL0                                     |
+|        |         | Driver: RTG4FCCC_0/GL0_INST/U0_RGB1                        |
+|        |         | Source: NETLIST                                            |
+| 886    | INT_NET | Net   : COREBOOTSTRAP_0_HRESETN                            |
+|        |         | Driver: COREBOOTSTRAP_0/BOOT_RESET/HRESETN_RNI1O5B/U0_RGB1 |
+|        |         | Source: NETLIST                                            |
+| 192    | INT_NET | Net   : COREJTAGDEBUG_0_TGT_TCK                            |
+|        |         | Driver: COREJTAGDEBUG_0/tck_clkint/U0_RGB1                 |
+|        |         | Source: NETLIST                                            |
+| 128    | INT_NET | Net   : RTG4FCCC_0_GL1                                     |
+|        |         | Driver: RTG4FCCC_0/GL1_INST/U0_RGB1                        |
+|        |         | Source: NETLIST                                            |
+| 16     | INT_NET | Net   : COREJTAGDEBUG_0/udrck_clkint                       |
+|        |         | Driver: COREJTAGDEBUG_0/genblk1_udrck_clkint/U0_RGB1       |
+|        |         | Source: NETLIST                                            |
++--------+---------+------------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                                               |
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 723    | INT_NET | Net   : COREBOOTSTRAP_0_PROC_SYS_RESETN                                                                                                                                                            |
+|        |         | Driver: COREBOOTSTRAP_0/AHB_WRITER/PROC_SYS_RESETN                                                                                                                                                 |
+| 233    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/T_628                                                                                                                                                   |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/TileLinkRecursiveInterconnect_2/xbar/RTG4_CoreRISCV_AXI4_BaseDesign_CORERISCV_AXI4_0_CORERISCV_AXI4_CLIENT_UNCACHED_TILE_LINK_IO_ROUTER_1/gnt_arb/T_628 |
+| 139    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core_io_imem_flush_icache                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/io_imem_flush_icache                                                                                                                         |
+| 128    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/un1_GEN_13_1_sqmuxa_or                                                                                                              |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/invalidated_RNIGBAN1                                                                                                                |
+| 108    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/io_chosen_i                                                                                                                                   |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/ClientTileLinkIOUnwrapper_1/acqArb/io_chosen_iv                                                                                               |
+| 102    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/ex_pc_valid                                                                                                                                  |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/ex_pc_valid                                                                                                                                  |
+| 101    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/DebugModule_1_io_tl_grant_bits_addr_beat[1]                                                                                                             |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/DebugModule_1/sbAcqReg_addr_beat[1]                                                                                                                     |
+| 98     | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/N_485                                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/l1tol2net/relNet/arb/un2_GEN_10_i                                                                                                             |
+| 90     | INT_NET | Net   : CoreAPB3_0_APBmslave1_PADDR[2]                                                                                                                                                             |
+|        |         | Driver: COREAHBTOAPB3_0/U_ApbAddrData/haddrReg[2]                                                                                                                                                  |
+| 87     | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/s1_vaddr[6]                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/s1_vaddr[6]                                                                                                                         |
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                                                                                                               |
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 723    | INT_NET | Net   : COREBOOTSTRAP_0_PROC_SYS_RESETN                                                                                                                                                            |
+|        |         | Driver: COREBOOTSTRAP_0/AHB_WRITER/PROC_SYS_RESETN                                                                                                                                                 |
+| 233    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/T_628                                                                                                                                                   |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/TileLinkRecursiveInterconnect_2/xbar/RTG4_CoreRISCV_AXI4_BaseDesign_CORERISCV_AXI4_0_CORERISCV_AXI4_CLIENT_UNCACHED_TILE_LINK_IO_ROUTER_1/gnt_arb/T_628 |
+| 139    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core_io_imem_flush_icache                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/io_imem_flush_icache                                                                                                                         |
+| 128    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/un1_GEN_13_1_sqmuxa_or                                                                                                              |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/invalidated_RNIGBAN1                                                                                                                |
+| 108    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/io_chosen_i                                                                                                                                   |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/ClientTileLinkIOUnwrapper_1/acqArb/io_chosen_iv                                                                                               |
+| 102    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/ex_pc_valid                                                                                                                                  |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/core/ex_pc_valid                                                                                                                                  |
+| 101    | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/DebugModule_1_io_tl_grant_bits_addr_beat[1]                                                                                                             |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/DebugModule_1/sbAcqReg_addr_beat[1]                                                                                                                     |
+| 98     | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/N_485                                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/uncore/outmemsys/l1tol2net/relNet/arb/un2_GEN_10_i                                                                                                             |
+| 90     | INT_NET | Net   : CoreAPB3_0_APBmslave1_PADDR[2]                                                                                                                                                             |
+|        |         | Driver: COREAHBTOAPB3_0/U_ApbAddrData/haddrReg[2]                                                                                                                                                  |
+| 87     | INT_NET | Net   : CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/s1_vaddr[6]                                                                                                                         |
+|        |         | Driver: CORERISCV_AXI4_0/ChiselTop0/RocketTile_1/icache/icache/s1_vaddr[6]                                                                                                                         |
++--------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Async Global Reset net fanout
++--------+-----------+--------------------------------------------+
+| Fanout | Type      | Name                                       |
++--------+-----------+--------------------------------------------+
+| 1127   | RESET_NET | Net   : COREBOOTSTRAP_0/BOOT_RESET/HRESETN |
+|        |           | Driver: greset_inst                        |
++--------+-----------+--------------------------------------------+
+
+Async Row Reset nets fanout
++--------+-----------+-------------------------+
+| Fanout | Type      | Name                    |
++--------+-----------+-------------------------+
+| 87     | RESET_NET | Net   : rgreset_driver3 |
+|        |           | Driver: rgreset_inst_3  |
+| 33     | RESET_NET | Net   : rgreset_driver1 |
+|        |           | Driver: rgreset_inst_1  |
+| 14     | RESET_NET | Net   : rgreset_driver2 |
+|        |           | Driver: rgreset_inst_2  |
+| 2      | RESET_NET | Net   : rgreset_driver  |
+|        |           | Driver: rgreset_inst    |
++--------+-----------+-------------------------+
+

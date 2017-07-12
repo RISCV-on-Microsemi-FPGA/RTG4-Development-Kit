@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Nov 16 21:21:40 2016
-// Version: v11.7 SP2 11.7.2.2
+// Created by SmartDesign Wed Jul 12 18:43:56 2017
+// Version: v11.8 11.8.0.26
 //////////////////////////////////////////////////////////////////////
 
 `timescale 1ns / 100ps
@@ -11,8 +11,10 @@ module RTG4_CoreRISCV_AXI4_BaseDesign(
     DEVRST_N,
     FDDR_DQS_TMATCH_0_IN,
     FDDR_DQS_TMATCH_1_IN,
+    FLASH_SDI,
     GPIO_IN,
     RX,
+    SW_DEBUG_MODE,
     TCK,
     TDI,
     TMS,
@@ -31,6 +33,9 @@ module RTG4_CoreRISCV_AXI4_BaseDesign(
     FDDR_RAS_N,
     FDDR_RESET_N,
     FDDR_WE_N,
+    FLASH_SCK,
+    FLASH_SDO,
+    FLASH_SS,
     GPIO_OUT,
     TDO,
     TX,
@@ -47,8 +52,10 @@ module RTG4_CoreRISCV_AXI4_BaseDesign(
 input         DEVRST_N;
 input         FDDR_DQS_TMATCH_0_IN;
 input         FDDR_DQS_TMATCH_1_IN;
+input         FLASH_SDI;
 input  [7:0]  GPIO_IN;
 input         RX;
+input         SW_DEBUG_MODE;
 input         TCK;
 input         TDI;
 input         TMS;
@@ -69,6 +76,9 @@ output        FDDR_ODT;
 output        FDDR_RAS_N;
 output        FDDR_RESET_N;
 output        FDDR_WE_N;
+output        FLASH_SCK;
+output        FLASH_SDO;
+output        FLASH_SS;
 output [7:0]  GPIO_OUT;
 output        TDO;
 output        TX;
@@ -207,6 +217,10 @@ wire   [31:0] CoreAPB3_0_APBmslave5_PRDATA;
 wire          CoreAPB3_0_APBmslave5_PREADY;
 wire          CoreAPB3_0_APBmslave5_PSELx;
 wire          CoreAPB3_0_APBmslave5_PSLVERR;
+wire   [31:0] CoreAPB3_0_APBmslave6_0_PRDATA;
+wire          CoreAPB3_0_APBmslave6_0_PREADY;
+wire          CoreAPB3_0_APBmslave6_0_PSELx;
+wire          CoreAPB3_0_APBmslave6_0_PSLVERR;
 wire   [31:0] COREAXITOAHBL_0_AHBMasterIF_HADDR;
 wire   [2:0]  COREAXITOAHBL_0_AHBMasterIF_HBURST;
 wire   [31:0] COREAXITOAHBL_0_AHBMasterIF_HRDATA;
@@ -223,6 +237,17 @@ wire   [2:0]  COREAXITOAHBL_1_AHBMasterIF_HSIZE;
 wire   [1:0]  COREAXITOAHBL_1_AHBMasterIF_HTRANS;
 wire   [31:0] COREAXITOAHBL_1_AHBMasterIF_HWDATA;
 wire          COREAXITOAHBL_1_AHBMasterIF_HWRITE;
+wire   [31:0] COREBOOTSTRAP_0_AHB_MASTER_HADDR;
+wire   [2:0]  COREBOOTSTRAP_0_AHB_MASTER_HBURST;
+wire   [31:0] COREBOOTSTRAP_0_AHB_MASTER_HRDATA;
+wire          COREBOOTSTRAP_0_AHB_MASTER_HREADY;
+wire   [2:0]  COREBOOTSTRAP_0_AHB_MASTER_HSIZE;
+wire   [1:0]  COREBOOTSTRAP_0_AHB_MASTER_HTRANS;
+wire   [31:0] COREBOOTSTRAP_0_AHB_MASTER_HWDATA;
+wire          COREBOOTSTRAP_0_AHB_MASTER_HWRITE;
+wire          COREBOOTSTRAP_0_HOST_SDI;
+wire          COREBOOTSTRAP_0_HRESETN;
+wire          COREBOOTSTRAP_0_PROC_SYS_RESETN;
 wire          COREJTAGDEBUG_0_TGT_TCK;
 wire          COREJTAGDEBUG_0_TGT_TDI;
 wire          COREJTAGDEBUG_0_TGT_TMS;
@@ -318,6 +343,9 @@ wire          CORERISCV_AXI4_0_AXI_MST_MMIO_WUSER;
 wire          CORERISCV_AXI4_0_AXI_MST_MMIO_WVALID;
 wire   [4:0]  CORERISCV_AXI4_0_AXI_MST_MMIO_WID;
 wire          CORERISCV_AXI4_0_TDO;
+wire          CORESPI_0_SPISCLKO;
+wire          CORESPI_0_SPISDO;
+wire   [0:0]  CORESPI_0_SPISS0to0;
 wire          CoreTimer_0_TIMINT;
 wire          CoreTimer_1_TIMINT;
 wire          DDR_MEMORY_CTRL_0_INIT_DONE;
@@ -341,13 +369,19 @@ wire          FDDR_ODT_net_0;
 wire          FDDR_RAS_N_net_0;
 wire          FDDR_RESET_N_net_0;
 wire          FDDR_WE_N_net_0;
+wire          FLASH_SCK_net_0;
+wire          FLASH_SDI;
+wire          FLASH_SDO_net_0;
+wire          FLASH_SS_net_0;
 wire   [7:0]  GPIO_IN;
 wire   [7:0]  GPIO_OUT_net_0;
 wire          RCOSC_50MHZ_0_CLKOUT;
+wire          reset_synchronizer_0_reset_sync;
 wire          RTG4FCCC_0_GL0;
 wire          RTG4FCCC_0_GL1;
 wire          RTG4FCCC_0_LOCK;
 wire          RX;
+wire          SW_DEBUG_MODE;
 wire          SYSRESET_0_POWER_ON_RESET_N;
 wire          TCK;
 wire          TDI;
@@ -368,28 +402,35 @@ wire          FDDR_WE_N_net_1;
 wire          FDDR_DQS_TMATCH_0_OUT_net_1;
 wire          FDDR_DQS_TMATCH_1_OUT_net_1;
 wire          TX_net_1;
+wire          FLASH_SCK_net_1;
+wire          FLASH_SS_net_1;
+wire          FLASH_SDO_net_1;
 wire   [15:0] FDDR_ADDR_net_1;
 wire   [2:0]  FDDR_BA_net_1;
 wire   [7:0]  GPIO_OUT_net_1;
+wire   [1:1]  SPISS_slice_0;
+wire   [2:2]  SPISS_slice_1;
+wire   [3:3]  SPISS_slice_2;
+wire   [4:4]  SPISS_slice_3;
+wire   [5:5]  SPISS_slice_4;
+wire   [6:6]  SPISS_slice_5;
+wire   [7:7]  SPISS_slice_6;
 wire   [30:0] IRQ_net_0;
+wire   [7:0]  SPISS_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire   [7:0]  GPIO_IN_const_net_0;
-wire          GND_net;
 wire          VCC_net;
+wire          GND_net;
+wire   [7:0]  GPIO_IN_const_net_0;
 wire   [31:0] IADDR_const_net_0;
+wire   [7:0]  UIREG_IN_const_net_0;
 wire   [7:0]  APB_S_PWDATA_const_net_0;
 wire   [7:2]  APB_S_PADDR_const_net_0;
 wire   [7:0]  CCC_APB_S_PWDATA_const_net_0;
 wire   [7:2]  CCC_APB_S_PADDR_const_net_0;
 wire   [3:0]  HPROT_M0_const_net_0;
-wire   [31:0] HADDR_M1_const_net_0;
-wire   [1:0]  HTRANS_M1_const_net_0;
-wire   [2:0]  HSIZE_M1_const_net_0;
-wire   [2:0]  HBURST_M1_const_net_0;
 wire   [3:0]  HPROT_M1_const_net_0;
-wire   [31:0] HWDATA_M1_const_net_0;
 wire   [31:0] HADDR_M2_const_net_0;
 wire   [1:0]  HTRANS_M2_const_net_0;
 wire   [2:0]  HSIZE_M2_const_net_0;
@@ -435,12 +476,12 @@ wire   [1:0]  HRESP_S14_const_net_0;
 wire   [31:0] HRDATA_S15_const_net_0;
 wire   [1:0]  HRESP_S15_const_net_0;
 wire   [3:0]  HPROT_M0_const_net_1;
-wire   [31:0] HADDR_M1_const_net_1;
-wire   [1:0]  HTRANS_M1_const_net_1;
-wire   [2:0]  HSIZE_M1_const_net_1;
-wire   [2:0]  HBURST_M1_const_net_1;
+wire   [31:0] HADDR_M1_const_net_0;
+wire   [1:0]  HTRANS_M1_const_net_0;
+wire   [2:0]  HSIZE_M1_const_net_0;
+wire   [2:0]  HBURST_M1_const_net_0;
 wire   [3:0]  HPROT_M1_const_net_1;
-wire   [31:0] HWDATA_M1_const_net_1;
+wire   [31:0] HWDATA_M1_const_net_0;
 wire   [31:0] HADDR_M2_const_net_1;
 wire   [1:0]  HTRANS_M2_const_net_1;
 wire   [2:0]  HSIZE_M2_const_net_1;
@@ -486,7 +527,6 @@ wire   [1:0]  HRESP_S15_const_net_1;
 wire   [31:0] HRDATA_S16_const_net_0;
 wire   [1:0]  HRESP_S16_const_net_0;
 wire   [31:0] PRDATAS0_const_net_0;
-wire   [31:0] PRDATAS6_const_net_0;
 wire   [31:0] PRDATAS7_const_net_0;
 wire   [31:0] PRDATAS8_const_net_0;
 wire   [31:0] PRDATAS9_const_net_0;
@@ -523,21 +563,23 @@ wire          CoreAHBLite_0_AHBmslave16_HRESP;
 wire   [2:0]  CoreAHBLite_0_AHBmslave16_HSIZE;
 wire   [1:0]  CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0;
 wire   [1:0]  CoreAHBLite_0_AHBmslave16_HSIZE_0;
-wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2_4to2;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1;
+wire   [31:0] CoreAPB3_0_APBmslave1_PADDR;
+wire   [6:0]  CoreAPB3_0_APBmslave1_PADDR_5_6to0;
+wire   [6:0]  CoreAPB3_0_APBmslave1_PADDR_5;
 wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3_4to2;
 wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3;
 wire   [4:0]  CoreAPB3_0_APBmslave1_PADDR_0_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave1_PADDR_0;
-wire   [31:0] CoreAPB3_0_APBmslave1_PADDR;
-wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2_4to2;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2;
 wire   [31:8] CoreAPB3_0_APBmslave1_PRDATA_0_31to8;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave1_PRDATA_0;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA;
 wire   [31:0] CoreAPB3_0_APBmslave1_PWDATA;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PWDATA_0_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PWDATA_0;
@@ -547,24 +589,23 @@ wire          COREAXITOAHBL_0_AHBMasterIF_HRESP_0;
 wire   [1:0]  COREAXITOAHBL_1_AHBMasterIF_HRESP;
 wire   [0:0]  COREAXITOAHBL_1_AHBMasterIF_HRESP_0_0to0;
 wire          COREAXITOAHBL_1_AHBMasterIF_HRESP_0;
+wire   [1:0]  COREBOOTSTRAP_0_AHB_MASTER_HRESP;
+wire   [0:0]  COREBOOTSTRAP_0_AHB_MASTER_HRESP_0_0to0;
+wire          COREBOOTSTRAP_0_AHB_MASTER_HRESP_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GPIO_IN_const_net_0          = 8'h00;
-assign GND_net                      = 1'b0;
 assign VCC_net                      = 1'b1;
+assign GND_net                      = 1'b0;
+assign GPIO_IN_const_net_0          = 8'h00;
 assign IADDR_const_net_0            = 32'h00000000;
+assign UIREG_IN_const_net_0         = 8'h00;
 assign APB_S_PWDATA_const_net_0     = 8'h00;
 assign APB_S_PADDR_const_net_0      = 6'h00;
 assign CCC_APB_S_PWDATA_const_net_0 = 8'h00;
 assign CCC_APB_S_PADDR_const_net_0  = 6'h00;
 assign HPROT_M0_const_net_0         = 4'h0;
-assign HADDR_M1_const_net_0         = 32'h00000000;
-assign HTRANS_M1_const_net_0        = 2'h0;
-assign HSIZE_M1_const_net_0         = 3'h0;
-assign HBURST_M1_const_net_0        = 3'h0;
 assign HPROT_M1_const_net_0         = 4'h0;
-assign HWDATA_M1_const_net_0        = 32'h00000000;
 assign HADDR_M2_const_net_0         = 32'h00000000;
 assign HTRANS_M2_const_net_0        = 2'h0;
 assign HSIZE_M2_const_net_0         = 3'h0;
@@ -610,12 +651,12 @@ assign HRESP_S14_const_net_0        = 2'h0;
 assign HRDATA_S15_const_net_0       = 32'h00000000;
 assign HRESP_S15_const_net_0        = 2'h0;
 assign HPROT_M0_const_net_1         = 4'h0;
-assign HADDR_M1_const_net_1         = 32'h00000000;
-assign HTRANS_M1_const_net_1        = 2'h0;
-assign HSIZE_M1_const_net_1         = 3'h0;
-assign HBURST_M1_const_net_1        = 3'h0;
+assign HADDR_M1_const_net_0         = 32'h00000000;
+assign HTRANS_M1_const_net_0        = 2'h0;
+assign HSIZE_M1_const_net_0         = 3'h0;
+assign HBURST_M1_const_net_0        = 3'h0;
 assign HPROT_M1_const_net_1         = 4'h0;
-assign HWDATA_M1_const_net_1        = 32'h00000000;
+assign HWDATA_M1_const_net_0        = 32'h00000000;
 assign HADDR_M2_const_net_1         = 32'h00000000;
 assign HTRANS_M2_const_net_1        = 2'h0;
 assign HSIZE_M2_const_net_1         = 3'h0;
@@ -661,7 +702,6 @@ assign HRESP_S15_const_net_1        = 2'h0;
 assign HRDATA_S16_const_net_0       = 32'h00000000;
 assign HRESP_S16_const_net_0        = 2'h0;
 assign PRDATAS0_const_net_0         = 32'h00000000;
-assign PRDATAS6_const_net_0         = 32'h00000000;
 assign PRDATAS7_const_net_0         = 32'h00000000;
 assign PRDATAS8_const_net_0         = 32'h00000000;
 assign PRDATAS9_const_net_0         = 32'h00000000;
@@ -675,7 +715,7 @@ assign PRDATAS16_const_net_0        = 32'h00000000;
 //--------------------------------------------------------------------
 // Inversions
 //--------------------------------------------------------------------
-assign RESET_IN_POST_INV0_0 = ~ AND2_1_Y;
+assign RESET_IN_POST_INV0_0 = ~ COREBOOTSTRAP_0_PROC_SYS_RESETN;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -705,12 +745,29 @@ assign FDDR_DQS_TMATCH_1_OUT_net_1 = FDDR_DQS_TMATCH_1_OUT_net_0;
 assign FDDR_DQS_TMATCH_1_OUT       = FDDR_DQS_TMATCH_1_OUT_net_1;
 assign TX_net_1                    = TX_net_0;
 assign TX                          = TX_net_1;
+assign FLASH_SCK_net_1             = FLASH_SCK_net_0;
+assign FLASH_SCK                   = FLASH_SCK_net_1;
+assign FLASH_SS_net_1              = FLASH_SS_net_0;
+assign FLASH_SS                    = FLASH_SS_net_1;
+assign FLASH_SDO_net_1             = FLASH_SDO_net_0;
+assign FLASH_SDO                   = FLASH_SDO_net_1;
 assign FDDR_ADDR_net_1             = FDDR_ADDR_net_0;
 assign FDDR_ADDR[15:0]             = FDDR_ADDR_net_1;
 assign FDDR_BA_net_1               = FDDR_BA_net_0;
 assign FDDR_BA[2:0]                = FDDR_BA_net_1;
 assign GPIO_OUT_net_1              = GPIO_OUT_net_0;
 assign GPIO_OUT[7:0]               = GPIO_OUT_net_1;
+//--------------------------------------------------------------------
+// Slices assignments
+//--------------------------------------------------------------------
+assign CORESPI_0_SPISS0to0[0] = SPISS_net_0[0:0];
+assign SPISS_slice_0[1]       = SPISS_net_0[1:1];
+assign SPISS_slice_1[2]       = SPISS_net_0[2:2];
+assign SPISS_slice_2[3]       = SPISS_net_0[3:3];
+assign SPISS_slice_3[4]       = SPISS_net_0[4:4];
+assign SPISS_slice_4[5]       = SPISS_net_0[5:5];
+assign SPISS_slice_5[6]       = SPISS_net_0[6:6];
+assign SPISS_slice_6[7]       = SPISS_net_0[7:7];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
@@ -737,16 +794,18 @@ assign CoreAHBLite_0_AHBmslave16_HRESP_0 = { CoreAHBLite_0_AHBmslave16_HRESP_0_1
 assign CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0 = CoreAHBLite_0_AHBmslave16_HSIZE[1:0];
 assign CoreAHBLite_0_AHBmslave16_HSIZE_0 = { CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0 };
 
-assign CoreAPB3_0_APBmslave1_PADDR_1_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
-assign CoreAPB3_0_APBmslave1_PADDR_1 = { CoreAPB3_0_APBmslave1_PADDR_1_7to0 };
 assign CoreAPB3_0_APBmslave1_PADDR_4_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
 assign CoreAPB3_0_APBmslave1_PADDR_4 = { CoreAPB3_0_APBmslave1_PADDR_4_7to0 };
-assign CoreAPB3_0_APBmslave1_PADDR_2_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
-assign CoreAPB3_0_APBmslave1_PADDR_2 = { CoreAPB3_0_APBmslave1_PADDR_2_4to2 };
+assign CoreAPB3_0_APBmslave1_PADDR_1_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
+assign CoreAPB3_0_APBmslave1_PADDR_1 = { CoreAPB3_0_APBmslave1_PADDR_1_7to0 };
+assign CoreAPB3_0_APBmslave1_PADDR_5_6to0 = CoreAPB3_0_APBmslave1_PADDR[6:0];
+assign CoreAPB3_0_APBmslave1_PADDR_5 = { CoreAPB3_0_APBmslave1_PADDR_5_6to0 };
 assign CoreAPB3_0_APBmslave1_PADDR_3_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
 assign CoreAPB3_0_APBmslave1_PADDR_3 = { CoreAPB3_0_APBmslave1_PADDR_3_4to2 };
 assign CoreAPB3_0_APBmslave1_PADDR_0_4to0 = CoreAPB3_0_APBmslave1_PADDR[4:0];
 assign CoreAPB3_0_APBmslave1_PADDR_0 = { CoreAPB3_0_APBmslave1_PADDR_0_4to0 };
+assign CoreAPB3_0_APBmslave1_PADDR_2_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
+assign CoreAPB3_0_APBmslave1_PADDR_2 = { CoreAPB3_0_APBmslave1_PADDR_2_4to2 };
 
 assign CoreAPB3_0_APBmslave1_PRDATA_0_31to8 = 24'h0;
 assign CoreAPB3_0_APBmslave1_PRDATA_0_7to0 = CoreAPB3_0_APBmslave1_PRDATA[7:0];
@@ -760,6 +819,9 @@ assign COREAXITOAHBL_0_AHBMasterIF_HRESP_0 = { COREAXITOAHBL_0_AHBMasterIF_HRESP
 
 assign COREAXITOAHBL_1_AHBMasterIF_HRESP_0_0to0 = COREAXITOAHBL_1_AHBMasterIF_HRESP[0:0];
 assign COREAXITOAHBL_1_AHBMasterIF_HRESP_0 = { COREAXITOAHBL_1_AHBMasterIF_HRESP_0_0to0 };
+
+assign COREBOOTSTRAP_0_AHB_MASTER_HRESP_0_0to0 = COREBOOTSTRAP_0_AHB_MASTER_HRESP[0:0];
+assign COREBOOTSTRAP_0_AHB_MASTER_HRESP_0 = { COREBOOTSTRAP_0_AHB_MASTER_HRESP_0_0to0 };
 
 //--------------------------------------------------------------------
 // Component instances
@@ -777,7 +839,7 @@ AND2 AND2_0(
 AND2 AND2_1(
         // Inputs
         .A ( DDR_MEMORY_CTRL_0_INIT_DONE ),
-        .B ( AND2_0_Y ),
+        .B ( reset_synchronizer_0_reset_sync ),
         // Outputs
         .Y ( AND2_1_Y ) 
         );
@@ -786,7 +848,7 @@ AND2 AND2_1(
 AXI_GLUE_LOGIC AXI_GLUE_LOGIC_0(
         // Inputs
         .CLK                          ( RTG4FCCC_0_GL0 ),
-        .RESET                        ( AND2_0_Y ),
+        .RESET                        ( COREBOOTSTRAP_0_HRESETN ),
         .AXI_MIRROR_MST_MEM_AWVALID   ( CORERISCV_AXI4_0_AXI_MST_MEM_AWVALID ),
         .AXI_MIRROR_MST_MEM_AWLOCK    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWLOCK ),
         .AXI_MIRROR_MST_MEM_AWUSER    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWUSER ),
@@ -999,7 +1061,7 @@ CoreAHBLite #(
         .M1_AHBSLOT13ENABLE ( 0 ),
         .M1_AHBSLOT14ENABLE ( 0 ),
         .M1_AHBSLOT15ENABLE ( 0 ),
-        .M1_AHBSLOT16ENABLE ( 0 ),
+        .M1_AHBSLOT16ENABLE ( 1 ),
         .M2_AHBSLOT0ENABLE  ( 0 ),
         .M2_AHBSLOT1ENABLE  ( 0 ),
         .M2_AHBSLOT2ENABLE  ( 0 ),
@@ -1054,12 +1116,12 @@ CoreAHBLite #(
 CoreAHBLite_0(
         // Inputs
         .HCLK          ( RTG4FCCC_0_GL0 ),
-        .HRESETN       ( AND2_0_Y ),
+        .HRESETN       ( COREBOOTSTRAP_0_HRESETN ),
         .REMAP_M0      ( GND_net ), // tied to 1'b0 from definition
         .HMASTLOCK_M0  ( GND_net ), // tied to 1'b0 from definition
         .HWRITE_M0     ( COREAXITOAHBL_1_AHBMasterIF_HWRITE ),
         .HMASTLOCK_M1  ( GND_net ), // tied to 1'b0 from definition
-        .HWRITE_M1     ( GND_net ), // tied to 1'b0 from definition
+        .HWRITE_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HWRITE ),
         .HMASTLOCK_M2  ( GND_net ), // tied to 1'b0 from definition
         .HWRITE_M2     ( GND_net ), // tied to 1'b0 from definition
         .HMASTLOCK_M3  ( GND_net ), // tied to 1'b0 from definition
@@ -1087,11 +1149,11 @@ CoreAHBLite_0(
         .HWDATA_M0     ( COREAXITOAHBL_1_AHBMasterIF_HWDATA ),
         .HBURST_M0     ( COREAXITOAHBL_1_AHBMasterIF_HBURST ),
         .HPROT_M0      ( HPROT_M0_const_net_0 ), // tied to 4'h0 from definition
-        .HADDR_M1      ( HADDR_M1_const_net_0 ), // tied to 32'h00000000 from definition
-        .HSIZE_M1      ( HSIZE_M1_const_net_0 ), // tied to 3'h0 from definition
-        .HTRANS_M1     ( HTRANS_M1_const_net_0 ), // tied to 2'h0 from definition
-        .HWDATA_M1     ( HWDATA_M1_const_net_0 ), // tied to 32'h00000000 from definition
-        .HBURST_M1     ( HBURST_M1_const_net_0 ), // tied to 3'h0 from definition
+        .HADDR_M1      ( COREBOOTSTRAP_0_AHB_MASTER_HADDR ),
+        .HSIZE_M1      ( COREBOOTSTRAP_0_AHB_MASTER_HSIZE ),
+        .HTRANS_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HTRANS ),
+        .HWDATA_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HWDATA ),
+        .HBURST_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HBURST ),
         .HPROT_M1      ( HPROT_M1_const_net_0 ), // tied to 4'h0 from definition
         .HADDR_M2      ( HADDR_M2_const_net_0 ), // tied to 32'h00000000 from definition
         .HSIZE_M2      ( HSIZE_M2_const_net_0 ), // tied to 3'h0 from definition
@@ -1141,7 +1203,7 @@ CoreAHBLite_0(
         .HRESP_S16     ( CoreAHBLite_0_AHBmslave16_HRESP_0 ),
         // Outputs
         .HREADY_M0     ( COREAXITOAHBL_1_AHBMasterIF_HREADY ),
-        .HREADY_M1     (  ),
+        .HREADY_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HREADY ),
         .HREADY_M2     (  ),
         .HREADY_M3     (  ),
         .HSEL_S0       (  ),
@@ -1214,8 +1276,8 @@ CoreAHBLite_0(
         .HMASTLOCK_S16 ( CoreAHBLite_0_AHBmslave16_HMASTLOCK ),
         .HRESP_M0      ( COREAXITOAHBL_1_AHBMasterIF_HRESP ),
         .HRDATA_M0     ( COREAXITOAHBL_1_AHBMasterIF_HRDATA ),
-        .HRESP_M1      (  ),
-        .HRDATA_M1     (  ),
+        .HRESP_M1      ( COREBOOTSTRAP_0_AHB_MASTER_HRESP ),
+        .HRDATA_M1     ( COREBOOTSTRAP_0_AHB_MASTER_HRDATA ),
         .HRESP_M2      (  ),
         .HRDATA_M2     (  ),
         .HRESP_M3      (  ),
@@ -1416,7 +1478,7 @@ CoreAHBLite #(
 CoreAHBLite_1(
         // Inputs
         .HCLK          ( RTG4FCCC_0_GL0 ),
-        .HRESETN       ( AND2_0_Y ),
+        .HRESETN       ( COREBOOTSTRAP_0_HRESETN ),
         .REMAP_M0      ( GND_net ), // tied to 1'b0 from definition
         .HMASTLOCK_M0  ( GND_net ), // tied to 1'b0 from definition
         .HWRITE_M0     ( COREAXITOAHBL_0_AHBMasterIF_HWRITE ),
@@ -1449,11 +1511,11 @@ CoreAHBLite_1(
         .HWDATA_M0     ( COREAXITOAHBL_0_AHBMasterIF_HWDATA ),
         .HBURST_M0     ( COREAXITOAHBL_0_AHBMasterIF_HBURST ),
         .HPROT_M0      ( HPROT_M0_const_net_1 ), // tied to 4'h0 from definition
-        .HADDR_M1      ( HADDR_M1_const_net_1 ), // tied to 32'h00000000 from definition
-        .HSIZE_M1      ( HSIZE_M1_const_net_1 ), // tied to 3'h0 from definition
-        .HTRANS_M1     ( HTRANS_M1_const_net_1 ), // tied to 2'h0 from definition
-        .HWDATA_M1     ( HWDATA_M1_const_net_1 ), // tied to 32'h00000000 from definition
-        .HBURST_M1     ( HBURST_M1_const_net_1 ), // tied to 3'h0 from definition
+        .HADDR_M1      ( HADDR_M1_const_net_0 ), // tied to 32'h00000000 from definition
+        .HSIZE_M1      ( HSIZE_M1_const_net_0 ), // tied to 3'h0 from definition
+        .HTRANS_M1     ( HTRANS_M1_const_net_0 ), // tied to 2'h0 from definition
+        .HWDATA_M1     ( HWDATA_M1_const_net_0 ), // tied to 32'h00000000 from definition
+        .HBURST_M1     ( HBURST_M1_const_net_0 ), // tied to 3'h0 from definition
         .HPROT_M1      ( HPROT_M1_const_net_1 ), // tied to 4'h0 from definition
         .HADDR_M2      ( HADDR_M2_const_net_1 ), // tied to 32'h00000000 from definition
         .HSIZE_M2      ( HSIZE_M2_const_net_1 ), // tied to 3'h0 from definition
@@ -1692,7 +1754,7 @@ COREAHBTOAPB3 #(
 COREAHBTOAPB3_0(
         // Inputs
         .HCLK      ( RTG4FCCC_0_GL0 ),
-        .HRESETN   ( AND2_0_Y ),
+        .HRESETN   ( COREBOOTSTRAP_0_HRESETN ),
         .HWRITE    ( CoreAHBLite_1_AHBmslave7_HWRITE ),
         .HSEL      ( CoreAHBLite_1_AHBmslave7_HSELx ),
         .HREADY    ( CoreAHBLite_1_AHBmslave7_HREADY ),
@@ -1722,7 +1784,7 @@ CoreAPB3 #(
         .APBSLOT3ENABLE  ( 1 ),
         .APBSLOT4ENABLE  ( 1 ),
         .APBSLOT5ENABLE  ( 1 ),
-        .APBSLOT6ENABLE  ( 0 ),
+        .APBSLOT6ENABLE  ( 1 ),
         .APBSLOT7ENABLE  ( 0 ),
         .APBSLOT8ENABLE  ( 0 ),
         .APBSLOT9ENABLE  ( 0 ),
@@ -1771,8 +1833,8 @@ CoreAPB3_0(
         .PSLVERRS4  ( GND_net ), // tied to 1'b0 from definition
         .PREADYS5   ( CoreAPB3_0_APBmslave5_PREADY ),
         .PSLVERRS5  ( CoreAPB3_0_APBmslave5_PSLVERR ),
-        .PREADYS6   ( VCC_net ), // tied to 1'b1 from definition
-        .PSLVERRS6  ( GND_net ), // tied to 1'b0 from definition
+        .PREADYS6   ( CoreAPB3_0_APBmslave6_0_PREADY ),
+        .PSLVERRS6  ( CoreAPB3_0_APBmslave6_0_PSLVERR ),
         .PREADYS7   ( VCC_net ), // tied to 1'b1 from definition
         .PSLVERRS7  ( GND_net ), // tied to 1'b0 from definition
         .PREADYS8   ( VCC_net ), // tied to 1'b1 from definition
@@ -1801,7 +1863,7 @@ CoreAPB3_0(
         .PRDATAS3   ( CoreAPB3_0_APBmslave3_PRDATA ),
         .PRDATAS4   ( CoreAPB3_0_APBmslave4_PRDATA ),
         .PRDATAS5   ( CoreAPB3_0_APBmslave5_PRDATA ),
-        .PRDATAS6   ( PRDATAS6_const_net_0 ), // tied to 32'h00000000 from definition
+        .PRDATAS6   ( CoreAPB3_0_APBmslave6_0_PRDATA ),
         .PRDATAS7   ( PRDATAS7_const_net_0 ), // tied to 32'h00000000 from definition
         .PRDATAS8   ( PRDATAS8_const_net_0 ), // tied to 32'h00000000 from definition
         .PRDATAS9   ( PRDATAS9_const_net_0 ), // tied to 32'h00000000 from definition
@@ -1824,7 +1886,7 @@ CoreAPB3_0(
         .PSELS3     ( CoreAPB3_0_APBmslave3_PSELx ),
         .PSELS4     ( CoreAPB3_0_APBmslave4_PSELx ),
         .PSELS5     ( CoreAPB3_0_APBmslave5_PSELx ),
-        .PSELS6     (  ),
+        .PSELS6     ( CoreAPB3_0_APBmslave6_0_PSELx ),
         .PSELS7     (  ),
         .PSELS8     (  ),
         .PSELS9     (  ),
@@ -1849,7 +1911,7 @@ COREAXITOAHBL #(
 COREAXITOAHBL_0(
         // Inputs
         .ACLK     ( RTG4FCCC_0_GL0 ),
-        .ARESETN  ( AND2_0_Y ),
+        .ARESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .AWVALID  ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_AWVALID ),
         .WVALID   ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_WVALID ),
         .WLAST    ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_WLAST ),
@@ -1857,7 +1919,7 @@ COREAXITOAHBL_0(
         .ARVALID  ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_ARVALID ),
         .RREADY   ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_RREADY ),
         .HCLK     ( RTG4FCCC_0_GL0 ),
-        .HRESETN  ( AND2_0_Y ),
+        .HRESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .HREADYIN ( COREAXITOAHBL_0_AHBMasterIF_HREADY ),
         .HRESP    ( COREAXITOAHBL_0_AHBMasterIF_HRESP_0 ),
         .AWLEN    ( AXI_GLUE_LOGIC_0_UNCORE_MMIO_AWLEN_0 ),
@@ -1903,7 +1965,7 @@ COREAXITOAHBL #(
 COREAXITOAHBL_1(
         // Inputs
         .ACLK     ( RTG4FCCC_0_GL0 ),
-        .ARESETN  ( AND2_0_Y ),
+        .ARESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .AWVALID  ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_AWVALID ),
         .WVALID   ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_WVALID ),
         .WLAST    ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_WLAST ),
@@ -1911,7 +1973,7 @@ COREAXITOAHBL_1(
         .ARVALID  ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_ARVALID ),
         .RREADY   ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_RREADY ),
         .HCLK     ( RTG4FCCC_0_GL0 ),
-        .HRESETN  ( AND2_0_Y ),
+        .HRESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .HREADYIN ( COREAXITOAHBL_1_AHBMasterIF_HREADY ),
         .HRESP    ( COREAXITOAHBL_1_AHBMasterIF_HRESP_0 ),
         .AWLEN    ( AXI_GLUE_LOGIC_0_UNCORE_MEMORY_AWLEN_0 ),
@@ -1946,6 +2008,49 @@ COREAXITOAHBL_1(
         .HADDR    ( COREAXITOAHBL_1_AHBMasterIF_HADDR ),
         .HTRANS   ( COREAXITOAHBL_1_AHBMasterIF_HTRANS ),
         .HBURST   ( COREAXITOAHBL_1_AHBMasterIF_HBURST ) 
+        );
+
+//--------COREBOOTSTRAP   -   Actel:DirectCore:COREBOOTSTRAP:2.0.100
+COREBOOTSTRAP #( 
+        .AHB_DST_ADDR          ( 'h80000000 ),
+        .BIG_ENDIAN_EN         ( 0 ),
+        .DATA_WORD_CNT         ( 8000 ),
+        .READ_STATUS_TYPE      ( 0 ),
+        .RST_EXTPROC_DURATION  ( 32768 ),
+        .RST_POR_DURATION      ( 32768 ),
+        .RST_RECOVERY_DURATION ( 32768 ),
+        .SPI_CLK_RATIO         ( 8 ),
+        .SPI_SRC_ADDR          ( 'h0 ),
+        .SS_DESELECT_DURATION  ( 8 ) )
+COREBOOTSTRAP_0(
+        // Inputs
+        .HOST_SCK        ( CORESPI_0_SPISCLKO ),
+        .HOST_SDO        ( CORESPI_0_SPISDO ),
+        .HOST_SS         ( CORESPI_0_SPISS0to0 ),
+        .FLASH_SDI       ( FLASH_SDI ),
+        .HCLK            ( RTG4FCCC_0_GL0 ),
+        .HREADY          ( COREBOOTSTRAP_0_AHB_MASTER_HREADY ),
+        .HRESP           ( COREBOOTSTRAP_0_AHB_MASTER_HRESP_0 ),
+        .EXT_RESETN      ( VCC_net ),
+        .PO_RESETN       ( AND2_1_Y ),
+        .SW_DEBUG_MODE   ( SW_DEBUG_MODE ),
+        .SYS_RESET_REQ   ( GND_net ),
+        .HRDATA          ( COREBOOTSTRAP_0_AHB_MASTER_HRDATA ),
+        // Outputs
+        .HOST_SDI        ( COREBOOTSTRAP_0_HOST_SDI ),
+        .FLASH_SCK       ( FLASH_SCK_net_0 ),
+        .FLASH_SDO       ( FLASH_SDO_net_0 ),
+        .FLASH_SS        ( FLASH_SS_net_0 ),
+        .HRESETN         ( COREBOOTSTRAP_0_HRESETN ),
+        .HWRITE          ( COREBOOTSTRAP_0_AHB_MASTER_HWRITE ),
+        .CKSUM_ERR       (  ),
+        .PROC_SYS_RESETN ( COREBOOTSTRAP_0_PROC_SYS_RESETN ),
+        .HADDR           ( COREBOOTSTRAP_0_AHB_MASTER_HADDR ),
+        .HBURST          ( COREBOOTSTRAP_0_AHB_MASTER_HBURST ),
+        .HSIZE           ( COREBOOTSTRAP_0_AHB_MASTER_HSIZE ),
+        .HTRANS          ( COREBOOTSTRAP_0_AHB_MASTER_HTRANS ),
+        .HWDATA          ( COREBOOTSTRAP_0_AHB_MASTER_HWDATA ),
+        .AHB_ERR         (  ) 
         );
 
 //--------CoreGPIO   -   Actel:DirectCore:CoreGPIO:3.1.101
@@ -2085,7 +2190,7 @@ CoreGPIO #(
         .OE_TYPE         ( 0 ) )
 CoreGPIO_IN(
         // Inputs
-        .PRESETN  ( AND2_0_Y ),
+        .PRESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .PCLK     ( RTG4FCCC_0_GL0 ),
         .PSEL     ( CoreAPB3_0_APBmslave2_PSELx ),
         .PENABLE  ( CoreAPB3_0_APBmslave1_PENABLE ),
@@ -2240,7 +2345,7 @@ CoreGPIO #(
         .OE_TYPE         ( 0 ) )
 CoreGPIO_OUT(
         // Inputs
-        .PRESETN  ( AND2_0_Y ),
+        .PRESETN  ( COREBOOTSTRAP_0_HRESETN ),
         .PCLK     ( RTG4FCCC_0_GL0 ),
         .PSEL     ( CoreAPB3_0_APBmslave5_PSELx ),
         .PENABLE  ( CoreAPB3_0_APBmslave1_PENABLE ),
@@ -2258,27 +2363,52 @@ CoreGPIO_OUT(
         .GPIO_OE  (  ) 
         );
 
-//--------COREJTAGDEBUG   -   Actel:DirectCore:COREJTAGDEBUG:1.0.101
+//--------COREJTAGDEBUG   -   Actel:DirectCore:COREJTAGDEBUG:2.0.100
 COREJTAGDEBUG #( 
-        .IR_CODE ( 'h55 ) )
+        .ACTIVE_HIGH_TGT_RESET ( 1 ),
+        .IR_CODE               ( 'h55 ) )
 COREJTAGDEBUG_0(
         // Inputs
-        .TDI      ( TDI ),
-        .TCK      ( TCK ),
-        .TMS      ( TMS ),
-        .TRSTB    ( TRSTB ),
-        .TGT_TDO  ( CORERISCV_AXI4_0_TDO ),
+        .TGT_TDO     ( CORERISCV_AXI4_0_TDO ),
+        .TDI         ( TDI ),
+        .TCK         ( TCK ),
+        .TMS         ( TMS ),
+        .TRSTB       ( TRSTB ),
+        .UTDODRV_0   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_1   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_2   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_3   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_0   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_1   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_2   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_3   ( GND_net ), // tied to 1'b0 from definition
+        .UDRCAP_IN   ( GND_net ), // tied to 1'b0 from definition
+        .UDRSH_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UDRUPD_IN   ( GND_net ), // tied to 1'b0 from definition
+        .URSTB_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UDRCK_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UTDI_IN     ( GND_net ), // tied to 1'b0 from definition
+        .UIREG_IN    ( UIREG_IN_const_net_0 ), // tied to 8'h00 from definition
         // Outputs
-        .TDO      ( TDO_net_0 ),
-        .TGT_TCK  ( COREJTAGDEBUG_0_TGT_TCK ),
-        .TGT_TRST ( COREJTAGDEBUG_0_TGT_TRST ),
-        .TGT_TMS  ( COREJTAGDEBUG_0_TGT_TMS ),
-        .TGT_TDI  ( COREJTAGDEBUG_0_TGT_TDI ) 
+        .TGT_TCK     ( COREJTAGDEBUG_0_TGT_TCK ),
+        .TGT_TRST    ( COREJTAGDEBUG_0_TGT_TRST ),
+        .TGT_TMS     ( COREJTAGDEBUG_0_TGT_TMS ),
+        .TGT_TDI     ( COREJTAGDEBUG_0_TGT_TDI ),
+        .TDO         ( TDO_net_0 ),
+        .UDRCAP_OUT  (  ),
+        .UDRSH_OUT   (  ),
+        .UDRUPD_OUT  (  ),
+        .URSTB_OUT   (  ),
+        .UDRCK_OUT   (  ),
+        .UTDI_OUT    (  ),
+        .UTDODRV_OUT (  ),
+        .UTDO_OUT    (  ),
+        .UIREG_OUT   (  ) 
         );
 
-//--------CORERISCV_AXI4   -   Actel:DirectCore:CORERISCV_AXI4:1.0.100
-CORERISCV_AXI4 #( 
-        .RESET_VECTOR_ADDR ( 'h60000000 ) )
+//--------RTG4_CoreRISCV_AXI4_BaseDesign_CORERISCV_AXI4_0_CORERISCV_AXI4   -   Actel:DirectCore:CORERISCV_AXI4:2.0.102
+RTG4_CoreRISCV_AXI4_BaseDesign_CORERISCV_AXI4_0_CORERISCV_AXI4 #( 
+        .RESET_VECTOR_ADDR ( 'h80000000 ) )
 CORERISCV_AXI4_0(
         // Inputs
         .CLK                   ( RTG4FCCC_0_GL0 ),
@@ -2286,101 +2416,141 @@ CORERISCV_AXI4_0(
         .AXI_MST_MEM_AWREADY   ( CORERISCV_AXI4_0_AXI_MST_MEM_AWREADY ),
         .AXI_MST_MEM_WREADY    ( CORERISCV_AXI4_0_AXI_MST_MEM_WREADY ),
         .AXI_MST_MEM_BVALID    ( CORERISCV_AXI4_0_AXI_MST_MEM_BVALID ),
-        .AXI_MST_MEM_BRESP     ( CORERISCV_AXI4_0_AXI_MST_MEM_BRESP ),
-        .AXI_MST_MEM_BID       ( CORERISCV_AXI4_0_AXI_MST_MEM_BID ),
         .AXI_MST_MEM_BUSER     ( CORERISCV_AXI4_0_AXI_MST_MEM_BUSER ),
         .AXI_MST_MEM_ARREADY   ( CORERISCV_AXI4_0_AXI_MST_MEM_ARREADY ),
         .AXI_MST_MEM_RVALID    ( CORERISCV_AXI4_0_AXI_MST_MEM_RVALID ),
-        .AXI_MST_MEM_RRESP     ( CORERISCV_AXI4_0_AXI_MST_MEM_RRESP ),
-        .AXI_MST_MEM_RDATA     ( CORERISCV_AXI4_0_AXI_MST_MEM_RDATA ),
         .AXI_MST_MEM_RLAST     ( CORERISCV_AXI4_0_AXI_MST_MEM_RLAST ),
-        .AXI_MST_MEM_RID       ( CORERISCV_AXI4_0_AXI_MST_MEM_RID ),
         .AXI_MST_MEM_RUSER     ( CORERISCV_AXI4_0_AXI_MST_MEM_RUSER ),
         .AXI_MST_MMIO_AWREADY  ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWREADY ),
         .AXI_MST_MMIO_WREADY   ( CORERISCV_AXI4_0_AXI_MST_MMIO_WREADY ),
         .AXI_MST_MMIO_BVALID   ( CORERISCV_AXI4_0_AXI_MST_MMIO_BVALID ),
-        .AXI_MST_MMIO_BRESP    ( CORERISCV_AXI4_0_AXI_MST_MMIO_BRESP ),
-        .AXI_MST_MMIO_BID      ( CORERISCV_AXI4_0_AXI_MST_MMIO_BID ),
         .AXI_MST_MMIO_BUSER    ( CORERISCV_AXI4_0_AXI_MST_MMIO_BUSER ),
         .AXI_MST_MMIO_ARREADY  ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARREADY ),
         .AXI_MST_MMIO_RVALID   ( CORERISCV_AXI4_0_AXI_MST_MMIO_RVALID ),
-        .AXI_MST_MMIO_RRESP    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RRESP ),
-        .AXI_MST_MMIO_RDATA    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RDATA ),
         .AXI_MST_MMIO_RLAST    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RLAST ),
-        .AXI_MST_MMIO_RID      ( CORERISCV_AXI4_0_AXI_MST_MMIO_RID ),
         .AXI_MST_MMIO_RUSER    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RUSER ),
-        .IRQ                   ( IRQ_net_0 ),
         .TDI                   ( COREJTAGDEBUG_0_TGT_TDI ),
         .TCK                   ( COREJTAGDEBUG_0_TGT_TCK ),
         .TMS                   ( COREJTAGDEBUG_0_TGT_TMS ),
         .TRST                  ( COREJTAGDEBUG_0_TGT_TRST ),
+        .AXI_MST_MEM_BRESP     ( CORERISCV_AXI4_0_AXI_MST_MEM_BRESP ),
+        .AXI_MST_MEM_BID       ( CORERISCV_AXI4_0_AXI_MST_MEM_BID ),
+        .AXI_MST_MEM_RRESP     ( CORERISCV_AXI4_0_AXI_MST_MEM_RRESP ),
+        .AXI_MST_MEM_RDATA     ( CORERISCV_AXI4_0_AXI_MST_MEM_RDATA ),
+        .AXI_MST_MEM_RID       ( CORERISCV_AXI4_0_AXI_MST_MEM_RID ),
+        .AXI_MST_MMIO_BRESP    ( CORERISCV_AXI4_0_AXI_MST_MMIO_BRESP ),
+        .AXI_MST_MMIO_BID      ( CORERISCV_AXI4_0_AXI_MST_MMIO_BID ),
+        .AXI_MST_MMIO_RRESP    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RRESP ),
+        .AXI_MST_MMIO_RDATA    ( CORERISCV_AXI4_0_AXI_MST_MMIO_RDATA ),
+        .AXI_MST_MMIO_RID      ( CORERISCV_AXI4_0_AXI_MST_MMIO_RID ),
+        .IRQ                   ( IRQ_net_0 ),
         // Outputs
         .AXI_MST_MEM_AWVALID   ( CORERISCV_AXI4_0_AXI_MST_MEM_AWVALID ),
+        .AXI_MST_MEM_AWLOCK    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWLOCK ),
+        .AXI_MST_MEM_AWUSER    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWUSER ),
+        .AXI_MST_MEM_WVALID    ( CORERISCV_AXI4_0_AXI_MST_MEM_WVALID ),
+        .AXI_MST_MEM_WLAST     ( CORERISCV_AXI4_0_AXI_MST_MEM_WLAST ),
+        .AXI_MST_MEM_WUSER     ( CORERISCV_AXI4_0_AXI_MST_MEM_WUSER ),
+        .AXI_MST_MEM_BREADY    ( CORERISCV_AXI4_0_AXI_MST_MEM_BREADY ),
+        .AXI_MST_MEM_ARVALID   ( CORERISCV_AXI4_0_AXI_MST_MEM_ARVALID ),
+        .AXI_MST_MEM_ARLOCK    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARLOCK ),
+        .AXI_MST_MEM_ARUSER    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARUSER ),
+        .AXI_MST_MEM_RREADY    ( CORERISCV_AXI4_0_AXI_MST_MEM_RREADY ),
+        .AXI_MST_MMIO_AWVALID  ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWVALID ),
+        .AXI_MST_MMIO_AWLOCK   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWLOCK ),
+        .AXI_MST_MMIO_AWUSER   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWUSER ),
+        .AXI_MST_MMIO_WVALID   ( CORERISCV_AXI4_0_AXI_MST_MMIO_WVALID ),
+        .AXI_MST_MMIO_WLAST    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WLAST ),
+        .AXI_MST_MMIO_WUSER    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WUSER ),
+        .AXI_MST_MMIO_BREADY   ( CORERISCV_AXI4_0_AXI_MST_MMIO_BREADY ),
+        .AXI_MST_MMIO_ARVALID  ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARVALID ),
+        .AXI_MST_MMIO_ARLOCK   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARLOCK ),
+        .AXI_MST_MMIO_ARUSER   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARUSER ),
+        .AXI_MST_MMIO_RREADY   ( CORERISCV_AXI4_0_AXI_MST_MMIO_RREADY ),
+        .TDO                   ( CORERISCV_AXI4_0_TDO ),
+        .DRV_TDO               (  ),
         .AXI_MST_MEM_AWADDR    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWADDR ),
         .AXI_MST_MEM_AWLEN     ( CORERISCV_AXI4_0_AXI_MST_MEM_AWLEN ),
         .AXI_MST_MEM_AWSIZE    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWSIZE ),
         .AXI_MST_MEM_AWBURST   ( CORERISCV_AXI4_0_AXI_MST_MEM_AWBURST ),
-        .AXI_MST_MEM_AWLOCK    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWLOCK ),
         .AXI_MST_MEM_AWCACHE   ( CORERISCV_AXI4_0_AXI_MST_MEM_AWCACHE ),
         .AXI_MST_MEM_AWPROT    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWPROT ),
         .AXI_MST_MEM_AWQOS     ( CORERISCV_AXI4_0_AXI_MST_MEM_AWQOS ),
         .AXI_MST_MEM_AWREGION  ( CORERISCV_AXI4_0_AXI_MST_MEM_AWREGION ),
         .AXI_MST_MEM_AWID      ( CORERISCV_AXI4_0_AXI_MST_MEM_AWID ),
-        .AXI_MST_MEM_AWUSER    ( CORERISCV_AXI4_0_AXI_MST_MEM_AWUSER ),
-        .AXI_MST_MEM_WVALID    ( CORERISCV_AXI4_0_AXI_MST_MEM_WVALID ),
         .AXI_MST_MEM_WDATA     ( CORERISCV_AXI4_0_AXI_MST_MEM_WDATA ),
-        .AXI_MST_MEM_WLAST     ( CORERISCV_AXI4_0_AXI_MST_MEM_WLAST ),
         .AXI_MST_MEM_WSTRB     ( CORERISCV_AXI4_0_AXI_MST_MEM_WSTRB ),
-        .AXI_MST_MEM_WUSER     ( CORERISCV_AXI4_0_AXI_MST_MEM_WUSER ),
-        .AXI_MST_MEM_BREADY    ( CORERISCV_AXI4_0_AXI_MST_MEM_BREADY ),
-        .AXI_MST_MEM_ARVALID   ( CORERISCV_AXI4_0_AXI_MST_MEM_ARVALID ),
         .AXI_MST_MEM_ARADDR    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARADDR ),
         .AXI_MST_MEM_ARLEN     ( CORERISCV_AXI4_0_AXI_MST_MEM_ARLEN ),
         .AXI_MST_MEM_ARSIZE    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARSIZE ),
         .AXI_MST_MEM_ARBURST   ( CORERISCV_AXI4_0_AXI_MST_MEM_ARBURST ),
-        .AXI_MST_MEM_ARLOCK    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARLOCK ),
         .AXI_MST_MEM_ARCACHE   ( CORERISCV_AXI4_0_AXI_MST_MEM_ARCACHE ),
         .AXI_MST_MEM_ARPROT    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARPROT ),
         .AXI_MST_MEM_ARQOS     ( CORERISCV_AXI4_0_AXI_MST_MEM_ARQOS ),
         .AXI_MST_MEM_ARREGION  ( CORERISCV_AXI4_0_AXI_MST_MEM_ARREGION ),
         .AXI_MST_MEM_ARID      ( CORERISCV_AXI4_0_AXI_MST_MEM_ARID ),
-        .AXI_MST_MEM_ARUSER    ( CORERISCV_AXI4_0_AXI_MST_MEM_ARUSER ),
-        .AXI_MST_MEM_RREADY    ( CORERISCV_AXI4_0_AXI_MST_MEM_RREADY ),
-        .AXI_MST_MMIO_AWVALID  ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWVALID ),
         .AXI_MST_MMIO_AWADDR   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWADDR ),
         .AXI_MST_MMIO_AWLEN    ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWLEN ),
         .AXI_MST_MMIO_AWSIZE   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWSIZE ),
         .AXI_MST_MMIO_AWBURST  ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWBURST ),
-        .AXI_MST_MMIO_AWLOCK   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWLOCK ),
         .AXI_MST_MMIO_AWCACHE  ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWCACHE ),
         .AXI_MST_MMIO_AWPROT   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWPROT ),
         .AXI_MST_MMIO_AWQOS    ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWQOS ),
         .AXI_MST_MMIO_AWREGION ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWREGION ),
         .AXI_MST_MMIO_AWID     ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWID ),
-        .AXI_MST_MMIO_AWUSER   ( CORERISCV_AXI4_0_AXI_MST_MMIO_AWUSER ),
-        .AXI_MST_MMIO_WVALID   ( CORERISCV_AXI4_0_AXI_MST_MMIO_WVALID ),
         .AXI_MST_MMIO_WDATA    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WDATA ),
-        .AXI_MST_MMIO_WLAST    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WLAST ),
         .AXI_MST_MMIO_WSTRB    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WSTRB ),
-        .AXI_MST_MMIO_WUSER    ( CORERISCV_AXI4_0_AXI_MST_MMIO_WUSER ),
-        .AXI_MST_MMIO_BREADY   ( CORERISCV_AXI4_0_AXI_MST_MMIO_BREADY ),
-        .AXI_MST_MMIO_ARVALID  ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARVALID ),
         .AXI_MST_MMIO_ARADDR   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARADDR ),
         .AXI_MST_MMIO_ARLEN    ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARLEN ),
         .AXI_MST_MMIO_ARSIZE   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARSIZE ),
         .AXI_MST_MMIO_ARBURST  ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARBURST ),
-        .AXI_MST_MMIO_ARLOCK   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARLOCK ),
         .AXI_MST_MMIO_ARCACHE  ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARCACHE ),
         .AXI_MST_MMIO_ARPROT   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARPROT ),
         .AXI_MST_MMIO_ARQOS    ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARQOS ),
         .AXI_MST_MMIO_ARREGION ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARREGION ),
         .AXI_MST_MMIO_ARID     ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARID ),
-        .AXI_MST_MMIO_ARUSER   ( CORERISCV_AXI4_0_AXI_MST_MMIO_ARUSER ),
-        .AXI_MST_MMIO_RREADY   ( CORERISCV_AXI4_0_AXI_MST_MMIO_RREADY ),
-        .TDO                   ( CORERISCV_AXI4_0_TDO ),
-        .DRV_TDO               (  ),
         .AXI_MST_MEM_WID       ( CORERISCV_AXI4_0_AXI_MST_MEM_WID ),
         .AXI_MST_MMIO_WID      ( CORERISCV_AXI4_0_AXI_MST_MMIO_WID ) 
+        );
+
+//--------CORESPI   -   Actel:DirectCore:CORESPI:5.1.104
+CORESPI #( 
+        .APB_DWIDTH        ( 32 ),
+        .CFG_CLK           ( 7 ),
+        .CFG_FIFO_DEPTH    ( 32 ),
+        .CFG_FRAME_SIZE    ( 8 ),
+        .CFG_MODE          ( 0 ),
+        .CFG_MOT_MODE      ( 0 ),
+        .CFG_MOT_SSEL      ( 1 ),
+        .CFG_NSC_OPERATION ( 0 ),
+        .CFG_TI_JMB_FRAMES ( 0 ),
+        .CFG_TI_NSC_CUSTOM ( 0 ),
+        .CFG_TI_NSC_FRC    ( 0 ),
+        .FAMILY            ( 25 ) )
+CORESPI_0(
+        // Inputs
+        .PCLK       ( RTG4FCCC_0_GL0 ),
+        .PRESETN    ( COREBOOTSTRAP_0_HRESETN ),
+        .PSEL       ( CoreAPB3_0_APBmslave6_0_PSELx ),
+        .PENABLE    ( CoreAPB3_0_APBmslave1_PENABLE ),
+        .PWRITE     ( CoreAPB3_0_APBmslave1_PWRITE ),
+        .SPISSI     ( GND_net ),
+        .SPISDI     ( COREBOOTSTRAP_0_HOST_SDI ),
+        .SPICLKI    ( GND_net ),
+        .PADDR      ( CoreAPB3_0_APBmslave1_PADDR_5 ),
+        .PWDATA     ( CoreAPB3_0_APBmslave1_PWDATA ),
+        // Outputs
+        .PREADY     ( CoreAPB3_0_APBmslave6_0_PREADY ),
+        .PSLVERR    ( CoreAPB3_0_APBmslave6_0_PSLVERR ),
+        .SPIINT     (  ),
+        .SPIRXAVAIL (  ),
+        .SPITXRFM   (  ),
+        .SPISCLKO   ( CORESPI_0_SPISCLKO ),
+        .SPIOEN     (  ),
+        .SPISDO     ( CORESPI_0_SPISDO ),
+        .SPIMODE    (  ),
+        .PRDATA     ( CoreAPB3_0_APBmslave6_0_PRDATA ),
+        .SPISS      ( SPISS_net_0 ) 
         );
 
 //--------CoreTimer   -   Actel:DirectCore:CoreTimer:2.0.103
@@ -2391,7 +2561,7 @@ CoreTimer #(
 CoreTimer_0(
         // Inputs
         .PCLK    ( RTG4FCCC_0_GL0 ),
-        .PRESETn ( AND2_0_Y ),
+        .PRESETn ( COREBOOTSTRAP_0_HRESETN ),
         .PSEL    ( CoreAPB3_0_APBmslave3_PSELx ),
         .PWRITE  ( CoreAPB3_0_APBmslave1_PWRITE ),
         .PENABLE ( CoreAPB3_0_APBmslave1_PENABLE ),
@@ -2410,7 +2580,7 @@ CoreTimer #(
 CoreTimer_1(
         // Inputs
         .PCLK    ( RTG4FCCC_0_GL0 ),
-        .PRESETn ( AND2_0_Y ),
+        .PRESETn ( COREBOOTSTRAP_0_HRESETN ),
         .PSEL    ( CoreAPB3_0_APBmslave4_PSELx ),
         .PWRITE  ( CoreAPB3_0_APBmslave1_PWRITE ),
         .PENABLE ( CoreAPB3_0_APBmslave1_PENABLE ),
@@ -2436,7 +2606,7 @@ RTG4_CoreRISCV_AXI4_BaseDesign_CoreUARTapb_0_CoreUARTapb #(
 CoreUARTapb_0(
         // Inputs
         .PCLK        ( RTG4FCCC_0_GL0 ),
-        .PRESETN     ( AND2_0_Y ),
+        .PRESETN     ( COREBOOTSTRAP_0_HRESETN ),
         .PSEL        ( CoreAPB3_0_APBmslave1_PSELx ),
         .PENABLE     ( CoreAPB3_0_APBmslave1_PENABLE ),
         .PWRITE      ( CoreAPB3_0_APBmslave1_PWRITE ),
@@ -2461,8 +2631,8 @@ DDR_MEMORY_CTRL DDR_MEMORY_CTRL_0(
         .FDDR_DQS_TMATCH_0_IN  ( FDDR_DQS_TMATCH_0_IN ),
         .FDDR_DQS_TMATCH_1_IN  ( FDDR_DQS_TMATCH_1_IN ),
         .INIT_CLK_50MHZ        ( RTG4FCCC_0_GL1 ),
-        .INIT_RESET_N          ( AND2_0_Y ),
-        .CORE_RESET_N          ( AND2_0_Y ),
+        .INIT_RESET_N          ( reset_synchronizer_0_reset_sync ),
+        .CORE_RESET_N          ( reset_synchronizer_0_reset_sync ),
         .CLK_BASE              ( RTG4FCCC_0_GL0 ),
         .AHB0_S_HSEL           ( CoreAHBLite_0_AHBmslave16_HSELx ),
         .AHB0_S_HMASTLOCK      ( CoreAHBLite_0_AHBmslave16_HMASTLOCK ),
@@ -2504,7 +2674,16 @@ RCOSC_50MHZ RCOSC_50MHZ_0(
         .CLKOUT ( RCOSC_50MHZ_0_CLKOUT ) 
         );
 
-//--------RTG4_CoreRISCV_AXI4_BaseDesign_RTG4FCCC_0_RTG4FCCC   -   Actel:SgCore:RTG4FCCC:1.1.216
+//--------reset_synchronizer
+reset_synchronizer reset_synchronizer_0(
+        // Inputs
+        .clock      ( RTG4FCCC_0_GL0 ),
+        .reset      ( AND2_0_Y ),
+        // Outputs
+        .reset_sync ( reset_synchronizer_0_reset_sync ) 
+        );
+
+//--------RTG4_CoreRISCV_AXI4_BaseDesign_RTG4FCCC_0_RTG4FCCC   -   Actel:SgCore:RTG4FCCC:1.1.217
 RTG4_CoreRISCV_AXI4_BaseDesign_RTG4FCCC_0_RTG4FCCC RTG4FCCC_0(
         // Inputs
         .RCOSC_50MHZ ( RCOSC_50MHZ_0_CLKOUT ),
