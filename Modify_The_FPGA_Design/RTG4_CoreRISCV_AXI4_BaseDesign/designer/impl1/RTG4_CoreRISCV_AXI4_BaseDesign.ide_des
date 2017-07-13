@@ -1,12 +1,11 @@
 KEY IDE_DES_TOOL "Ide"
-KEY IDE_DES_ADB_PATH "C:\Users\ciaran.lappin\Desktop\RISCV_UPDATE\RTG4-Development-Kit-master\Libero\11_8\RTG4_CoreRISCV_AXI4_BaseDesign\designer\impl1\RTG4_CoreRISCV_AXI4_BaseDesign.adb"
+KEY IDE_DES_ADB_PATH "C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\designer\impl1\RTG4_CoreRISCV_AXI4_BaseDesign.adb"
 LIST SOURCE_FILES
-VALUE "C:\Users\ciaran.lappin\Desktop\RISCV_UPDATE\RTG4-Development-Kit-master\Libero\11_8\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\io\user.pdc;pdc"
-VALUE "C:\Users\ciaran.lappin\Desktop\RISCV_UPDATE\RTG4-Development-Kit-master\Libero\11_8\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\RTG4_CoreRISCV_AXI4_BaseDesign_derived_constraints.sdc;sdc"
-VALUE "C:\Users\ciaran.lappin\Desktop\RISCV_UPDATE\RTG4-Development-Kit-master\Libero\11_8\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\user.sdc;sdc"
+VALUE "C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\io\user.pdc;pdc"
+VALUE "C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\RTG4_CoreRISCV_AXI4_BaseDesign_derived_constraints.sdc;sdc"
 ENDLIST
 LIST OPTIONAL_FILES
-VALUE "C:\Users\ciaran.lappin\Desktop\RISCV_UPDATE\RTG4-Development-Kit-master\Libero\11_8\RTG4_CoreRISCV_AXI4_BaseDesign\synthesis\RTG4_CoreRISCV_AXI4_BaseDesign_sdc.sdc;Skipped"
+VALUE "C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\synthesis\RTG4_CoreRISCV_AXI4_BaseDesign_sdc.sdc;Skipped"
 ENDLIST
 LIST VCD_FILES
 ENDLIST

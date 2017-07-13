@@ -1,0 +1,14 @@
+Software Version: 11.8.0.26
+Opened 'C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\designer\RTG4_CoreRISCV_AXI4_BaseDesign\RTG4_CoreRISCV_AXI4_BaseDesign_fp\RTG4_CoreRISCV_AXI4_BaseDesign.pro'
+The 'open_project' command succeeded.
+PDB file 'C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\designer\RTG4_CoreRISCV_AXI4_BaseDesign\683c34b6-353e-4f7b-b53e-5f7b353e5f7b.pdb' has been loaded successfully.
+DESIGN : RTG4_CoreRISCV_AXI4_BaseDesign;  CHECKSUM : 1A3E;  PDB_VERSION : 1.9
+The 'load_programming_data' command succeeded.
+Exported single device STAPL file 'C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\export\RTG4_CoreRISCV_AXI4_BaseDesign_RT4G150.stp' successfully.
+Finished: Wed Jul 12 20:15:33 2017 (Elapsed time 00:00:19)
+
+The 'export_single_stapl' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

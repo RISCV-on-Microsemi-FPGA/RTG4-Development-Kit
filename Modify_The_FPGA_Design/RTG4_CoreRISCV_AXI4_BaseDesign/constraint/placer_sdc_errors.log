@@ -1,2 +1,1 @@
-Warning: SDC0061: C:\Users\ciaran.lappin\Desktop\RTG4\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\user.sdc:5: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 
-Warning: SDC0061: C:\Users\ciaran.lappin\Desktop\RTG4\RTG4_CoreRISCV_AXI4_BaseDesign\constraint\user.sdc:8: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 
+No errors or warnings found.

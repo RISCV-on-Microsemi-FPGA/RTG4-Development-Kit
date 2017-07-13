@@ -1,5 +1,5 @@
 #===========================================================
-# Created by Microsemi SmartDesign Tue Jun 13 10:17:55 2017
+# Created by Microsemi SmartDesign Wed Jul 12 18:43:57 2017
 #
 # Syntax: 
 # ------- 
@@ -41,11 +41,12 @@
 # memmap CoreTimer_0 0x70003000;
 # memmap CoreTimer_1 0x70004000;
 # memmap CoreGPIO_OUT 0x70005000;
+# memmap CORESPI_0 0x70006000;
 #-----------------------------------------------------------
 # Include resource scriptlets
 #-----------------------------------------------------------
 
-# # # # # 
+# # # # # # 
 
 #-----------------------------------------------------------
 # Secondary subsystems.  To test this subsystem, uncomment the following code.

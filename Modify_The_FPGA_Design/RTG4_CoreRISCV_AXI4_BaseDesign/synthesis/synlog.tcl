@@ -1,0 +1,1 @@
+run_tcl -fg RTG4_CoreRISCV_AXI4_BaseDesign_syn.tcl
