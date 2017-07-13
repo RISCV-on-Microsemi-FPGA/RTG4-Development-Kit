@@ -1,6 +1,6 @@
 <project name="RTG4_CoreRISCV_AXI4_BaseDesign" version="1.1">
     <ProjectDirectory>
-        C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\RTG4_CoreRISCV_AXI4_BaseDesign
+        C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign
     </ProjectDirectory>
     <View>
         ChainView
@@ -9,17 +9,17 @@
         
     </LiberoTargetDevice>
     <LogFile>
-        C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\RTG4_CoreRISCV_AXI4_BaseDesign\RTG4_CoreRISCV_AXI4_BaseDesign.log
+        C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RTG4_CoreRISCV_AXI4_BaseDesign.log
     </LogFile>
     <SerializationOption>
         Skip
     </SerializationOption>
     <programmer status="enable" type="FlashPro5" revision="UndefRev" connection="usb2.0">
         <name>
-            S201Z6SSZF
+            S200XTY0G2
         </name>
         <id>
-            S201Z6SSZF
+            S200XTY0G2
         </id>
     </programmer>
     <configuration>
@@ -81,7 +81,7 @@
             </Custom>
             <Algo type="STAPL">
                 <filename>
-                    C:\Users\ciaran.lappin\Desktop\Github\RTG4_RT4G150_Devlopment_Kit\Programming_The_Target_Device\RTG4_CoreRISCV_AXI4_BaseDesign\RT4G150_1.stp
+                    C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\FlashProExpress\RTG4_CoreRISCV_AXI4_BaseDesign\RT4G150_1.stp
                 </filename>
                 <local>
                     projectData\RT4G150_1.stp
