@@ -8,8 +8,8 @@
     These packages are availalble from the [riscv-junk-drawer](https://github.com/RISCV-on-Microsemi-FPGA/riscv-junk-drawer/tree/master/IP-packages).
 
     USER_UserCore_MIRSLV2MIRMSTRBRIDGE_AHB_1.0.3.cpz is set up in this project as follows: 
-    Master Drives upper 4 address bits  0
-    Upper 4 address bits                8
+    Master Drives upper 4 address bits  0.
+    Upper 4 address bits                8.
     This allows the ControlRISCV to transfer data to DDR WEST through slot 6 on CoreAHBLite_1.
 
 ### Memory Map
