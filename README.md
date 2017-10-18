@@ -5,10 +5,10 @@ This project contains Libero projects containing FPGA designs including a RISC-V
 
 ### Design Feature
 The FPGA Designs include the following features
-* CoreRISCV_AXI4 RV32IM RISC-V processor 
-* RISC-V debug block allowing on-target debug using openocd/GDB
-* DDR3 memory for code/data
-* User peripherals such as GPIO, Timers, UART
+* CoreRISCV_AXI4 RV32IM RISC-V processor. 
+* RISC-V debug block allowing on-target debug using openocd/GDB.
+* DDR3 memory for code/data.
+* User peripherals such as GPIO, Timers, UART.
 
 The memory map for each design is available within each Libero project.
 
