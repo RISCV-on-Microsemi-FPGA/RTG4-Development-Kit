@@ -1,0 +1,14 @@
+Software Version: 11.8.1.12
+Opened 'C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\designer\PROC_SUBSYSTEM\PROC_SUBSYSTEM_fp\PROC_SUBSYSTEM.pro'
+The 'open_project' command succeeded.
+PDB file 'C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\designer\PROC_SUBSYSTEM\c2f2c01c-ad74-4e2b-ad74-be2bad74be2b.pdb' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : 14FF;  PDB_VERSION : 1.9
+The 'load_programming_data' command succeeded.
+Exported single device STAPL file 'C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\designer\PROC_SUBSYSTEM\export\PROC_SUBSYSTEM_RV32IMA_BaseDesign_RT4G150.stp' successfully.
+Finished: Mon Nov 20 14:15:33 2017 (Elapsed time 00:00:18)
+
+The 'export_single_stapl' command succeeded.
+The 'set_programming_file' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.

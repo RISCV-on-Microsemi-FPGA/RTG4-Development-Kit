@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>RTG4_RV32_BaseDesign</design>
+	<target_edif>D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\synthesis\RTG4_RV32_BaseDesign.edn</target_edif>
+</SynplifyOutput>
