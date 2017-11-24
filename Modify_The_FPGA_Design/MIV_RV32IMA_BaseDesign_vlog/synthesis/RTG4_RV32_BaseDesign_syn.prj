@@ -1,0 +1,239 @@
+#add_file options
+add_file -include "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/support.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/acmtable.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/debugblk.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructions.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructnvm_bb.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/iram512x9_rtl.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/instructram.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram128x8_rtl.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram256x16_rtl.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ram256x8_rtl.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/ramblocks.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/coreabc.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/FDDRC_0/DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC_syn.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/FDDRC_0/DDR_MEMORY_CTRL_FDDRC_0_RTG4FDDRC.v"
+add_file -lib COREAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_muxptob3.v"
+add_file -lib COREAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3_iaddr_reg.v"
+add_file -lib COREAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAPB3/4.1.100/rtl/vlog/core/coreapb3.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/DDR_MEMORY_CTRL.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreGPIO_IN/rtl/vlog/core/coregpio.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreGPIO_OUT/rtl/vlog/core/coregpio.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Clock_gen.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Rx_async.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/Tx_async.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/fifo_256x8_rtg4.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/CoreUART.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreUARTapb_0/rtl/vlog/core/CoreUARTapb.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/SgCore/RTG4FCCC/1.1.217/ccc_comps.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/RTG4FCCC_0/RTG4_RV32_BaseDesign_RTG4FCCC_0_RTG4FCCC.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/hdl/reset_synchronizer.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_addrdec.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_defaultslavesm.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_masterstage.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_slavearbiter.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_slavestage.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreAHBLite/5.3.101/rtl/vlog/core/coreahblite_matrix4x16.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreAHBLite_0/rtl/vlog/core/coreahblite.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/CoreAHBLite_1/rtl/vlog/core/coreahblite.v"
+add_file -lib COREAHBTOAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_ahbtoapbsm.v"
+add_file -lib COREAHBTOAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_apbaddrdata.v"
+add_file -lib COREAHBTOAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3_penablescheduler.v"
+add_file -lib COREAHBTOAPB3_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREAHBTOAPB3/3.1.100/rtl/vlog/core/coreahbtoapb3.v"
+add_file -lib COREJTAGDEBUG_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREJTAGDEBUG/0.0.1/rtl/vlog/core/corejtagdebug_uj_jtag.v"
+add_file -lib COREJTAGDEBUG_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/COREJTAGDEBUG/0.0.1/rtl/vlog/core/corejtagdebug.v"
+add_file -lib CORETIMER_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/Actel/DirectCore/CoreTimer/2.0.103/rtl/vlog/core/coretimer.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_coreplex_local_interrupter_clint.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_capture_chain.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_capture_update_chain.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_capture_update_chain_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_jtag_bypass_chain.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_capture_update_chain_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_reset_reg.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_reset_reg_vec_90.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_jtag_state_machine.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_negative_edge_latch.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_negative_edge_latch_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_jtag_tap_controller.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_debug_transport_module_jtag.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xbar.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xbar_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xbar_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xing.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_reset_reg_vec_89.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_reset_catch_and_sync.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xbar_int_xbar.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_int_xing_xing.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_amoalu.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_arbiter.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_arbiter_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_d_cache_data_array.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_pmp_checker.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tlb.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_d_cache_dcache.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_i_cache_icache.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_shift_queue.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tlb_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_frontend_frontend.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_hella_cache_arbiter.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_rr_arbiter.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_ptw.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_alu.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_breakpoint_unit.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_csr_file.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_rvc_expander.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_i_buf.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_mul_div.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_rocket.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_xbar_tile_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_rocket_tile_rocket.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_sync_rocket_tile_tile.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tlfifo_fixer_system_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_level_gateway.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_13.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tlplic_plic.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_atomic_automata.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_4.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_5.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_6.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_7.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_8.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_10.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_9.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_3.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_4.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_23.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_24.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_25.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_26.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_27.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_error.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_14.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_15.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_16.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_17.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_18.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_buffer_system_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_cache_cork.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_reset_reg_vec_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync_3.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync_4.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync_5.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_sink_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_sink_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_valid_sync_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_source_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_async_crossing_sink.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_debug_module_inner_dm_inner.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_debug_module_inner_async_dm_inner.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_source_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_dmi_to_tl_dmi2tl.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_sink.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_queue_source.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_async_crossing_source_dm_inner.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_async_reset_reg_vec.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_debug_module_outer_dm_outer.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_xbar_dmi_xbar.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_debug_module_outer_async_dm_outer.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_debug_module_debug.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_21.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_22.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_error_error.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_filter.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_repeater.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_repeater_2.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_fragmenter_1.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_splitter_system_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_20.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_to_ahb.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_queue_19.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_to_ahb_converter.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_width_widget.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_width_widget_3.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_xbar_memory_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_xbar_periphery_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_tl_xbar_system_bus.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb_core_risc_vahb_top.v"
+add_file -lib CORERISCVRV32IMA_LIB -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/MIV_RV32IMA_L1_AHB_0/rtl/vlog/core/miv_rv32ima_l1_ahb.v"
+add_file -verilog "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/RTG4_RV32_BaseDesign/RTG4_RV32_BaseDesign.v"
+add_file -fpga_constraint "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/designer/RTG4_RV32_BaseDesign/synthesis.fdc"
+
+
+
+#project files
+add_file -include "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlog/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/support.v"
+add_file -include "C:/Users/ciaran.lappin/Desktop/MiV_Github/RTG4/MIV_RV32IMA_BaseDesign_vlogResetn/component/work/DDR_MEMORY_CTRL/COREABC_0/rtl/vlog/core/support.v"
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+
+#device options
+set_option -technology RTG4
+set_option -part RT4G150
+set_option -package CG1657
+set_option -speed_grade -1
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
+set_option -frequency 100.000
+set_option -srs_instrumentation 1
+
+set_option -top_module RTG4_RV32_BaseDesign
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi G4
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -clock_globalthreshold 2
+set_option -async_globalthreshold 12
+set_option -globalthreshold 5000
+set_option -low_power_ram_decomp 0
+set_option -seqshift_to_uram 0
+set_option -opcond COMTC
+set_option -retiming 0
+set_option -report_path 4000
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+# Compiler Options
+set_option -vhdl2008 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./RTG4_RV32_BaseDesign.edn"
+impl -active "synthesis"

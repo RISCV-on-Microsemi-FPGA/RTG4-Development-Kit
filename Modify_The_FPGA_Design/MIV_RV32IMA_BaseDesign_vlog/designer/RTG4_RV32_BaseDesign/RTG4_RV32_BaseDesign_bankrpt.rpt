@@ -1,0 +1,61 @@
+********************************************************************
+I/O Bank Report - Date: Wed Nov 15 23:13:59 2017
+Product: Designer
+Release: Libero SoC v11.8 SP1
+Version: 11.8.1.12
+Design Name: RTG4_RV32_BaseDesign
+Family: RTG4
+Die: RT4G150
+Package: 1657 CG
+********************************************************************
+
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 11            | 0            | 0
+    Output I/O                            | 37            | 0            | 0
+    Bidirectional I/O                     | 36            | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 1             | 0            | 0
+    Differential Bidirectional I/O Pairs  | 4             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os              
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vddi  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVCMOS25                        | 2.50v | N/A   | 9     | 9      | 0            
+    SSTL15I (Input/Bidirectional)   | 1.50v | 0.75v | 2     | 0      | 44           
+    SSTL15I (Output)                | 1.50v | N/A   | 0     | 30     | 0            
+
+I/O Bank Resource Usage:
+
+          |   Voltages    | Single I/Os  | Diff I/O Pairs |        Vref I/Os        |  Type   
+          |-------|-------|------|-------|-------|--------|------|-------|----------|---------
+          | Vddi  | Vref  | Used | Total | Used  | Total  | Used | Total | Vref Pins|         
+    ------|-------|-------|------|-------|-------|--------|------|-------|----------|---------
+    Bank0 | N/A   | N/A   | 0    | 90    | 0     | 45     | N/A  | N/A   | N/A      | DDRIO   
+    Bank1 | 2.50v | N/A   | 16   | 78    | 0     | 39     | N/A  | N/A   | N/A      | MSIOD   
+    Bank2 | N/A   | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | MSIOD   
+    Bank3 | N/A   | N/A   | 0    | 0     | 0     | 0      | N/A  | N/A   | N/A      | JTAG    
+    Bank4 | 2.50v | N/A   | 2    | 72    | 0     | 36     | N/A  | N/A   | N/A      | MSIO    
+    Bank5 | N/A   | N/A   | 0    | 96    | 0     | 48     | N/A  | N/A   | N/A      | MSIO    
+    Bank6 | N/A   | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | MSIO    
+    Bank7 | N/A   | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | MSIOD   
+    Bank8 | N/A   | N/A   | 0    | 78    | 0     | 39     | N/A  | N/A   | N/A      | MSIOD   
+    Bank9 | 1.50v | 0.75v | 0    | 90    | 5     | 45     | 66   | 90    | 0        | DDRIO   
+
+
+I/O Voltage Usage:
+
+       Voltages    |     I/Os     
+    -------|-------|------|-------
+     Vddi  | Vref  | Used | Total 
+    -------|-------|------|-------
+     1.50v | N/A   | 76   | 90    
+     2.50v | N/A   | 18   | 150   
+     1.50v | 0.75v | 38   | 90    
+

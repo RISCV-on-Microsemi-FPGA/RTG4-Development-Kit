@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Configuration report for PROC_SUBSYSTEM_RTG4FCCC_0_</title>
+<separator/>
+<table>
+<header>
+</header>
+<row>
+ <cell>Date:</cell>
+ <cell>Mon Nov 20 10:57:45 2017</cell>
+</row>
+<separator/>
+<row>
+ <cell>Design:</cell>
+ <cell>PROC_SUBSYSTEM</cell>
+</row>
+<row>
+ <cell>Instance:</cell>
+ <cell>RTG4FCCC_0</cell>
+</row>
+<row>
+ <cell>Family:</cell>
+ <cell>RTG4</cell>
+</row>
+<row>
+ <cell>Die:</cell>
+ <cell>RT4G150</cell>
+</row>
+<row>
+ <cell>Package:</cell>
+ <cell>1657 CG</cell>
+</row>
+</table>
+<text></text>
+<section>
+<name>CCC Generator Messages</name>
+<table>
+<header>
+ <cell>Severity</cell>
+ <cell>Message</cell>
+</header>
+<row>
+ <cell>Warning</cell>
+ <cell>Feedback configuration other than PLL Internal configures the PLL in non-triplicated mode. Single PLL mode is mitigated for radiation but does not provide the same level of radiation tolerance as the three working together.</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Outputs Configuration Summary</name>
+<table>
+<header>
+ <cell>Name</cell>
+ <cell>Type</cell>
+ <cell>Source</cell>
+ <cell>Source Frequency</cell>
+ <cell>Required Output Frequency</cell>
+ <cell>Actual Output Frequency</cell>
+ <cell>Divider</cell>
+</header>
+<row>
+ <cell>GL0</cell>
+ <cell>primary clock</cell>
+ <cell>PLL (0)</cell>
+ <cell>50 MHz</cell>
+ <cell>50 MHz</cell>
+ <cell>50 MHz</cell>
+ <cell>--</cell>
+</row>
+<separator/>
+<row>
+ <cell>GL1</cell>
+ <cell>primary clock</cell>
+ <cell>PLL (0)</cell>
+ <cell>50 MHz</cell>
+ <cell>50 MHz</cell>
+ <cell>50 MHz</cell>
+ <cell>--</cell>
+</row>
+<separator/>
+</table>
+</section>
+<section>
+<name>PLL Configuration Summary</name>
+<table>
+<header>
+</header>
+<row>
+ <cell>Reference clock frequency</cell>
+ <cell>50 MHz</cell>
+</row>
+<row>
+ <cell>Reference clock source</cell>
+ <cell>On-chip 25/50 MHz RC Oscillator</cell>
+</row>
+<row>
+ <cell>Output frequency</cell>
+ <cell>50 MHz</cell>
+</row>
+<row>
+ <cell>VCO frequency</cell>
+ <cell>800 MHz</cell>
+</row>
+<separator/>
+<row>
+ <cell>PLL reference clock divider</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>CCC reference clock divider</cell>
+ <cell>2</cell>
+</row>
+<separator/>
+<row>
+ <cell>Feedback source</cell>
+ <cell>CCC Internal</cell>
+</row>
+<row>
+ <cell>PLL feedback divider</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>CCC feedback divider</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>External feedback divider</cell>
+ <cell>--</cell>
+</row>
+<separator/>
+<row>
+ <cell>PLL VCO divider</cell>
+ <cell>16</cell>
+</row>
+<separator/>
+<row>
+ <cell>Lock counter</cell>
+ <cell>1024 cycles</cell>
+</row>
+<row>
+ <cell>Lock window</cell>
+ <cell>6000 ppm</cell>
+</row>
+<separator/>
+</table>
+</section>
+<section>
+<name>CCC Registers Configured Value</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Value</cell>
+ <cell>Description</cell>
+</header>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x00</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_RFMUX_CR</cell>
+ <cell>0x01</cell>
+ <cell>0x1b</cell>
+ <cell>RFMUX configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_RFDIV_CR</cell>
+ <cell>0x02</cell>
+ <cell>0x01</cell>
+ <cell>RFDIV configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_FBMUX_CR</cell>
+ <cell>0x03</cell>
+ <cell>0x07</cell>
+ <cell>FBMUX configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_FBDIV_CR</cell>
+ <cell>0x04</cell>
+ <cell>0x01</cell>
+ <cell>FBDIV configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x05</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x06</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_CGLMUX0_CR</cell>
+ <cell>0x07</cell>
+ <cell>0x07</cell>
+ <cell>CGLMUX0 configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x08</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_CGLMUX1_CR</cell>
+ <cell>0x09</cell>
+ <cell>0x07</cell>
+ <cell>CGLMUX1 configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x0a</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_CGLMUX2_CR</cell>
+ <cell>0x0b</cell>
+ <cell>0x18</cell>
+ <cell>CGLMUX2 configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x0c</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_CGLMUX3_CR</cell>
+ <cell>0x0d</cell>
+ <cell>0x18</cell>
+ <cell>CGLMUX3 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX0_CR</cell>
+ <cell>0x0e</cell>
+ <cell>0x4c</cell>
+ <cell>GPMUX0 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX1_CR</cell>
+ <cell>0x0f</cell>
+ <cell>0x4c</cell>
+ <cell>GPMUX1 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX2_CR</cell>
+ <cell>0x10</cell>
+ <cell>0x4c</cell>
+ <cell>GPMUX2 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPMUX3_CR</cell>
+ <cell>0x11</cell>
+ <cell>0x4c</cell>
+ <cell>GPMUX3 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_CR</cell>
+ <cell>0x12</cell>
+ <cell>0x01</cell>
+ <cell>GPD0 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_CR</cell>
+ <cell>0x13</cell>
+ <cell>0x01</cell>
+ <cell>GPD1 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_CR</cell>
+ <cell>0x14</cell>
+ <cell>0x01</cell>
+ <cell>GPD2 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_CR</cell>
+ <cell>0x15</cell>
+ <cell>0x01</cell>
+ <cell>GPD3 configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR0</cell>
+ <cell>0x16</cell>
+ <cell>0x06</cell>
+ <cell>PLL lock window configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR1</cell>
+ <cell>0x17</cell>
+ <cell>0x05</cell>
+ <cell>PLL lock counter configuration and lock status register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR2</cell>
+ <cell>0x18</cell>
+ <cell>0x00</cell>
+ <cell>Write 1 pulse for reload of flash bits</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x19</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x1a</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR3</cell>
+ <cell>0x1b</cell>
+ <cell>0x00</cell>
+ <cell>PLL internal or external feedback path selection register</cell>
+</row>
+<row>
+ <cell>FCCC_GPDS_SYNC_CR</cell>
+ <cell>0x1c</cell>
+ <cell>0x00</cell>
+ <cell>GPDs outputs realignment request configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR4</cell>
+ <cell>0x1d</cell>
+ <cell>0x04</cell>
+ <cell>PLL&apos;s internal output divider configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x1e</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR5</cell>
+ <cell>0x1f</cell>
+ <cell>0x00</cell>
+ <cell>PLL&apos;s internal reference clock divider configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR6</cell>
+ <cell>0x20</cell>
+ <cell>0x00</cell>
+ <cell>PLL&apos;s internal feedback clock divider configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PLL_CR7</cell>
+ <cell>0x21</cell>
+ <cell>0x02</cell>
+ <cell>PLL loop filter range configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD0_SYNC_CR</cell>
+ <cell>0x22</cell>
+ <cell>0x02</cell>
+ <cell>GPD0 operating mode configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD1_SYNC_CR</cell>
+ <cell>0x23</cell>
+ <cell>0x02</cell>
+ <cell>GPD1 operating mode configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD2_SYNC_CR</cell>
+ <cell>0x24</cell>
+ <cell>0x02</cell>
+ <cell>GPD2 operating mode configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_GPD3_SYNC_CR</cell>
+ <cell>0x25</cell>
+ <cell>0x02</cell>
+ <cell>GPD3 operating mode configuration register</cell>
+</row>
+<row>
+ <cell>FCCC_PDLY_CR</cell>
+ <cell>0x26</cell>
+ <cell>0x40</cell>
+ <cell>Programmable delay elements configuration register</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x27</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x28</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x29</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>Reserved</cell>
+ <cell>0x2a</cell>
+ <cell>0x00</cell>
+ <cell>Reserved</cell>
+</row>
+<row>
+ <cell>FCCC_RX_RECOVERY_CR</cell>
+ <cell>0x2b</cell>
+ <cell>0x11</cell>
+ <cell>Rx clock recovery mux select configuration register</cell>
+</row>
+</table>
+</section>
+<text></text>
+</doc>
