@@ -1,9 +1,0 @@
-Debug File version: Ver 1.0
-Creator: Designer
-Creator version: Libero SoC v11.8 SP1
-Creator build: 11.8.1.12
-External die name: RT4G150
-Package: cg1657
-Design Name: RTG4_RV32_BaseDesign
-Probe A IO: available for probe A
-Probe B IO: not available for probing

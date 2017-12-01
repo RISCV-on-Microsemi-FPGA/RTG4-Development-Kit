@@ -1,7 +1,0 @@
-C:\Microsemi\synplify_L201609M-2_W\bin64\syn_nfilter.exe  -link  -top  PROC_SUBSYSTEM  -multisrs  C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synwork\PROC_SUBSYSTEM_comp.srs  -osyn  C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synwork\PROC_SUBSYSTEM_mult.srs  -log  C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\PROC_SUBSYSTEM_multi_srs_gen.srr 
-rc:0 success:1 runtime:2
-file:C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synwork\PROC_SUBSYSTEM_comp.srs|io:i|time:1511180837|size:697418|exec:0
-file:C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synwork\PROC_SUBSYSTEM_mult.srs|io:o|time:1511180840|size:51395|exec:0
-file:C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\PROC_SUBSYSTEM_multi_srs_gen.srr|io:o|time:1511180840|size:442|exec:0
-file:C:\Microsemi\synplify_L201609M-2_W\bin\syn_nfilter.exe|io:i|time:1479402458|size:3128320|exec:1
-file:C:\Microsemi\synplify_L201609M-2_W\bin64\syn_nfilter.exe|io:i|time:1479402724|size:4208128|exec:1

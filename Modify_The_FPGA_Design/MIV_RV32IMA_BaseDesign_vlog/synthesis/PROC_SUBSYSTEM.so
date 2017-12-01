@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>PROC_SUBSYSTEM</design>
-	<target_edif>C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\PROC_SUBSYSTEM.edn</target_edif>
-</SynplifyOutput>
