@@ -1,0 +1,201 @@
+
+fsm_encoding {39449444910} onehot
+
+fsm_state_encoding {39449444910} M0EXTEND {0000000000000000}
+
+fsm_state_encoding {39449444910} M0DONE {0000000000000011}
+
+fsm_state_encoding {39449444910} M0LOCK {0000000000000101}
+
+fsm_state_encoding {39449444910} M0LOCKEXTEND {0000000000001001}
+
+fsm_state_encoding {39449444910} M1EXTEND {0000000000010001}
+
+fsm_state_encoding {39449444910} M1DONE {0000000000100001}
+
+fsm_state_encoding {39449444910} M1LOCK {0000000001000001}
+
+fsm_state_encoding {39449444910} M1LOCKEXTEND {0000000010000001}
+
+fsm_state_encoding {39449444910} M2EXTEND {0000000100000001}
+
+fsm_state_encoding {39449444910} M2DONE {0000001000000001}
+
+fsm_state_encoding {39449444910} M2LOCK {0000010000000001}
+
+fsm_state_encoding {39449444910} M2LOCKEXTEND {0000100000000001}
+
+fsm_state_encoding {39449444910} M3EXTEND {0001000000000001}
+
+fsm_state_encoding {39449444910} M3DONE {0010000000000001}
+
+fsm_state_encoding {39449444910} M3LOCK {0100000000000001}
+
+fsm_state_encoding {39449444910} M3LOCKEXTEND {1000000000000001}
+
+fsm_registers {39449444910} {arbRegSMCurrentState[15]}  {arbRegSMCurrentState[14]}  {arbRegSMCurrentState[13]}  {arbRegSMCurrentState[12]}  {arbRegSMCurrentState[11]}  {arbRegSMCurrentState[10]}  {arbRegSMCurrentState[9]}  {arbRegSMCurrentState[8]}  {arbRegSMCurrentState[7]}  {arbRegSMCurrentState[6]}  {arbRegSMCurrentState[5]}  {arbRegSMCurrentState[4]}  {arbRegSMCurrentState[3]}  {arbRegSMCurrentState[2]}  {arbRegSMCurrentState[1]}  {arbRegSMCurrentState_i[0]} 
+
+fsm_encoding {4326542659} onehot
+
+fsm_state_encoding {4326542659} IDLE {00000}
+
+fsm_state_encoding {4326542659} WRITE0 {00011}
+
+fsm_state_encoding {4326542659} WRITE1 {00101}
+
+fsm_state_encoding {4326542659} READ0 {01001}
+
+fsm_state_encoding {4326542659} WAIT {10001}
+
+fsm_registers {4326542659} {ahbToApbSMState[4]}  {ahbToApbSMState[3]}  {ahbToApbSMState[2]}  {ahbToApbSMState[1]}  {ahbToApbSMState_i[0]} 
+
+fsm_encoding {4511141118} sequential
+
+fsm_state_encoding {4511141118} IDLE {00}
+
+fsm_state_encoding {4511141118} WAIT {01}
+
+fsm_state_encoding {4511141118} WAITCLR {10}
+
+fsm_registers {4511141118} {penableSchedulerState[1]}  {penableSchedulerState[0]} 
+
+fsm_encoding {2911901197} onehot
+
+fsm_state_encoding {2911901197} tx_idle {000000}
+
+fsm_state_encoding {2911901197} tx_load {000011}
+
+fsm_state_encoding {2911901197} start_bit {000101}
+
+fsm_state_encoding {2911901197} tx_data_bits {001001}
+
+fsm_state_encoding {2911901197} parity_bit {010001}
+
+fsm_state_encoding {2911901197} tx_stop_bit {100001}
+
+fsm_registers {2911901197} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state_i[0]} 
+
+fsm_encoding {2828602866} sequential
+
+fsm_state_encoding {2828602866} 00 {00}
+
+fsm_state_encoding {2828602866} 01 {01}
+
+fsm_state_encoding {2828602866} 10 {10}
+
+fsm_state_encoding {2828602866} 11 {11}
+
+fsm_registers {2828602866} {rx_state[1]}  {rx_state[0]} 
+
+fsm_encoding {191031410315} sequential
+
+fsm_state_encoding {191031410315} CYCLE0 {00}
+
+fsm_state_encoding {191031410315} CYCLE1 {01}
+
+fsm_state_encoding {191031410315} CYCLE2 {10}
+
+fsm_state_encoding {191031410315} CYCLE3 {11}
+
+fsm_registers {191031410315} {ICYCLE[1]}  {ICYCLE[0]} 
+
+fsm_encoding {1377436274364} sequential
+
+fsm_state_encoding {1377436274364} 00 {00}
+
+fsm_state_encoding {1377436274364} 01 {01}
+
+fsm_state_encoding {1377436274364} 10 {10}
+
+fsm_registers {1377436274364} {ctrlStateReg[1]}  {ctrlStateReg[0]} 
+
+fsm_encoding {773017230173} onehot
+
+fsm_state_encoding {773017230173} 000 {0000000}
+
+fsm_state_encoding {773017230173} 001 {0000011}
+
+fsm_state_encoding {773017230173} 010 {0000101}
+
+fsm_state_encoding {773017230173} 011 {0001001}
+
+fsm_state_encoding {773017230173} 101 {0010001}
+
+fsm_state_encoding {773017230173} 110 {0100001}
+
+fsm_state_encoding {773017230173} 111 {1000001}
+
+fsm_registers {773017230173} {release_state[6]}  {release_state[5]}  {release_state[4]}  {release_state[3]}  {release_state[2]}  {release_state[1]}  {release_state_i[0]} 
+
+fsm_encoding {9039623961} onehot
+
+fsm_state_encoding {9039623961} 000 {0000000}
+
+fsm_state_encoding {9039623961} 001 {0000011}
+
+fsm_state_encoding {9039623961} 010 {0000101}
+
+fsm_state_encoding {9039623961} 011 {0001001}
+
+fsm_state_encoding {9039623961} 101 {0010001}
+
+fsm_state_encoding {9039623961} 110 {0100001}
+
+fsm_state_encoding {9039623961} 111 {1000001}
+
+fsm_registers {9039623961} {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state_i[0]} 
+CLE0 {00}
+
+fsm_state_encoding {191031410315} CYCLE1 {01}
+
+fsm_state_encoding {191031410315} CYCLE2 {10}
+
+fsm_state_encoding {191031410315} CYCLE3 {11}
+
+fsm_registers {191031410315} {ICYCLE[1]}  {ICYCLE[0]} 
+
+fsm_encoding {1377436274364} sequential
+
+fsm_state_encoding {1377436274364} 00 {00}
+
+fsm_state_encoding {1377436274364} 01 {01}
+
+fsm_state_encoding {1377436274364} 10 {10}
+
+fsm_registers {1377436274364} {ctrlStateReg[1]}  {ctrlStateReg[0]} 
+
+fsm_encoding {773017230173} onehot
+
+fsm_state_encoding {773017230173} 000 {0000000}
+
+fsm_state_encoding {773017230173} 001 {0000011}
+
+fsm_state_encoding {773017230173} 010 {0000101}
+
+fsm_state_encoding {773017230173} 011 {0001001}
+
+fsm_state_encoding {773017230173} 101 {0010001}
+
+fsm_state_encoding {773017230173} 110 {0100001}
+
+fsm_state_encoding {773017230173} 111 {1000001}
+
+fsm_registers {773017230173} {release_state[6]}  {release_state[5]}  {release_state[4]}  {release_state[3]}  {release_state[2]}  {release_state[1]}  {release_state_i[0]} 
+
+fsm_encoding {9039623961} onehot
+
+fsm_state_encoding {9039623961} 000 {0000000}
+
+fsm_state_encoding {9039623961} 001 {0000011}
+
+fsm_state_encoding {9039623961} 010 {0000101}
+
+fsm_state_encoding {9039623961} 011 {0001001}
+
+fsm_state_encoding {9039623961} 101 {0010001}
+
+fsm_state_encoding {9039623961} 110 {0100001}
+
+fsm_state_encoding {9039623961} 111 {1000001}
+
+fsm_registers {9039623961} {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state_i[0]} 

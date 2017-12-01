@@ -1,0 +1,55 @@
+Resource Usage Report for PROC_SUBSYSTEM 
+
+Mapping to part: rt4g150cg1657-1
+Cell usage:
+AND2            2 uses
+CCC             1 use
+CLKINT          9 uses
+DFN1            28 uses
+FDDR_W          1 use
+INV             1 use
+MX2             28 uses
+RCOSC_50MHZ     1 use
+SYSRESET        1 use
+UJTAG           1 use
+CFG1           20 uses
+CFG2           1246 uses
+CFG3           4021 uses
+CFG4           6104 uses
+
+Carry cells:
+ARI1            1020 uses - used for arithmetic functions
+ARI1            136 uses - used for Wide-Mux implementation
+Total ARI1      1156 uses
+
+
+Sequential Cells: 
+SLE            5514 uses
+
+DSP Blocks:    2 of 462 (0%)
+ MACC:         1 MultAdd
+ MACC:         1 Mult
+
+I/O ports: 100
+I/O primitives: 89
+BIBUF          36 uses
+BIBUF_DIFF     4 uses
+INBUF          11 uses
+OUTBUF         37 uses
+OUTBUF_DIFF    1 use
+
+
+Global Clock Buffers: 9 of 8 (112%)
+
+
+Total LUTs:    12547
+
+Extra resources required for RAM and MACC interface logic during P&R:
+
+RAM64x18_RT Interface Logic : SLEs = 288; LUTs = 288;
+RAM1K18_RT  Interface Logic : SLEs = 288; LUTs = 288;
+MACC     Interface Logic : SLEs = 72; LUTs = 72;
+
+Total number of SLEs after P&R:  5514 + 288 + 288 + 72 = 6162;
+Total number of LUTs after P&R:  12547 + 288 + 288 + 72 = 13195;
+

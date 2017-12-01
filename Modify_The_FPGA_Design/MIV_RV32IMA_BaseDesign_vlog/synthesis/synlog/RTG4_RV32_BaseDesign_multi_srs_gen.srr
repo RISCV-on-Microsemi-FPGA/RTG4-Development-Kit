@@ -1,0 +1,12 @@
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+File D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\synthesis\synwork\RTG4_RV32_BaseDesign_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 138MB peak: 139MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Nov 15 23:01:45 2017
+
+###########################################################]

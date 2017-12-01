@@ -1,0 +1,147 @@
+# Microsemi I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: v11.7 SP2 11.7.2.2
+
+# Family: RTG4 , Die: RT4G150 , Package: 1657 CG
+
+# Date generated: Wed Nov 16 20:09:58 2016 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io {GPIO_IN[0]}   \
+    -pinname V33      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[1]}   \
+    -pinname V34      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[2]}   \
+    -pinname U34      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[3]}   \
+    -pinname W36      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[4]}   \
+    -pinname AA30     \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[5]}   \
+    -pinname AB31     \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[6]}   \
+    -pinname AB30     \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_IN[7]}   \
+    -pinname AB32     \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io {GPIO_OUT[0]}   \
+    -pinname W35       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[1]}   \
+    -pinname W34       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[2]}   \
+    -pinname V30       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[3]}   \
+    -pinname W33       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[4]}   \
+    -pinname T33       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[5]}   \
+    -pinname U35       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[6]}   \
+    -pinname R36       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io {GPIO_OUT[7]}   \
+    -pinname T34       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+set_io RX             \
+    -pinname E27      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+
+set_io TX              \
+    -pinname E28       \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
