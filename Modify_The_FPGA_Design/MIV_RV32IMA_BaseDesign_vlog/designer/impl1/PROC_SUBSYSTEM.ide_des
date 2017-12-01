@@ -1,0 +1,12 @@
+KEY IDE_DES_TOOL "Ide"
+KEY IDE_DES_ADB_PATH "C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\designer\impl1\PROC_SUBSYSTEM.adb"
+LIST SOURCE_FILES
+VALUE "C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\constraint\PROC_SUBSYSTEM_derived_constraints.sdc;sdc"
+VALUE "C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\constraint\io\user.pdc;pdc"
+VALUE "C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\constraint\user.sdc;sdc"
+ENDLIST
+LIST OPTIONAL_FILES
+VALUE "C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\PROC_SUBSYSTEM_sdc.sdc;Skipped"
+ENDLIST
+LIST VCD_FILES
+ENDLIST

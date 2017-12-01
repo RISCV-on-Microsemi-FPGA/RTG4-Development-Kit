@@ -1,0 +1,16 @@
+Project Name: RTG4_RV32IMA_AHB_SmallDesign
+Location: D:\Sandbox\RISCV_Libero\RTG4_RV32IMA_AHB_SmallDesign
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : RT4G150-1CG1657M
+Family         : RTG4
+Die            : RT4G150
+Package        : 1657 CG
+Speed          : -1
+Core Voltage   : 1.2
+Range          : MIL
