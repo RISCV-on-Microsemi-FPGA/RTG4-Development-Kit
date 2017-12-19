@@ -1,2 +1,2 @@
-Warning: SDC0061: C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\constraint\user.sdc:5: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 
-Warning: SDC0061: C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\constraint\user.sdc:8: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 
+Warning: SDC0061: C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\constraint\user.sdc:5: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 
+Warning: SDC0061: C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\constraint\user.sdc:8: Exception constraints using get_clocks command is not supported by placer; Please use get_pins instead 

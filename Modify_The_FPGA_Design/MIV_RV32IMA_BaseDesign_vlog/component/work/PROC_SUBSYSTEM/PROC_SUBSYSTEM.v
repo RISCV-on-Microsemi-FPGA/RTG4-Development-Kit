@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Nov 20 10:57:46 2017
+// Created by SmartDesign Fri Dec 01 18:02:17 2017
 // Version: v11.8 SP1 11.8.1.12
 //////////////////////////////////////////////////////////////////////
 
@@ -133,10 +133,10 @@ wire   [31:0] CoreAPB3_0_APBmslave5_PRDATA;
 wire          CoreAPB3_0_APBmslave5_PREADY;
 wire          CoreAPB3_0_APBmslave5_PSELx;
 wire          CoreAPB3_0_APBmslave5_PSLVERR;
-wire          COREJTAGDEBUG_0_TGT_TCK_0;
-wire          COREJTAGDEBUG_0_TGT_TDI_0;
+wire          COREJTAGDEBUG_0_TGT_TCK_1;
+wire          COREJTAGDEBUG_0_TGT_TDI_1;
 wire          COREJTAGDEBUG_0_TGT_TMS_0;
-wire          COREJTAGDEBUG_0_TGT_TRSTB_0;
+wire          COREJTAGDEBUG_0_TGT_TRST_1;
 wire          CoreTimer_0_TIMINT;
 wire          CoreTimer_1_TIMINT;
 wire          DDR_MEMORY_CTRL_0_INIT_DONE;
@@ -219,6 +219,7 @@ wire   [7:0]  GPIO_IN_const_net_0;
 wire          GND_net;
 wire          VCC_net;
 wire   [31:0] IADDR_const_net_0;
+wire   [7:0]  UIREG_IN_const_net_0;
 wire   [7:0]  APB_S_PWDATA_const_net_0;
 wire   [7:2]  APB_S_PADDR_const_net_0;
 wire   [7:0]  CCC_APB_S_PWDATA_const_net_0;
@@ -346,16 +347,16 @@ wire   [2:0]  CoreAHBLite_0_AHBmslave16_HSIZE;
 wire   [1:0]  CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0;
 wire   [1:0]  CoreAHBLite_0_AHBmslave16_HSIZE_0;
 wire   [31:0] CoreAPB3_0_APBmslave1_PADDR;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2_4to2;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_1;
-wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3_4to2;
-wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3;
 wire   [4:0]  CoreAPB3_0_APBmslave1_PADDR_0_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave1_PADDR_0;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave1_PADDR_4;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2_4to2;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_2;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3_4to2;
+wire   [4:2]  CoreAPB3_0_APBmslave1_PADDR_3;
 wire   [31:8] CoreAPB3_0_APBmslave1_PRDATA_0_31to8;
 wire   [7:0]  CoreAPB3_0_APBmslave1_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave1_PRDATA_0;
@@ -380,6 +381,7 @@ assign GPIO_IN_const_net_0          = 8'h00;
 assign GND_net                      = 1'b0;
 assign VCC_net                      = 1'b1;
 assign IADDR_const_net_0            = 32'h00000000;
+assign UIREG_IN_const_net_0         = 8'h00;
 assign APB_S_PWDATA_const_net_0     = 8'h00;
 assign APB_S_PADDR_const_net_0      = 6'h00;
 assign CCC_APB_S_PWDATA_const_net_0 = 8'h00;
@@ -545,16 +547,16 @@ assign CoreAHBLite_0_AHBmslave16_HRESP_0 = { CoreAHBLite_0_AHBmslave16_HRESP_0_1
 assign CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0 = CoreAHBLite_0_AHBmslave16_HSIZE[1:0];
 assign CoreAHBLite_0_AHBmslave16_HSIZE_0 = { CoreAHBLite_0_AHBmslave16_HSIZE_0_1to0 };
 
-assign CoreAPB3_0_APBmslave1_PADDR_2_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
-assign CoreAPB3_0_APBmslave1_PADDR_2 = { CoreAPB3_0_APBmslave1_PADDR_2_4to2 };
 assign CoreAPB3_0_APBmslave1_PADDR_1_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
 assign CoreAPB3_0_APBmslave1_PADDR_1 = { CoreAPB3_0_APBmslave1_PADDR_1_7to0 };
-assign CoreAPB3_0_APBmslave1_PADDR_4_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
-assign CoreAPB3_0_APBmslave1_PADDR_4 = { CoreAPB3_0_APBmslave1_PADDR_4_7to0 };
-assign CoreAPB3_0_APBmslave1_PADDR_3_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
-assign CoreAPB3_0_APBmslave1_PADDR_3 = { CoreAPB3_0_APBmslave1_PADDR_3_4to2 };
 assign CoreAPB3_0_APBmslave1_PADDR_0_4to0 = CoreAPB3_0_APBmslave1_PADDR[4:0];
 assign CoreAPB3_0_APBmslave1_PADDR_0 = { CoreAPB3_0_APBmslave1_PADDR_0_4to0 };
+assign CoreAPB3_0_APBmslave1_PADDR_4_7to0 = CoreAPB3_0_APBmslave1_PADDR[7:0];
+assign CoreAPB3_0_APBmslave1_PADDR_4 = { CoreAPB3_0_APBmslave1_PADDR_4_7to0 };
+assign CoreAPB3_0_APBmslave1_PADDR_2_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
+assign CoreAPB3_0_APBmslave1_PADDR_2 = { CoreAPB3_0_APBmslave1_PADDR_2_4to2 };
+assign CoreAPB3_0_APBmslave1_PADDR_3_4to2 = CoreAPB3_0_APBmslave1_PADDR[4:2];
+assign CoreAPB3_0_APBmslave1_PADDR_3 = { CoreAPB3_0_APBmslave1_PADDR_3_4to2 };
 
 assign CoreAPB3_0_APBmslave1_PRDATA_0_31to8 = 24'h0;
 assign CoreAPB3_0_APBmslave1_PRDATA_0_7to0 = CoreAPB3_0_APBmslave1_PRDATA[7:0];
@@ -1780,132 +1782,47 @@ CoreGPIO_OUT(
         .GPIO_OE  (  ) 
         );
 
-//--------COREJTAGDEBUG   -   Actel:DirectCore:COREJTAGDEBUG:0.0.1
+//--------COREJTAGDEBUG   -   Actel:DirectCore:COREJTAGDEBUG:2.0.100
 COREJTAGDEBUG #( 
-        .FAMILY                   ( 25 ),
-        .IR_CODE_TGT_0            ( 'h55 ),
-        .IR_CODE_TGT_1            ( 'h56 ),
-        .IR_CODE_TGT_2            ( 'h57 ),
-        .IR_CODE_TGT_3            ( 'h58 ),
-        .IR_CODE_TGT_4            ( 'h59 ),
-        .IR_CODE_TGT_5            ( 'h5a ),
-        .IR_CODE_TGT_6            ( 'h5b ),
-        .IR_CODE_TGT_7            ( 'h5c ),
-        .IR_CODE_TGT_8            ( 'h5d ),
-        .IR_CODE_TGT_9            ( 'h5e ),
-        .IR_CODE_TGT_10           ( 'h5f ),
-        .IR_CODE_TGT_11           ( 'h60 ),
-        .IR_CODE_TGT_12           ( 'h61 ),
-        .IR_CODE_TGT_13           ( 'h62 ),
-        .IR_CODE_TGT_14           ( 'h63 ),
-        .IR_CODE_TGT_15           ( 'h64 ),
-        .NUM_DEBUG_TGTS           ( 1 ),
-        .NUM_LEAD_PAD_BITS        ( 0 ),
-        .NUM_TRAIL_PAD_BITS       ( 0 ),
-        .TGT_ACTIVE_HIGH_RESET_0  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_1  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_2  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_3  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_4  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_5  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_6  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_7  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_8  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_9  ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_10 ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_11 ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_12 ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_13 ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_14 ( 1 ),
-        .TGT_ACTIVE_HIGH_RESET_15 ( 1 ) )
+        .ACTIVE_HIGH_TGT_RESET ( 1 ),
+        .IR_CODE               ( 'h55 ) )
 COREJTAGDEBUG_0(
         // Inputs
-        .TRSTB        ( TRSTB ),
-        .TCK          ( TCK ),
-        .TMS          ( TMS ),
-        .TDI          ( TDI ),
-        .TGT_TDO_0    ( MIV_RV32IMA_L1_AHB_0_TDO ),
-        .TGT_TDO_1    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_2    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_3    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_4    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_5    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_6    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_7    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_8    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_9    ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_10   ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_11   ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_12   ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_13   ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_14   ( GND_net ), // tied to 1'b0 from definition
-        .TGT_TDO_15   ( GND_net ), // tied to 1'b0 from definition
+        .TGT_TDO     ( MIV_RV32IMA_L1_AHB_0_TDO ),
+        .TDI         ( TDI ),
+        .TCK         ( TCK ),
+        .TMS         ( TMS ),
+        .TRSTB       ( TRSTB ),
+        .UTDODRV_0   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_1   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_2   ( GND_net ), // tied to 1'b0 from definition
+        .UTDODRV_3   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_0   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_1   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_2   ( GND_net ), // tied to 1'b0 from definition
+        .UTDO_IN_3   ( GND_net ), // tied to 1'b0 from definition
+        .UDRCAP_IN   ( GND_net ), // tied to 1'b0 from definition
+        .UDRSH_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UDRUPD_IN   ( GND_net ), // tied to 1'b0 from definition
+        .UIREG_IN    ( UIREG_IN_const_net_0 ), // tied to 8'h00 from definition
+        .URSTB_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UDRCK_IN    ( GND_net ), // tied to 1'b0 from definition
+        .UTDI_IN     ( GND_net ), // tied to 1'b0 from definition
         // Outputs
-        .TDO          ( TDO_net_0 ),
-        .TGT_TRSTB_0  ( COREJTAGDEBUG_0_TGT_TRSTB_0 ),
-        .TGT_TCK_0    ( COREJTAGDEBUG_0_TGT_TCK_0 ),
-        .TGT_TMS_0    ( COREJTAGDEBUG_0_TGT_TMS_0 ),
-        .TGT_TDI_0    ( COREJTAGDEBUG_0_TGT_TDI_0 ),
-        .TGT_TRSTB_1  (  ),
-        .TGT_TCK_1    (  ),
-        .TGT_TMS_1    (  ),
-        .TGT_TDI_1    (  ),
-        .TGT_TRSTB_2  (  ),
-        .TGT_TCK_2    (  ),
-        .TGT_TMS_2    (  ),
-        .TGT_TDI_2    (  ),
-        .TGT_TRSTB_3  (  ),
-        .TGT_TCK_3    (  ),
-        .TGT_TMS_3    (  ),
-        .TGT_TDI_3    (  ),
-        .TGT_TRSTB_4  (  ),
-        .TGT_TCK_4    (  ),
-        .TGT_TMS_4    (  ),
-        .TGT_TDI_4    (  ),
-        .TGT_TRSTB_5  (  ),
-        .TGT_TCK_5    (  ),
-        .TGT_TMS_5    (  ),
-        .TGT_TDI_5    (  ),
-        .TGT_TRSTB_6  (  ),
-        .TGT_TCK_6    (  ),
-        .TGT_TMS_6    (  ),
-        .TGT_TDI_6    (  ),
-        .TGT_TRSTB_7  (  ),
-        .TGT_TCK_7    (  ),
-        .TGT_TMS_7    (  ),
-        .TGT_TDI_7    (  ),
-        .TGT_TRSTB_8  (  ),
-        .TGT_TCK_8    (  ),
-        .TGT_TMS_8    (  ),
-        .TGT_TDI_8    (  ),
-        .TGT_TRSTB_9  (  ),
-        .TGT_TCK_9    (  ),
-        .TGT_TMS_9    (  ),
-        .TGT_TDI_9    (  ),
-        .TGT_TRSTB_10 (  ),
-        .TGT_TCK_10   (  ),
-        .TGT_TMS_10   (  ),
-        .TGT_TDI_10   (  ),
-        .TGT_TRSTB_11 (  ),
-        .TGT_TCK_11   (  ),
-        .TGT_TMS_11   (  ),
-        .TGT_TDI_11   (  ),
-        .TGT_TRSTB_12 (  ),
-        .TGT_TCK_12   (  ),
-        .TGT_TMS_12   (  ),
-        .TGT_TDI_12   (  ),
-        .TGT_TRSTB_13 (  ),
-        .TGT_TCK_13   (  ),
-        .TGT_TMS_13   (  ),
-        .TGT_TDI_13   (  ),
-        .TGT_TRSTB_14 (  ),
-        .TGT_TCK_14   (  ),
-        .TGT_TMS_14   (  ),
-        .TGT_TDI_14   (  ),
-        .TGT_TRSTB_15 (  ),
-        .TGT_TCK_15   (  ),
-        .TGT_TMS_15   (  ),
-        .TGT_TDI_15   (  ) 
+        .TGT_TCK     ( COREJTAGDEBUG_0_TGT_TCK_1 ),
+        .TGT_TRST    ( COREJTAGDEBUG_0_TGT_TRST_1 ),
+        .TGT_TMS     ( COREJTAGDEBUG_0_TGT_TMS_0 ),
+        .TGT_TDI     ( COREJTAGDEBUG_0_TGT_TDI_1 ),
+        .TDO         ( TDO_net_0 ),
+        .UDRCAP_OUT  (  ),
+        .UDRSH_OUT   (  ),
+        .UDRUPD_OUT  (  ),
+        .UIREG_OUT   (  ),
+        .URSTB_OUT   (  ),
+        .UDRCK_OUT   (  ),
+        .UTDI_OUT    (  ),
+        .UTDODRV_OUT (  ),
+        .UTDO_OUT    (  ) 
         );
 
 //--------CoreTimer   -   Actel:DirectCore:CoreTimer:2.0.103
@@ -2031,10 +1948,10 @@ MIV_RV32IMA_L1_AHB_0(
         // Inputs
         .CLK                 ( RTG4FCCC_0_GL0 ),
         .RESETN              ( reset_synchronizer_0_reset_sync ),
-        .TCK                 ( COREJTAGDEBUG_0_TGT_TCK_0 ),
+        .TCK                 ( COREJTAGDEBUG_0_TGT_TCK_1 ),
         .TMS                 ( COREJTAGDEBUG_0_TGT_TMS_0 ),
-        .TRST                ( COREJTAGDEBUG_0_TGT_TRSTB_0 ),
-        .TDI                 ( COREJTAGDEBUG_0_TGT_TDI_0 ),
+        .TRST                ( COREJTAGDEBUG_0_TGT_TRST_1 ),
+        .TDI                 ( COREJTAGDEBUG_0_TGT_TDI_1 ),
         .AHB_MST_MMIO_HREADY ( MIV_RV32IMA_L1_AHB_0_AHB_MST_MMIO_HREADY ),
         .AHB_MST_MMIO_HRESP  ( MIV_RV32IMA_L1_AHB_0_AHB_MST_MMIO_HRESP_0 ),
         .AHB_MST_MEM_HREADY  ( MIV_RV32IMA_L1_AHB_0_AHB_MST_MEM_HREADY ),

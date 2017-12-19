@@ -1,6 +1,6 @@
 set_component PROC_SUBSYSTEM_RTG4FCCC_0_RTG4FCCC
 # Microsemi Corp.
-# Date: 2017-Nov-20 10:57:46
+# Date: 2017-Dec-01 18:02:17
 #
 
 create_clock -period 20 [ get_pins { CCC_INST/RCOSC_50MHZ } ]

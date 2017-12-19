@@ -5,7 +5,7 @@ The file contains the job information from mapper to be displayed as part of the
 *******************************************************************************************-->
 <job_run_status name="Mapper">
 <report_link name="Detailed report">
-<data>C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\PROC_SUBSYSTEM_fpga_mapper.srr</data>
+<data>C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\PROC_SUBSYSTEM_fpga_mapper.srr</data>
 <title>Synopsys Generic Technology Mapper</title>
 </report_link>
 <job_status>
@@ -15,32 +15,32 @@ The file contains the job information from mapper to be displayed as part of the
 <info name="Notes">
 <data>349</data>
 <report_link name="more">
-<data>C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_notes.txt</data>
+<data>C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_notes.txt</data>
 </report_link>
 </info>
 <info name="Warnings">
 <data>168</data>
 <report_link name="more">
-<data>C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_warnings.txt</data>
+<data>C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_warnings.txt</data>
 </report_link>
 </info>
 <info name="Errors">
 <data>0</data>
 <report_link name="more">
-<data>C:\Users\ciaran.lappin\Desktop\MiV_Github\RTG4\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_errors.txt</data>
+<data>C:\Users\ciaran.lappin\Downloads\M2s060\RTG4-Development-Kit-master\Modify_The_FPGA_Design\MIV_RV32IMA_BaseDesign_vlog\synthesis\synlog\report\PROC_SUBSYSTEM_fpga_mapper_errors.txt</data>
 </report_link>
 </info>
 <info name="CPU Time">
-<data>0h:01m:26s</data>
+<data>0h:01m:28s</data>
 </info>
 <info name="Real Time">
-<data>0h:01m:27s</data>
+<data>0h:01m:28s</data>
 </info>
 <info name="Peak Memory">
-<data>346MB</data>
+<data>347MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1511180932</data>
+<data type="timestamp">1512147242</data>
 </info>
 </job_info>
 </job_run_status>

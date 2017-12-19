@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Tue Jun 13 10:17:51 2017
+// Created by Microsemi SmartDesign Fri Dec 01 18:02:16 2017
 // Parameters for COREJTAGDEBUG
 //--------------------------------------------------------------------
 

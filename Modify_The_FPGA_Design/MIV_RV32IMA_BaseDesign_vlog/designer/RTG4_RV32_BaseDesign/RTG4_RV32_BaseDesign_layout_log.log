@@ -1,81 +1,0 @@
-INFO: Reading User SDC file D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\constraint\RTG4_RV32_BaseDesign_derived_constraints.sdc.
-
-***** Place and Route Configurations *****
-Timing-driven            : ON
-Power-driven             : OFF
-High-effort              : OFF
-Repair min-delay         : ON
-Incremental              : OFF
-Inter-clock optimization : ON
-TDPR scenario            : place_and_route
-
-INFO: Reading User PDC file D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
-
-Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 89 fixed I/O macros, 0 unfixed I/O macros
-
-I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 2 seconds
-
-Placer V4.0 - 11.8.1 
-Design: RTG4_RV32_BaseDesign            Started: Wed Nov 15 23:06:04 2017
-
-Initializing Timing-Driven Placement ...
-Placing design...
-End of placement.
-Pre-Placement Runtime        : 41 seconds
-Placement Runtime            : 132 seconds
-
-Placer completed successfully.
-
-Design: RTG4_RV32_BaseDesign            
-Finished: Wed Nov 15 23:09:29 2017
-Total CPU Time:     00:03:19            Total Elapsed Time: 00:03:25
-Total Memory Usage: 919.2 Mbytes
-                        o - o - o - o - o - o
-
-Warning:  The following clocks or resets are driven by fabric-generated or local nets and are not radiation protected:
-    Driver: COREJTAGDEBUG_0/genblk4.UJ_JTAG/un1_DUT_TCK_inferred_clock_RNIK06:Y
-       Net: COREJTAGDEBUG_0/un1_DUT_TCK_i_0
-    Driver: COREJTAGDEBUG_0/genblk1.UJTAG_inst/INST_UJTAG_IP:URSTB
-       Net: COREJTAGDEBUG_0/iURSTB
-    Driver: COREJTAGDEBUG_0/genblk1.UJTAG_inst/INST_UJTAG_IP:UDRCK
-       Net: COREJTAGDEBUG_0/iUDRCK
-    Driver: reset_synchronizer_0/sync_asert_reg[1]:Q
-       Net: reset_synchronizer_0/sync_asert_reg[1]
-Info:  Microsemi recommends the use of dedicated global clocks with built-in radiation protection.
-Warning:  The following local resets are not driven by three separate logic cones and are not radiation protected:
-    Driver: MIV_RV32IMA_L1_AHB_0/ChiselTop0/debug_1/dmOuter/dmOuter/DMCONTROL/reg_0/q:Q
-       Net: MIV_RV32IMA_L1_AHB_0/ChiselTop0/dmOuter_io_ctrl_dmactive
-    Driver: AND2_1:Y
-       Net: AND2_1_Y
-    Driver: MIV_RV32IMA_L1_AHB_0/ChiselTop0/debug_1/dmInner/RTG4_RV32_BaseDesign_MIV_RV32IMA_L1_AHB_0_MIV_RV32IMA_L1_AHB_ASYNC_QUEUE_SINK/_T_43:Y
-       Net: MIV_RV32IMA_L1_AHB_0/ChiselTop0/debug_1/_T_43_i
-Info:  For radiation protection, Microsemi recommends that each of the three inputs of every RGRESET be driven by three separate logic cones replicating the paths from the source register.
-
-Router 
-Design: D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\designer\RTG4_RV32_BaseDesign\RTG4_RV32_BaseDesignStarted: Wed Nov 15 23:09:47 2017
-
-Final stats: search run time 17.308500
-
-Router completed successfully.
-
-Design: D:\Sandbox\RISCV_Libero\RTG4_RV-32IMA_AHB_VlogBaseDesign\designer\RTG4_RV32_BaseDesign\RTG4_RV32_BaseDesign
-Finished: Wed Nov 15 23:13:13 2017
-Total CPU Time:     00:03:18            Total Elapsed Time: 00:03:26
-Total Memory Usage: 6965.7 Mbytes
-                        o - o - o - o - o - o
-
-Info: Iteration 1:
-  Total violating paths eligible for improvement: 0
-  Worst minimum delay slack: 
-Resource Usage
-+---------------+-------+--------+------------+
-| Type          | Used  | Total  | Percentage |
-+---------------+-------+--------+------------+
-| 4LUT          | 12722 | 151824 | 8.38       |
-| DFF           | 6196  | 151824 | 4.08       |
-| I/O Register  | 0     | 2151   | 0.00       |
-| Logic Element | 13281 | 151824 | 8.75       |
-+---------------+-------+--------+------------+
-
