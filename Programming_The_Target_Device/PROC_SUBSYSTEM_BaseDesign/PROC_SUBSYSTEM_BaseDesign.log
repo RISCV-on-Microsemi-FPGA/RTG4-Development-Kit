@@ -1,0 +1,35 @@
+Software Version: 11.8.3.6
+creating folder: D:\2018-07-18\Desktop\ExtHelp\Nitin\RTG4-Development-Kit-master\Modify_The_FPGA_Design\ForGIT\PROC_SUBSYSTEM_BaseDesign
+programmer 'S20112PUY4' : FlashPro5
+Created new project 'D:\2018-07-18\Desktop\ExtHelp\Nitin\RTG4-Development-Kit-master\Modify_The_FPGA_Design\ForGIT\PROC_SUBSYSTEM_BaseDesign\PROC_SUBSYSTEM_BaseDesign.pro'
+STAPL file 'D:\2018-07-18\Desktop\ExtHelp\Nitin\RTG4-Development-Kit-master\Modify_The_FPGA_Design\ForGIT\PROC_SUBSYSTEM_BaseDesign\RT4G150_1.stp' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : 12BB;  ALG_VERSION : 2
+creating folder: D:\2018-07-18\Desktop\ExtHelp\Nitin\RTG4-Development-Kit-master\Modify_The_FPGA_Design\ForGIT\PROC_SUBSYSTEM_BaseDesign\projectData
+Software Version: 11.8.3.6
+STAPL file 'D:\2018-07-18\Desktop\ExtHelp\Nitin\RTG4-Development-Kit-master\Modify_The_FPGA_Design\ForGIT\PROC_SUBSYSTEM_BaseDesign\RT4G150_1.stp' has been loaded successfully.
+DESIGN : PROC_SUBSYSTEM;  CHECKSUM : 12BB;  ALG_VERSION : 2
+programmer 'S20112PUY4' : FlashPro5
+
+Created FlashPro Express Job Project.
+programmer 'S20112PUY4' : Scan Chain...
+programmer 'S20112PUY4' : Check Chain...
+programmer 'S20112PUY4' : Scan and Check Chain PASSED.
+programmer 'S20112PUY4' : device 'RT4G150' : Executing action PROGRAM
+programmer 'S20112PUY4' : device 'RT4G150' : EXPORT ISC_ENABLE_RESULT[32] = 00004704
+programmer 'S20112PUY4' : device 'RT4G150' : EXPORT CRCERR[1] = 0
+programmer 'S20112PUY4' : device 'RT4G150' : EXPORT ECCRCVR[1] = 0
+programmer 'S20112PUY4' : device 'RT4G150' : TEMPGRADE: ROOM
+programmer 'S20112PUY4' : device 'RT4G150' : EXPORT TEMP[8] = 47
+programmer 'S20112PUY4' : device 'RT4G150' : Programming FPGA Array...
+programmer 'S20112PUY4' : device 'RT4G150' : ===================================================================================
+programmer 'S20112PUY4' : device 'RT4G150' : EXPORT DSN[128] = 00000000000000000153390c00060017
+programmer 'S20112PUY4' : device 'RT4G150' : ===================================================================================
+programmer 'S20112PUY4' : device 'RT4G150' : Finished: Fri Jul 20 15:58:20 2018 (Elapsed time 00:02:28)
+programmer 'S20112PUY4' : device 'RT4G150' : Executing action PROGRAM PASSED.
+programmer 'S20112PUY4' : Chain programming PASSED.
+Chain Programming Finished: Fri Jul 20 15:58:20 2018 (Elapsed time 00:02:28)
+
+                        o - o - o - o - o - o
+
+Project saved.
+Project closed.
