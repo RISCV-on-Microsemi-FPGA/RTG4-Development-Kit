@@ -1,4 +1,0 @@
-CKID0001:@|S:RTG4FCCC_0.CCC_INST@|E:reset_synchronizer_0.sync_deasert_reg[1]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
-CKID0002:@|S:RTG4FCCC_0.CCC_INST@|E:DDR_MEMORY_CTRL_0.FDDRC_0.U0@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
-CKID0003:@|S:COREJTAGDEBUG_0.genblk4.UJ_JTAG.un1_DUT_TCK@|E:MIV_RV32IMA_L1_AHB_0.ChiselTop0.dtm.skipOpReg@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 
-CKID0004:@|S:COREJTAGDEBUG_0.genblk1.UJTAG_inst@|E:COREJTAGDEBUG_0.genblk4.UJ_JTAG.UTDODRV@|F:@syn_sample_clock_path1==CKID0004@|M:ClockId0004 
