@@ -24,5 +24,5 @@ This folder contains Mi-V Libero V11.8 projects.
 
 ### Modifying the Libero projects
 Some of the Libero projects use IP packages not directly available from the Microsemi IP Catalog. These IP packages were created to speed up design creation by wrapping simple logic into reusable user IP packages.
-These user IP packages are available [here](https://github.com/RISCV-on-Microsemi-FPGA/riscv-junk-drawer/tree/master/IP-packages).
+These user IP packages are available [here](https://github.com/RISCV-on-Microsemi-FPGA/Solutions/tree/master/Supporting-IPs).
 
