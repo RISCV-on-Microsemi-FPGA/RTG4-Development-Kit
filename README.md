@@ -13,7 +13,7 @@ The FPGA Designs include the following features
 The memory map for each design is available within each Libero project.
 
 ### Target Hardware
-The RTG4 Development Kit includes an RT4G150 FPGA. Details of the features available for this development board are available [here](https://www.microsemi.com/products/fpga-soc/radtolerant-fpgas/rtg4#overview) .
+The RTG4 Development Kit includes an RT4G150 FPGA. Details of the features available for this development board are available [here](https://www.microsemi.com/product-directory/dev-kits-solutions/3865-rtg4-kits) .
 
 ### FlashPro Express
 This project includes FlashPro Express projects that can be used to program the development boards FPGA. A standalone installer for FlashPro Express is available [here](https://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software) . Please note that you only need to install this standalone version of FlashPro Express if you do not have Libero tools installed.
