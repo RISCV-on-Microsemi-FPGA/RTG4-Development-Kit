@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>RTG4_CoreRISCV_AXI4_BaseDesign</design>
-	<target_edif>C:\Users\cyril.jean\Documents\GitHub\Cyril-Jean\RTG4-Development-Kit\Libero\RTG4_CoreRISCV_AXI4_BaseDesign\synthesis\RTG4_CoreRISCV_AXI4_BaseDesign.edn</target_edif>
-</SynplifyOutput>

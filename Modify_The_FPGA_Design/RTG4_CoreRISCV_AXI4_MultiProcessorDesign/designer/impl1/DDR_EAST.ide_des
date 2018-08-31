@@ -1,8 +1,0 @@
-KEY IDE_DES_TOOL "Ide"
-KEY IDE_DES_ADB_PATH "C:\Users\ciaran.lappin\Documents\RTG4_RISCV\RTG4-Development-Kit-master\Libero\RTG4_Dual_CoreRISCV_BaseDesign\designer\impl1\DDR_EAST.adb"
-LIST SOURCE_FILES
-ENDLIST
-LIST OPTIONAL_FILES
-ENDLIST
-LIST VCD_FILES
-ENDLIST
