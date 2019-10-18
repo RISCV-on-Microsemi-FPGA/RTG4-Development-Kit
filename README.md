@@ -4,6 +4,10 @@ Sample RISC-V Libero Projects for RTG4 the Radiation-Tolerant Dev Kit
 
 To get your design download or clone this repository. The files consist of .tcl file that is the main script that builds the design and support files that are called by it to provide constraints and components for the design. Follow the instructions below to build your own design or alternatively use the pre-generated Programming Files in this repository.
 
+**Note**: Unpack repository files to a file path not longer than 50 characters, as the project requires
+a lengthy file path and some OS systems have limits. **Not providing
+a sufficient file path for the project will result in errors**.
+
 #### Follow these steps
 
 - Launch Libero v12.1 on your computer. Wait for Libero to start. (Design will only work for Libero v12.1)
