@@ -63,7 +63,7 @@ Once the programming file has been generated (.job), it will output to the Flash
 ---------------------------------------------
 
 The projects contain default build programming files in the **FlashPro_Express_Projects** folder, there is a choice to use an AXI or AHB Core based design. Each (.job) file is capapble of programming your target device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
-Please note that you only need to install this standalone version of FlashPro Express if you do not have Libero tools installed. (**Please download FlashPro Express for Libero v12.1**) The programming procedure is as follows:
+Please note that you only need to install this standalone version of FlashPro Express for Libero v12.1 if you do not have Libero tools installed. The programming procedure is as follows:
 1. Power-up your board and connect it to your device running FlashPro Express.
 1. Launch FPExpress v12.1 and wait for it to load.
 2. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
