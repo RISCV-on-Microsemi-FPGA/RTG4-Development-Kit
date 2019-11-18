@@ -1,4 +1,4 @@
-## PolarFire Evaluation Kit RISC-V Designs
+## RTG4 Development Kit RISC-V Sample Designs
 
 Sample RISC-V Libero Projects for RTG4 the Radiation-Tolerant Dev Kit
 
