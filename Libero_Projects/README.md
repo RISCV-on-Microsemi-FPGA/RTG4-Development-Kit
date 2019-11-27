@@ -1,4 +1,4 @@
-##  RTG4 Development Kit RISC-V Sample Designs for Libero v12.1
+##  RTG4 Development Kit RISC-V Sample Designs for Libero v12.2
 
 Sample RISC-V Libero Projects for RTG4 the Radiation-Tolerant Dev Kit
 
@@ -14,7 +14,7 @@ a sufficient file path for the project will result in errors**.
 ### Instructions for Building the Design
 -------------
 
-- Launch Libero v12.1 on your computer. Wait for Libero to start, make sure you have the latest Libero cores downloaded.
+- Launch Libero v12.2 on your computer. Wait for Libero to start, make sure you have the latest Libero cores downloaded.
 - Examine the part on your hardware board, and try to match it with the right .tcl file.
 - In Libero Press "CTRL+U" to display the "Execute Script" menu. Alternatively, click Project from the top left hand corner of Libero Suite and select "Execute Script" from there.
 - Follow the instructions below and refer to the images to build the design.
