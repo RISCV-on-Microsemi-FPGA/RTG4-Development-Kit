@@ -53,7 +53,7 @@ There is also an optional 2nd argument that can be entered after the first one t
      - Synthesize
       - Place_and_Route
       - Generate_Bitstream
-      - Generate_Programming_File
+      - Export_Programming_File
       
 **Note**: It is important that the two arguments are separated by a space or the script will fail to execute or will execute partially.
 Once the programming file has been generated (.job), it will output to the FlashPro_Express_Projects folder where it will overwrite the default programming file. The file can be used to program the target device using the FlashPro Express.
