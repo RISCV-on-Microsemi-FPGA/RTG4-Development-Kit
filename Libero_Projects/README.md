@@ -1,4 +1,4 @@
-##  RTG4 Development Kit RISC-V Sample Designs for Libero v12.2
+##  RTG4 Development Kit RISC-V Sample Designs for Libero v12.3
 
 Sample RISC-V Libero Projects for RTG4 the Radiation-Tolerant Dev Kit
 
@@ -14,7 +14,7 @@ a sufficient file path for the project will result in errors**.
 ### Instructions for Building the Design
 -------------
 
-- Launch Libero v12.2 on your computer. Wait for Libero to start, make sure you have the latest Libero cores downloaded.
+- Launch Libero v12.3 on your computer. Wait for Libero to start, make sure you have the latest Libero cores downloaded.
 - Examine the part on your hardware board, and try to match it with the right .tcl file.
 - In Libero Press "CTRL+U" to display the "Execute Script" menu. Alternatively, click Project from the top left hand corner of Libero Suite and select "Execute Script" from there.
 - Follow the instructions below and refer to the images to build the design.
@@ -53,7 +53,7 @@ There is also an optional 2nd argument that can be entered after the first one t
      - Synthesize
       - Place_and_Route
       - Generate_Bitstream
-      - Generate_Programming_File
+      - Export_Programming_File
       
 **Note**: It is important that the two arguments are separated by a space or the script will fail to execute or will execute partially.
 Once the programming file has been generated (.job), it will output to the FlashPro_Express_Projects folder where it will overwrite the default programming file. The file can be used to program the target device using the FlashPro Express.

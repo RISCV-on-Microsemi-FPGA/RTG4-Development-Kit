@@ -17,7 +17,7 @@ The FPGA designs include the following features:
 * Operating frequency of the design is 50MHz
 * DDR for code/data
 * User peripherals such as GPIO, Timers, UART
-* Designs created with Libero v12.2
+* Designs created with Libero v12.3
 
 #### Projects
 A choice of two Libero projects, each containing either MiV Core:

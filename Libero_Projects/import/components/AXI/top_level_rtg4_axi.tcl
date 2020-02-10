@@ -793,7 +793,7 @@ sd_instantiate_hdl_module -sd_name ${sd_name} -hdl_module_name {reset_synchroniz
 
 
 # Add RTG4FCCC_0 instance
-sd_instantiate_core -sd_name ${sd_name} -core_vlnv {Actel:SgCore:RTG4FCCC:1.1.226} -instance_name {RTG4FCCC_0}
+sd_instantiate_core -sd_name ${sd_name} -core_vlnv {Actel:SgCore:RTG4FCCC:2.0.201} -instance_name {RTG4FCCC_0}
 # Exporting Parameters of instance RTG4FCCC_0
 sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -params {\
 "ADVANCED_TAB_CHANGED:false" \
@@ -923,6 +923,8 @@ sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -para
 "Y3_IS_USED:false" }\
 -validate_rules 0
 sd_save_core_instance_config -sd_name ${sd_name} -instance_name {RTG4FCCC_0}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {RTG4FCCC_0:CLK_50MHZ} -value {GND} 
+
 
 
 
