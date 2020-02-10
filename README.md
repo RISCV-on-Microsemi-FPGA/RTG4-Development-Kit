@@ -14,9 +14,10 @@ The Libero_Projects folder contains the .tcl scripts that build the Libero desig
 The FPGA designs include the following features:
 * Uses MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI soft processor
 * RISC-V debug block allowing on-target debug using openocd/GDB
+* Operating frequency of the design is 50MHz
 * DDR for code/data
 * User peripherals such as GPIO, Timers, UART
-* Designs created with Libero v12.1
+* Designs created with Libero v12.2
 
 #### Projects
 A choice of two Libero projects, each containing either MiV Core:
