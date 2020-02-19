@@ -841,8 +841,8 @@ sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -para
 "CLK3_IS_USED:false" \
 "CLK3_PAD_IS_USED:false" \
 "DYN_CONF_IS_USED:false" \
+"ENABLE_AUTO_RESET_LOGIC:false" \
 "EXPOSE_CGL_ENABLE_ARST_SIGNALS:false" \
-"FAMILY:25" \
 "GL0_BP_IN_0_FREQ:100" \
 "GL0_BP_IN_0_SRC:IO_HARDWIRED_0" \
 "GL0_BP_IN_1_FREQ:100" \
@@ -950,15 +950,13 @@ sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -para
 "RX1_RECOVERY_BLOCK_IS_USED:false" \
 "RX1_RECOVERY_BLOCK_STROBE:Unused" \
 "RX1_SPACE_WIRE_MODE_IS_USED:true" \
-"SD_EXPORT_HIDDEN_PORTS:false" \
 "VCOFREQUENCY:800.000" \
 "Y0_IS_USED:false" \
 "Y1_IS_USED:false" \
 "Y2_IS_USED:false" \
-"Y3_IS_USED:false" }\
+"Y3_IS_USED:false"	} \
 -validate_rules 0
 sd_save_core_instance_config -sd_name ${sd_name} -instance_name {RTG4FCCC_0}
-sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {RTG4FCCC_0:CLK_50MHZ} -value {GND} 
 
 
 
