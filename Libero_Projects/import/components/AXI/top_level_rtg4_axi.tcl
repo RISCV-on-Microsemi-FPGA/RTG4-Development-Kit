@@ -793,7 +793,7 @@ sd_instantiate_hdl_module -sd_name ${sd_name} -hdl_module_name {reset_synchroniz
 
 
 # Add RTG4FCCC_0 instance
-sd_instantiate_core -sd_name ${sd_name} -core_vlnv {Actel:SgCore:RTG4FCCC:1.1.226} -instance_name {RTG4FCCC_0}
+sd_instantiate_core -sd_name ${sd_name} -core_vlnv {Actel:SgCore:RTG4FCCC:2.0.201} -instance_name {RTG4FCCC_0}
 # Exporting Parameters of instance RTG4FCCC_0
 sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -params {\
 "ADVANCED_TAB_CHANGED:false" \
@@ -806,8 +806,8 @@ sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -para
 "CLK3_IS_USED:false" \
 "CLK3_PAD_IS_USED:false" \
 "DYN_CONF_IS_USED:false" \
+"ENABLE_AUTO_RESET_LOGIC:false" \
 "EXPOSE_CGL_ENABLE_ARST_SIGNALS:false" \
-"FAMILY:25" \
 "GL0_BP_IN_0_FREQ:100" \
 "GL0_BP_IN_0_SRC:IO_HARDWIRED_0" \
 "GL0_BP_IN_1_FREQ:100" \
@@ -915,12 +915,11 @@ sd_configure_core_instance -sd_name ${sd_name} -instance_name {RTG4FCCC_0} -para
 "RX1_RECOVERY_BLOCK_IS_USED:false" \
 "RX1_RECOVERY_BLOCK_STROBE:Unused" \
 "RX1_SPACE_WIRE_MODE_IS_USED:true" \
-"SD_EXPORT_HIDDEN_PORTS:false" \
 "VCOFREQUENCY:800.000" \
 "Y0_IS_USED:false" \
 "Y1_IS_USED:false" \
 "Y2_IS_USED:false" \
-"Y3_IS_USED:false" }\
+"Y3_IS_USED:false"	} \
 -validate_rules 0
 sd_save_core_instance_config -sd_name ${sd_name} -instance_name {RTG4FCCC_0}
 
@@ -992,8 +991,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:APB_bif" "CoreAPB3
 
 sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_0:AHBMasterIF" "CoreAHBLite_0:AHBmmaster0"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAXITOAHBL_1:AHBMasterIF" "CoreAHBLite_1:AHBmmaster0"}
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MEM_MST_AXI" "COREAXITOAHBL_1:AXI_MM_IF"} 
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MMIO_MST_AXI" "COREAXITOAHBL_0:AXI_MM_IF"}
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MEM_MST_AXI" "COREAXITOAHBL_0:AXI_MM_IF"} 
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MMIO_MST_AXI" "COREAXITOAHBL_1:AXI_MM_IF"}
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
