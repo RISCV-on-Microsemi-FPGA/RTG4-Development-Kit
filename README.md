@@ -15,7 +15,7 @@ The FPGA designs include the following features:
 * Uses MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI soft processor
 * RISC-V debug block allowing on-target debug using openocd/GDB
 * Operating frequency of the design is 50MHz
-* DDR for code/data
+* LSRAM to use for initialization.
 * User peripherals such as GPIO, Timers, UART
 * Designs created with Libero v12.3
 

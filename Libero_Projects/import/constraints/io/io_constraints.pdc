@@ -37,40 +37,41 @@ set_io {GPIO_IN[1]}   \
     -DIRECTION INPUT
 
 
-set_io {GPIO_IN[2]}   \
-    -pinname U34      \
-    -fixed yes        \
-    -DIRECTION INPUT
+# Additional GPIOs
+# set_io {GPIO_IN[2]}   \
+    # -pinname U34      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
-set_io {GPIO_IN[3]}   \
-    -pinname W36      \
-    -fixed yes        \
-    -DIRECTION INPUT
+# set_io {GPIO_IN[3]}   \
+    # -pinname W36      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
-set_io {GPIO_IN[4]}   \
-    -pinname AA30     \
-    -fixed yes        \
-    -DIRECTION INPUT
+# set_io {GPIO_IN[4]}   \
+    # -pinname AA30     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
-set_io {GPIO_IN[5]}   \
-    -pinname AB31     \
-    -fixed yes        \
-    -DIRECTION INPUT
+# set_io {GPIO_IN[5]}   \
+    # -pinname AB31     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
-set_io {GPIO_IN[6]}   \
-    -pinname AB30     \
-    -fixed yes        \
-    -DIRECTION INPUT
+# set_io {GPIO_IN[6]}   \
+    # -pinname AB30     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
-set_io {GPIO_IN[7]}   \
-    -pinname AB32     \
-    -fixed yes        \
-    -DIRECTION INPUT
+# set_io {GPIO_IN[7]}   \
+    # -pinname AB32     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
 
 
 set_io {GPIO_OUT[0]}   \
@@ -97,28 +98,29 @@ set_io {GPIO_OUT[3]}   \
     -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[4]}   \
-    -pinname T33       \
-    -fixed yes         \
-    -DIRECTION OUTPUT
+# Additional GPIOs
+# set_io {GPIO_OUT[4]}   \
+    # -pinname T33       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[5]}   \
-    -pinname U35       \
-    -fixed yes         \
-    -DIRECTION OUTPUT
+# set_io {GPIO_OUT[5]}   \
+    # -pinname U35       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[6]}   \
-    -pinname R36       \
-    -fixed yes         \
-    -DIRECTION OUTPUT
+# set_io {GPIO_OUT[6]}   \
+    # -pinname R36       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
 
 
-set_io {GPIO_OUT[7]}   \
-    -pinname T34       \
-    -fixed yes         \
-    -DIRECTION OUTPUT
+# set_io {GPIO_OUT[7]}   \
+    # -pinname T34       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
 
 
 set_io RX             \
