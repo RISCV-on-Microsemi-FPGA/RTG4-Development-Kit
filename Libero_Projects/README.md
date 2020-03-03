@@ -7,8 +7,9 @@ To get your design download or clone this repository. The files consist of .tcl 
 **Note**: 
 * Unpack repository files to your main Microsemi folder e.g. C:\Microsemi\ to keep the file path short, as the project requires
 a lengthy file path and some OS systems have limits. **Not providing
-a sufficient file path for the project will result in errors**.
+a sufficient file path for the project will result in errors (e.g. PF_SRAM_0 or SRAM_0 not found.)**.
 * Make sure you have the latest Libero Cores in your vault. Select Catalog tab from the left hand side toolbar and check if the "Download Latest Cores" option is available by a yellow marked area then click it. This option will only be visible if you don't have the lates cores in the vault. If the vault hasn't been updated in a while this could take some time. Not having the library of cores required for the design to be built will cause errors.
+* Single TCL script provided to build a BaseDesign with only vital components. DDR has been replaced with LSRAM for easier use.
 
 
 ### Instructions for Building the Design
