@@ -1,8 +1,8 @@
-set project_folder_name_axi MiV_AXI_RTG4_Dev_Kit
+set project_folder_name_axi MiV_RTG4_AXI_BD
 set project_dir_axi "./$project_folder_name_axi"
 set Libero_project_name_axi MiV_AXI_BaseDesign
 
-set project_folder_name_ahb MiV_AHB_RTG4_Dev_Kit
+set project_folder_name_ahb MiV_RTG4_AHB_BD
 set project_dir_ahb "./$project_folder_name_ahb"
 set Libero_project_name_ahb MiV_AHB_BaseDesign
 
@@ -52,13 +52,13 @@ proc invalid_argument { }\
 if {"$target" == "AHB"} then {
 	if {[file exists $project_dir_ahb] == 1} then {
 		project_exists
-	} else { 
+	} else {
 		create_new_project_label_ahb
-		new_project -location  $project_dir_ahb -name $Libero_project_name_ahb -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL} 
+		new_project -location  $project_dir_ahb -name $Libero_project_name_ahb -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
 		import_files -convert_EDN_to_HDL 0 -hdl_source {./import/hdl/reset_synchronizer.v}
 		build_design_hierarchy
 		set_root reset_synchronizer
-		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl 
+		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
@@ -71,11 +71,11 @@ if {"$target" == "AHB"} then {
 		project_exists
 	} else {
 		create_new_project_label_axi
-		new_project -location  $project_dir_axi -name $Libero_project_name_axi -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL} 
+		new_project -location  $project_dir_axi -name $Libero_project_name_axi -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
 		import_files -convert_EDN_to_HDL 0 -hdl_source {./import/hdl/reset_synchronizer.v}
 		build_design_hierarchy
 		set_root reset_synchronizer
-		source ./import/components/AXI/import_component_and_constraints_rtg4_dev_kit_axi.tcl 
+		source ./import/components/AXI/import_component_and_constraints_rtg4_dev_kit_axi.tcl
 		save_project
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
@@ -96,18 +96,18 @@ if {"$target" == "AHB"} then {
 		project_exists
 	} else {
 		create_new_project_label_ahb
-		new_project -location  $project_dir_ahb -name $Libero_project_name_ahb -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL} 
+		new_project -location  $project_dir_ahb -name $Libero_project_name_ahb -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
 		import_files -convert_EDN_to_HDL 0 -hdl_source {./import/hdl/reset_synchronizer.v}
 		build_design_hierarchy
 		set_root reset_synchronizer
-		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl 
+		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------SUCCESS!----------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "---------------------------BaseDesign Built-----------------------------"
 		puts "-------------------------------------------------------------------------"
-	}	
+	}
 }
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
@@ -128,7 +128,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "---------------------------SYNTHESIZED!----------------------------------"
     puts "-------------------------------------------------------------------------"
 	puts " "
-	
+
 } elseif {"$design_flow_stage" == "PLACE_AND_ROUTE"} then {
 	puts " "
     puts "-------------------------------------------------------------------------"
@@ -138,17 +138,17 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 
 	# Configuring Place_and_Route tool for a timing pass.
 	configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
-	# ##	
+	# ##
 	run_tool -name {PLACEROUTE}
 	save_project
-	
+
 	puts " "
     puts "-------------------------------------------------------------------------"
     puts "----------------------DESIGN PLACED AND ROUTED!--------------------------"
     puts "-------------------------------------------------------------------------"
 	puts " "
 
-	
+
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
 	puts " "
     puts "-------------------------------------------------------------------------"
@@ -162,7 +162,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
     save_project
-	
+
 	puts " "
     puts "-------------------------------------------------------------------------"
     puts "--------------------PROGRAMMING FILES GENERATED!-------------------------"
@@ -192,7 +192,7 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 			-bitstream_file_type {TRUSTED_FACILITY} \
 			-bitstream_file_components {}
 		save_project
-		
+
 	} else {
 		export_prog_job \
 			-job_file_name {BaseDesign_RTG4_Dev_Kit_AXI_ProgramFile} \
@@ -201,7 +201,7 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 			-bitstream_file_components {}
 		save_project
 	}
-	
+
 	puts " "
     puts "-------------------------------------------------------------------------"
     puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
@@ -236,9 +236,9 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 
-	
+
 	} elseif {"$target" == "AXI"} then {
-	
+
 		puts " "
 		puts " "
 		puts " "
@@ -262,7 +262,7 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 		puts "-------------------------SCRIPT EXECUTED!--------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
-	
+
 	} else {
 		puts " "
 		puts " "
