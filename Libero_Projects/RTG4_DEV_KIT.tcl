@@ -1,10 +1,29 @@
 set project_folder_name_axi MiV_RTG4_AXI_BD
-set project_dir_axi "./$project_folder_name_axi"
+set project_dir_axi ""
 set Libero_project_name_axi MiV_AXI_BaseDesign
 
 set project_folder_name_ahb MiV_RTG4_AHB_BD
-set project_dir_ahb "./$project_folder_name_ahb"
+set project_dir_ahb ""
 set Libero_project_name_ahb MiV_AHB_BaseDesign
+
+switch $::tcl_platform(platform) {
+    windows {
+      puts "Windows"
+      append project_dir_ahb "C:/MiVLiberoProj/$project_folder_name_ahb"
+			append project_dir_axi "C:/MiVLiberoProj/$project_folder_name_axi"
+    }
+    unix {
+       puts "Unix"
+       append project_dir_ahb "~/MiVLiberoProj/$project_folder_name_ahb"
+			 append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
+    }
+}
+
+
+
+
+
+
 
 set target [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
