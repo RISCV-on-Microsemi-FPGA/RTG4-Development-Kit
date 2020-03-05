@@ -8,65 +8,55 @@ set Libero_project_name_ahb MiV_AHB_BaseDesign
 
 switch $::tcl_platform(platform) {
     windows {
-      puts "Windows"
       append project_dir_ahb "C:/MiVLiberoProj/$project_folder_name_ahb"
 			append project_dir_axi "C:/MiVLiberoProj/$project_folder_name_axi"
     }
     unix {
-       puts "Unix"
-       append project_dir_ahb "~/MiVLiberoProj/$project_folder_name_ahb"
-			 append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
+      append project_dir_ahb "~/MiVLiberoProj/$project_folder_name_ahb"
+			append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
     }
 }
-
-
-
-
-
-
 
 set target [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
 
-
 proc create_new_project_label_axi { }\
 {
 	puts "-------------------------------------------------------------------------"
-    puts "-------------------------------------------------------------------------"
-    puts "-----------------------CREATING NEW PROJECT------------------------------"
+  puts "-------------------------------------------------------------------------"
+  puts "-----------------------CREATING NEW PROJECT------------------------------"
 	puts "------------MiV_RV32IMA_L1_AXI_BaseDesign_RTG4_DEV_KIT-------------------"
-    puts "-------------------------------------------------------------------------"
+  puts "-------------------------------------------------------------------------"
 	puts "-------------------------------------------------------------------------"
 }
 
 proc create_new_project_label_ahb { }\
 {
 	puts "-------------------------------------------------------------------------"
-    puts "-------------------------------------------------------------------------"
-    puts "-----------------------CREATING NEW PROJECT------------------------------"
+  puts "-------------------------------------------------------------------------"
+  puts "-----------------------CREATING NEW PROJECT------------------------------"
 	puts "------------MiV_RV32IMA_L1_AHB_BaseDesign_RTG4_DEV_KIT-------------------"
-    puts "-------------------------------------------------------------------------"
+  puts "-------------------------------------------------------------------------"
 	puts "-------------------------------------------------------------------------"
 }
 
 proc project_exists { }\
 {
 	puts "---------------------------------------------------------------------------"
-    puts "-------------------------------ERROR !-------------------------------------"
+  puts "-------------------------------ERROR !-------------------------------------"
 	puts "---------------------------------------------------------------------------"
-    puts "Project already exists in folder. Please rename or remove and rerun script."
+  puts "Project already exists in folder. Please rename or remove and rerun script."
 	puts "---------------------------------------------------------------------------"
 }
 
 proc invalid_argument { }\
 {
 	puts "---------------------------------------------------------------------------"
-    puts "----------------------WRONG ARGUMENT ENTERED !-----------------------------"
+  puts "----------------------WRONG ARGUMENT ENTERED !-----------------------------"
 	puts "---------------------------------------------------------------------------"
-    puts "Make sure you put AHB or AXI argument in front of the Design Flow argument!"
+  puts "Make sure you put AHB or AXI argument in front of the Design Flow argument!"
 	puts "---------------------------------------------------------------------------"
 }
-
 
 if {"$target" == "AHB"} then {
 	if {[file exists $project_dir_ahb] == 1} then {
@@ -130,79 +120,65 @@ if {"$target" == "AHB"} then {
 }
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "-----------------------------SYNTHESIS-----------------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+	puts "-------------------------------------------------------------------------"
+	puts "-----------------------------SYNTHESIS-----------------------------------"
+	puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
 	configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
-	# ##
-    run_tool -name {SYNTHESIZE}
-    save_project
 
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "---------------------------SYNTHESIZED!----------------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+  run_tool -name {SYNTHESIZE}
+  save_project
+
+  puts "-------------------------------------------------------------------------"
+  puts "---------------------------SYNTHESIZED!----------------------------------"
+  puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "PLACE_AND_ROUTE"} then {
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "--------------------------PLACE AND ROUTE--------------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+
+  puts "-------------------------------------------------------------------------"
+  puts "--------------------------PLACE AND ROUTE--------------------------------"
+  puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
 	configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
-	# ##
+
 	run_tool -name {PLACEROUTE}
 	save_project
 
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "----------------------DESIGN PLACED AND ROUTED!--------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
-
+  puts "-------------------------------------------------------------------------"
+  puts "----------------------DESIGN PLACED AND ROUTED!--------------------------"
+  puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "--------------------GENERATING PROGRAMMING FILES-------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+
+	puts "-------------------------------------------------------------------------"
+  puts "--------------------GENERATING PROGRAMMING FILES-------------------------"
+  puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
 	configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
-	# ##
-    run_tool -name {GENERATEPROGRAMMINGDATA}
-    run_tool -name {GENERATEPROGRAMMINGFILE}
-    save_project
 
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "--------------------PROGRAMMING FILES GENERATED!-------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+  run_tool -name {GENERATEPROGRAMMINGDATA}
+  run_tool -name {GENERATEPROGRAMMINGFILE}
+  save_project
 
+  puts "-------------------------------------------------------------------------"
+  puts "--------------------PROGRAMMING FILES GENERATED!-------------------------"
+  puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "----------------------EXPORT PROGRAMMING FILES---------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+
+	puts "-------------------------------------------------------------------------"
+  puts "----------------------EXPORT PROGRAMMING FILES---------------------------"
+  puts "-------------------------------------------------------------------------"
 
 # Configuring Place_and_Route tool for a timing pass.
-configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
-# ##
+ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:4} -params {RANDOM_SEED:8988747}
+
 # pre-requisite to enable exporting programming file function
-    run_tool -name {GENERATEPROGRAMMINGDATA}
-    run_tool -name {GENERATEPROGRAMMINGFILE}
-# ##
+  run_tool -name {GENERATEPROGRAMMINGDATA}
+  run_tool -name {GENERATEPROGRAMMINGFILE}
 
 	if {"$target" == "AHB"} then {
 		export_prog_job \
@@ -221,73 +197,30 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 		save_project
 	}
 
-	puts " "
-    puts "-------------------------------------------------------------------------"
-    puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
-    puts "-------------------------------------------------------------------------"
-	puts " "
+	puts "-------------------------------------------------------------------------"
+  puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
+  puts "-------------------------------------------------------------------------"
 
 } else {
 
 	if {"$target" == "AHB"} then {
-
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "-----------------NO VALID DESIGN FLOW ARGUMENT ENTERED!------------------"
 		puts "--------------------------(this is optional)-----------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------------------------------------------------"
 		puts "-------------------------SCRIPT EXECUTED!--------------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------------------------------------------------"
-
 
 	} elseif {"$target" == "AXI"} then {
-
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts "-------------------------------------------------------------------------"
+  	puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "-----------------NO VALID DESIGN FLOW ARGUMENT ENTERED!------------------"
 		puts "--------------------------(this is optional)-----------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------------------------------------------------"
 		puts "-------------------------SCRIPT EXECUTED!--------------------------------"
-		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 
 	} else {
-		puts " "
-		puts " "
-		puts " "
-		puts " "
-		puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "-----------------NO VALID DESIGN FLOW ARGUMENT ENTERED!------------------"
 		puts "--------------------------(this is optional)-----------------------------"
@@ -295,7 +228,5 @@ configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:t
 		puts "-------ENTER A VALID FIRST ARGUMENT TO USE DESIGN FLOW ARGUMENT----------"
 		puts "------------------------------AHB OR AXI---------------------------------"
 		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------------------------------------------------"
-
 	}
 }
