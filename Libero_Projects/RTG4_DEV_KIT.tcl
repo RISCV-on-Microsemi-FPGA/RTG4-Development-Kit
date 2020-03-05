@@ -9,11 +9,11 @@ set Libero_project_name_ahb MiV_AHB_BaseDesign
 switch $::tcl_platform(platform) {
     windows {
       append project_dir_ahb "C:/MiVLiberoProj/$project_folder_name_ahb"
-			append project_dir_axi "C:/MiVLiberoProj/$project_folder_name_axi"
+      append project_dir_axi "C:/MiVLiberoProj/$project_folder_name_axi"
     }
     unix {
       append project_dir_ahb "~/MiVLiberoProj/$project_folder_name_ahb"
-			append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
+      append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
     }
 }
 
@@ -152,7 +152,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
 
-	puts "-------------------------------------------------------------------------"
+  puts "-------------------------------------------------------------------------"
   puts "--------------------GENERATING PROGRAMMING FILES-------------------------"
   puts "-------------------------------------------------------------------------"
 
@@ -169,7 +169,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 
 } elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
 
-	puts "-------------------------------------------------------------------------"
+  puts "-------------------------------------------------------------------------"
   puts "----------------------EXPORT PROGRAMMING FILES---------------------------"
   puts "-------------------------------------------------------------------------"
 
@@ -196,8 +196,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 			-bitstream_file_components {}
 		save_project
 	}
-
-	puts "-------------------------------------------------------------------------"
+  puts "-------------------------------------------------------------------------"
   puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
   puts "-------------------------------------------------------------------------"
 
@@ -212,7 +211,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 		puts "-------------------------------------------------------------------------"
 
 	} elseif {"$target" == "AXI"} then {
-  	puts "-------------------------------------------------------------------------"
+  	        puts "-------------------------------------------------------------------------"
 		puts "-------------------------------------------------------------------------"
 		puts "-----------------NO VALID DESIGN FLOW ARGUMENT ENTERED!------------------"
 		puts "--------------------------(this is optional)-----------------------------"
