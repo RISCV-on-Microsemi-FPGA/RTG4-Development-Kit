@@ -1,18 +1,6 @@
-set project_folder_name MiV_RTG4_AHB_BD
-set project_dir2 ""
-set Libero_project_name MiV_AHB_BaseDesign
+set project_folder_name MiV_AHB_BD
+set project_dir2 "./$project_folder_name"
 
-
-switch $::tcl_platform(platform) {
-    windows {
-      puts "Windows"
-      append project_dir2 "C:/MiVLiberoProj/$project_folder_name"
-    }
-    unix {
-       puts "Unix"
-       append project_dir2 "~/MiVLiberoProj/$project_folder_name"
-    }
-}
 
 puts "-------------------------------------------------------------------------"
 puts "-----------------------IMPORTING COMPONENTS------------------------------"

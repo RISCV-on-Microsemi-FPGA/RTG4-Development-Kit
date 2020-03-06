@@ -1,21 +1,10 @@
-set project_folder_name_axi MiV_RTG4_AXI_BD
-set project_dir_axi ""
-set Libero_project_name_axi MiV_AXI_BaseDesign
+set project_folder_name_axi MiV_AXI_BD
+set project_dir_axi "./$project_folder_name_axi"
+set Libero_project_name_axi RTG4150_MiV_AXI_BaseDesign
 
-set project_folder_name_ahb MiV_RTG4_AHB_BD
-set project_dir_ahb ""
-set Libero_project_name_ahb MiV_AHB_BaseDesign
-
-switch $::tcl_platform(platform) {
-    windows {
-      append project_dir_ahb "C:/MiVLiberoProj/$project_folder_name_ahb"
-      append project_dir_axi "C:/MiVLiberoProj/$project_folder_name_axi"
-    }
-    unix {
-      append project_dir_ahb "~/MiVLiberoProj/$project_folder_name_ahb"
-      append project_dir_axi "~/MiVLiberoProj/$project_folder_name_axi"
-    }
-}
+set project_folder_name_ahb MiV_AHB_BD
+set project_dir_ahb "./$project_folder_name_ahb"
+set Libero_project_name_ahb RTG4150_MiV_AHB_BaseDesign
 
 set target [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
@@ -58,6 +47,13 @@ proc invalid_argument { }\
    puts "---------------------------------------------------------------------------"
 }
 
+proc  base_design_built {}\
+{
+  puts "-------------------------------------------------------------------------"
+  puts "---------------------------BaseDesign Built-----------------------------"
+  puts "-------------------------------------------------------------------------"
+}
+
 if {"$target" == "AHB"} then {
 	if {[file exists $project_dir_ahb] == 1} then {
 		project_exists
@@ -69,11 +65,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------SUCCESS!----------------------------------"
-		puts "-------------------------------------------------------------------------"
-		puts "---------------------------BaseDesign Built-----------------------------"
-		puts "-------------------------------------------------------------------------"
+    base_design_built
 	}
 } elseif {"$target" == "AXI"} then {
 	if {[file exists $project_dir_axi] == 1} then {
@@ -86,11 +78,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AXI/import_component_and_constraints_rtg4_dev_kit_axi.tcl
 		save_project
-		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------SUCCESS!----------------------------------"
-		puts "-------------------------------------------------------------------------"
-		puts "---------------------------BaseDesign Built-----------------------------"
-		puts "-------------------------------------------------------------------------"
+    base_design_built
 	}
 } elseif {"$target" == "SYNTHESIZE"} then {
 		invalid_argument
@@ -111,17 +99,13 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-		puts "-------------------------------------------------------------------------"
-		puts "-------------------------------SUCCESS!----------------------------------"
-		puts "-------------------------------------------------------------------------"
-		puts "---------------------------BaseDesign Built-----------------------------"
-		puts "-------------------------------------------------------------------------"
+    base_design_built
 	}
 }
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "-------------------------------------------------------------------------"
-	puts "-----------------------------SYNTHESIS-----------------------------------"
+	puts "-------------------------Begin SYNTHESIS-----------------------------------"
 	puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
@@ -131,13 +115,13 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
   save_project
 
   puts "-------------------------------------------------------------------------"
-  puts "---------------------------SYNTHESIZED!----------------------------------"
+  puts "---------------------------SYNTHESIS Complete----------------------------------"
   puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "PLACE_AND_ROUTE"} then {
 
   puts "-------------------------------------------------------------------------"
-  puts "--------------------------PLACE AND ROUTE--------------------------------"
+  puts "----------------------Begin PLACE AND ROUTE--------------------------------"
   puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
@@ -147,13 +131,13 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	save_project
 
   puts "-------------------------------------------------------------------------"
-  puts "----------------------DESIGN PLACED AND ROUTED!--------------------------"
+  puts "----------------------PLACE AND ROUTE Complete--------------------------"
   puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "GENERATE_BITSTREAM"} then {
 
   puts "-------------------------------------------------------------------------"
-  puts "--------------------GENERATING PROGRAMMING FILES-------------------------"
+  puts "--------------------GENERATING BITSTREAM-------------------------"
   puts "-------------------------------------------------------------------------"
 
 	# Configuring Place_and_Route tool for a timing pass.
@@ -164,13 +148,13 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
   save_project
 
   puts "-------------------------------------------------------------------------"
-  puts "--------------------PROGRAMMING FILES GENERATED!-------------------------"
+  puts "--------------------BITSTREAM GENERATED-------------------------"
   puts "-------------------------------------------------------------------------"
 
 } elseif {"$design_flow_stage" == "EXPORT_PROGRAMMING_FILE"} then {
 
   puts "-------------------------------------------------------------------------"
-  puts "----------------------EXPORT PROGRAMMING FILES---------------------------"
+  puts "----------------------EXPORTING PROGRAMMING FILES---------------------------"
   puts "-------------------------------------------------------------------------"
 
 # Configuring Place_and_Route tool for a timing pass.
@@ -197,7 +181,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 		save_project
 	}
   puts "-------------------------------------------------------------------------"
-  puts "--------------------PROGRAMMING FILES EXPORTED!--------------------------"
+  puts "--------------------PROGRAMMING FILES EXPORTED--------------------------"
   puts "-------------------------------------------------------------------------"
 
 } else {
