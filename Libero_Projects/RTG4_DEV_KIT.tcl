@@ -1,10 +1,10 @@
 set project_folder_name_axi MiV_AXI_BD
 set project_dir_axi "./$project_folder_name_axi"
-set Libero_project_name_axi RTG4150_MiV_AXI_BaseDesign
+set Libero_project_name_axi RTG4_DEV_KIT_MiV_AXI_BaseDesign
 
 set project_folder_name_ahb MiV_AHB_BD
 set project_dir_ahb "./$project_folder_name_ahb"
-set Libero_project_name_ahb RTG4150_MiV_AHB_BaseDesign
+set Libero_project_name_ahb RTG4_DEV_KIT_MiV_AHB_BaseDesign
 
 set target [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
@@ -65,7 +65,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-    base_design_built
+        base_design_built
 	}
 } elseif {"$target" == "AXI"} then {
 	if {[file exists $project_dir_axi] == 1} then {
@@ -78,7 +78,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AXI/import_component_and_constraints_rtg4_dev_kit_axi.tcl
 		save_project
-    base_design_built
+        base_design_built
 	}
 } elseif {"$target" == "SYNTHESIZE"} then {
 		invalid_argument
@@ -99,7 +99,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-    base_design_built
+        base_design_built
 	}
 }
 
