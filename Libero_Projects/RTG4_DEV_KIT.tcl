@@ -65,7 +65,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-        base_design_built
+                base_design_built
 	}
 } elseif {"$target" == "AXI"} then {
 	if {[file exists $project_dir_axi] == 1} then {
@@ -78,7 +78,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AXI/import_component_and_constraints_rtg4_dev_kit_axi.tcl
 		save_project
-        base_design_built
+                base_design_built
 	}
 } elseif {"$target" == "SYNTHESIZE"} then {
 		invalid_argument
@@ -99,7 +99,7 @@ if {"$target" == "AHB"} then {
 		set_root reset_synchronizer
 		source ./import/components/AHB/import_component_and_constraints_rtg4_dev_kit_ahb.tcl
 		save_project
-        base_design_built
+                base_design_built
 	}
 }
 
