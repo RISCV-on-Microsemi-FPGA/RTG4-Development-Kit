@@ -723,7 +723,7 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMA_L1_AXI:2.1.100} 
 "MEM_WID:5" \
 "MMIO_WID:5" \
 "RESET_VECTOR_ADDR_0:0x0" \
-"RESET_VECTOR_ADDR_1:0x6000"} 
+"RESET_VECTOR_ADDR_1:0x8000"} 
 # Parameters for MiV_RV32IMA_L1_AXI_0
 sd_instantiate_component -sd_name ${sd_name} -component_name {MiV_RV32IMA_L1_AXI_0} -instance_name {MiV_RV32IMA_L1_AXI_0}
 sd_create_pin_slices -sd_name ${sd_name} -pin_name {MiV_RV32IMA_L1_AXI_0:IRQ} -pin_slices {[28:0]}
