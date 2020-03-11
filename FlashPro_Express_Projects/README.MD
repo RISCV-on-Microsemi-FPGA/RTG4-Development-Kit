@@ -6,16 +6,15 @@ This folder contains FlashPro Express **(v12.3)** projects for the RTG4 Developm
 The programming files contained under this folder were exported from the designs in the Libero_Projects folder in this repository. Select the desired programming .job file and program your device using FlashPro Express.
 
 ## Programming the Device using FlashPro Express
+ Connect the FPGA board to the computer using the FlashPro5 or Embedded FlashPro.
+
     1. Open FlashPro Express
     2. Select Project -> New Job Project from FlashPro Express Job   
-    3. Browse to the Job file using, "Browse ...". The Job files are located in
-       the FlashPro_Express_Project/Programming_Files directory
+    3. Browse to the Job file using, "Browse ...". The Job files are    located in the FlashPro_Express_Project/Programming_Files directory
     4. Select the Job file, then select "Open"
     5. Select the FlashPro_Express_Project/Programming_Files  as the project location
-    6. Connect the FPGA board to the computer using the FlashPro5 or Embedded FlashPro
-    7. Turn on the board and select "Refreash/Rescan Programmers"
-    8. Select the "RUN" button, status bar will change from IDLE to the percentage complete
-    9. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
+    6. Select the "RUN" button, status bar will change from IDLE to the percentage complete
+    7. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
 
 ## Design Features
 The Libero designs include the following features:
