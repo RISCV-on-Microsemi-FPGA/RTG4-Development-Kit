@@ -1,24 +1,37 @@
-## RTG4 Development Kit RISC-V Designs FlashPro Express Programming Files (Libero v12.3)
+# RTG4 Development Kit FPGA Programming Files
 
-Sample Mi-V FlashPro Express files for RTG4 the Radiation-Tolerant Dev Kit
+This folder contains FlashPro Express **(v12.3)** projects for the RTG4 Development Kit Mi-V sample designs.
 
-### FlashPro Express
-The programming files contained here are exported from Libero projects and their configurations found in this repository. Select the desired programming .job file and program your device using the standalone installer for FlashPro Express which can be found [here](https://www.microsemi.com/product-directory/programming/4977-flashpro#software).
+## FlashPro Express
+The programming files contained under this folder were exported from the designs in the Libero_Projects folder in this repository. Select the desired programming .job file and program your device using FlashPro Express.
 
-### Programming the Device using FPExpress
----------------------------------------------
-1. Download or Clone this repository to get the contents of FlashPro_Express_Projects.
-2. Power-up your board and connect it to your programming device running FlashPro Express.
-3. Launch FPExpress v12.3 and wait for it to load.
-4. Click into Project from the top left bar and select "New Job Project from FlashPro Express Job"
-5. For "Programming job file:" navigate to your FlashPro_Express_Project/Programming_Files directory and select the (.job) programming file you want to program your board with.
-6. For "FlashPro Express job project location:" select the FlashPro_Express_Projects folder you have downloaded with this project.
-8. Click OK, wait for the new window to pop-up.
-7. From the bottom left drop-down menu select the PROGRAM option if it's not selected by default and click RUN. Wait for device to be programmed.
+## Programming the Device using FlashPro Express
+    1. Open FlashPro Express
+    2. Select Project -> New Job Project from FlashPro Express Job   
+    3. Browse to the Job file using, "Browse ...". The Job files are located in
+       the FlashPro_Express_Project/Programming_Files directory
+    4. Select the Job file, then select "Open"
+    5. Select the FlashPro_Express_Project/Programming_Files  as the project location
+    6. Connect the FPGA board to the computer using the FlashPro5 or Embedded FlashPro
+    7. Turn on the board and select "Refreash/Rescan Programmers"
+    8. Select the "RUN" button, status bar will change from IDLE to the percentage complete
+    9. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
 
-### Target Hardware
-Details on the RTG4 Development kit and it's features can be found:
-* RTG4-DEV-KIT [here](https://www.microsemi.com/product-directory/dev-kits-solutions/3865-rtg4-kits)
+## Design Features
+The Libero designs include the following features:
+* A MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI soft RISC-V processor.
+* RISC-V debug block allowing on-target debug using SoftConsole.
+* The operating frequency of the design is 50MHz.
+* Target memory is LSRAM.
+* User peripherals (GPIO, Timers, UART).
 
-### Target Mi-V CPU
-Details of the features of Mi-V CPUs are available [here](https://github.com/RISCV-on-Microsemi-FPGA/CPUs).
+The peripherals in this design are located at the following addresses.
+
+| Peripheral    | Address   |
+| ------------- |:-------------:|
+| CoreUARTapb   | 0x7000_1000   |
+| CoreGPIO_IN   | 0x7000_2000   |
+| CoreTimer_0   | 0x7000_3000   |
+| CoreTimer_1   | 0x7000_4000   |
+| CoreGPIO_OUT  | 0x7000_5000   |
+| LSRAM| 0x8000_0000|
