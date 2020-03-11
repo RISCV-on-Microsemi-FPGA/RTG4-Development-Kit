@@ -13,7 +13,7 @@ The programming files contained under this folder were exported from the designs
     3. Browse to the programming Job file (.job) using "Browse ...". The Job files are located
        in the FlashPro_Express_Project/Programming_Files directory
     4. Select the Job file, then select "Open"
-    5. Select the FlashPro_Express_Project/Programming_Files as the project location, then select "OK"
+    5. Select the FlashPro_Express_Project folder or a folder of your choice as the project location, then select "OK"
     6. The FlashPro Express Job Project is created
     7. Select the "RUN" button; the status bar will change from IDLE to the percentage complete
     8. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
