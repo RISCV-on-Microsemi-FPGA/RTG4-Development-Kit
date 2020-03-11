@@ -14,9 +14,9 @@ The programming files contained under this folder were exported from the designs
        in the FlashPro_Express_Project/Programming_Files directory
     4. Select the Job file, then select "Open"
     5. Select the FlashPro_Express_Project/Programming_Files as the project location, then select "OK"
-    6. The FlashPro Express project is created
-    6. Select the "RUN" button, status bar will change from IDLE to the percentage complete
-    7. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
+    6. The FlashPro Express Job Project is created
+    7. Select the "RUN" button, status bar will change from IDLE to the percentage complete
+    8. Once complete the status bar will display "1 PROGRAMMER(S) PASSED"
 
 ## Design Features
 The Libero designs include the following features:
