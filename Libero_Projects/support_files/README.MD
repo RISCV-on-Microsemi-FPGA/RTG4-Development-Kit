@@ -1,1 +1,0 @@
-## Support files for RTG4 Development Kit RISC-V Sample Designs
