@@ -5,7 +5,7 @@ FlashPro Express projects containing pre-generated programming files are also av
 
 To download or clone the repository:
 
-    $ git clone https://github.com/CLappin/RTG4-Development-Kit/tree/develop/
+    $ git clone https://github.com/RISCV-on-Microsemi-FPGA/RTG4-Development-Kit.git
 
     $ Running from the zipped sources
     1. Download the zipped sources via the "Clone or download" button using "Download Zip" button
