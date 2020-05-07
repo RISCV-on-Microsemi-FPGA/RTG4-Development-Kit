@@ -1,28 +1,49 @@
-# RTG4 Development Kit RISC-V Sample Designs
-Sample RISC-V Libero projects for the RTG4 Development Kit.
+# RTG4 Development Kit Mi-V Sample Designs
 
-This project contains Libero projects containing FPGA designs including a RISC-V RV32IM soft processor. Programming bitstreams are also included so you don't have to run through the full FPGA design flow in order to start developing software for RISC-V.
+This repository contains Libero projects for the MIV_RV32IMA_L1_AHB and MIV_RV32IMA_L1_AXI soft core RISC-V processors.
+FlashPro Express projects containing pre-generated programming files are also available for each of the designs.
 
-### Design Feature
-The FPGA Designs include the following features
-* Mi-V RV32IM RISC-V processor 
-* RISC-V debug block allowing on-target debug using openocd/GDB
-* DDR3 memory for code/data
-* User peripherals such as GPIO, Timers, UART
+To download or clone the repository:
 
-The memory map for each design is available within each Libero project.
+    $ git clone https://github.com/RISCV-on-Microsemi-FPGA/RTG4-Development-Kit.git
 
-### Target Hardware
-The RTG4 Development Kit includes an RT4G150 FPGA. Details of the features available for this development board are available [here](https://www.microsemi.com/product-directory/dev-kits-solutions/3865-rtg4-kits) .
+    $ Running from the zipped sources
+    1. Download the zipped sources via the "Clone or download" button using "Download Zip" button
+    2. Unzip the sources
 
-### FlashPro Express
-This project includes FlashPro Express projects that can be used to program the development boards FPGA. A standalone installer for FlashPro Express is available [here](https://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software) . Please note that you only need to install this standalone version of FlashPro Express if you do not have Libero tools installed.
 
-* MIV_RV32IMA_BaseDesign_vlog, contains a simple Mi-V RV32IMA design which allows users to use basic peripherals such as GPIO, UART and Timers. 
-* RTG4_MIV_RV32IMA_L1_AHB_MultiProcessorDesign, contains a design with two Mi-V RV32IMA. One as a control processor and one as an application processor. 
+# Libero Projects
+The Libero_Projects folder contains sample Mi-V Libero designs.
 
-### Libero 
-Libero is Microsemi's FPGA design tool. You will need this tool if you wish to modify the example FPGA designs. Libero is available from [here](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads).
+## Design Features
+The Libero designs include the following features:
+* A MIV_RV32IMA_L1_AHB or MIV_RV32IMA_L1_AXI soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
+* RISC-V debug block allowing on-target debug using SoftConsole
+* The operating frequency of the design is 50MHz
+* Target memory is LSRAM
+* User peripherals (GPIO, Timers, UART)
 
-### Example Software Projects
+## Target Hardware
+Details of the RTG4 Development kit and it's features can be found:
+* RTG4-DEV-KIT [here](https://www.microsemi.com/product-directory/dev-kits-solutions/3865-rtg4-kits)
+
+# FlashPro Express
+The FlashPro_Express_Projects folder contains the pre-generated programming files, which can be downloaded directly to the target board using FlashPro Express.
+
+# Design Tools
+The following design tools are required.
+
+## Libero SoC v12.3
+Libero SoC is Microsemi's FPGA design software.
+It is available from [here](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads).
+
+## FlashPro Express
+FlashPro Express is Microsemi's Programming and debug tool. It is included in the Libero SoC software and is also
+available as a standalone application found [here](http://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software). Please note, that if Libero SoC is already on your system, you do not need
+the standalone version.
+
+## SoftConsole
+SoftConsole is Microsemi’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microsemi CPU and SoC based FPGAs. It provides development and debug support for all Microsemi SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded [here](https://www.microsemi.com/product-directory/design-tools/4879-softconsole).  
+
+### SoftConsole Projects
 A set of RISC-V example software projects are also available for these designs from the SoftConsole [page](https://github.com/RISCV-on-Microsemi-FPGA/SoftConsole).
