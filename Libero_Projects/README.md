@@ -16,18 +16,6 @@ This folder contains Tcl scripts that build Libero SoC v12.5 design projects for
 | CFG1    |  This design uses the MiV_RV32IMAF_L1_AHB core with an **AHB** interface for memory and peripherals|
 
 
-
-#### RTG4_Dev_Kit_MiV_RV32IMC_BaseDesign
-
-
-| Config  | Description|
-| :------:|:----------------------------------------|
-| CFG1    | This design uses the MiV_RV32IMC core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
-| CFG2    | This design uses the MiV_RV32IMC core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
-| CFG3    | This design uses the MiV_RV32IMC core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
-
-
-
 ## <a name="quick"></a> Instructions
 
 #### Running Libero SoC in GUI mode
