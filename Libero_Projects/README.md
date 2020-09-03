@@ -1,7 +1,7 @@
 # RTG4 Development Kit Mi-V Sample FPGA Designs
 This folder contains Tcl scripts that build Libero SoC v12.5 design projects for the RTG4 Development Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
-#### SF2_Adv_Dev_Kit_TS_MiV_RV32IMA_BaseDesign
+#### RTG4_Dev_Kit_MiV_RV32IMA_BaseDesign
 
 | Config  | Description |
 | :------:|:------------|
@@ -9,7 +9,7 @@ This folder contains Tcl scripts that build Libero SoC v12.5 design projects for
 | CFG2    |This design uses the MiV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals|
 
 
-#### SF2_Adv_Dev_Kit_TS_MiV_RV32IMAF_BaseDesign
+#### RTG4_Dev_Kit_MiV_RV32IMAF_BaseDesign
 
 | Config  |Description |
 | :------:|:-----------|
@@ -17,7 +17,7 @@ This folder contains Tcl scripts that build Libero SoC v12.5 design projects for
 
 
 
-#### SF2_Adv_Dev_Kit_TS_MiV_RV32IMC_BaseDesign
+#### RTG4_Dev_Kit_MiV_RV32IMC_BaseDesign
 
 
 | Config  | Description|
