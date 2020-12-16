@@ -18,7 +18,7 @@ source ./import/components/SHARED_COMPONENTS/CoreAXITOAHBL_0.tcl
 source ./import/components/SHARED_COMPONENTS/CoreAXITOAHBL_1.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreGPIO_IN.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreGPIO_OUT.tcl 
-source ./import/components/SHARED_COMPONENTS/CoreJTAGDebug_0.tcl 
+source ./import/components/SHARED_COMPONENTS/CoreJTAGDebug_1.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreTimer_0.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreTimer_1.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreUARTapb_0.tcl 
@@ -94,8 +94,8 @@ sd_create_pin_slices -sd_name ${sd_name} -pin_name {CoreGPIO_OUT:GPIO_OUT} -pin_
 
 
 
-# Add CoreJTAGDebug_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {CoreJTAGDebug_0} -instance_name {CoreJTAGDebug_0}
+# Add CoreJTAGDebug_1 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {CoreJTAGDebug_1} -instance_name {CoreJTAGDebug_1}
 
 
 
@@ -166,21 +166,21 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"RCOSC_50MHZ_0:CLKOUT" "RTG4FCCC
 sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:Y" "reset_synchronizer_0:reset" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:B" "RTG4FCCC_0:LOCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:A" "SYSRESET_0:POWER_ON_RESET_N" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TCK_0" "MiV_RV32IMA_L1_AXI_0:TCK" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TDI_0" "MiV_RV32IMA_L1_AXI_0:TDI" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TMS_0" "MiV_RV32IMA_L1_AXI_0:TMS" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TRSTB_0" "MiV_RV32IMA_L1_AXI_0:TRST" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TCK_0" "MiV_RV32IMA_L1_AXI_0:TCK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TDI_0" "MiV_RV32IMA_L1_AXI_0:TDI" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TMS_0" "MiV_RV32IMA_L1_AXI_0:TMS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TRSTB_0" "MiV_RV32IMA_L1_AXI_0:TRST" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"reset_synchronizer_0:reset_sync" "RTG4_SRAM_0:HRESETN" "CoreTimer_1:PRESETn" "COREAHBTOAPB3_0:HRESETN" "CoreGPIO_OUT:PRESETN" "CoreAHBL_0:HRESETN" "CoreTimer_0:PRESETn" "CoreUARTapb_0:PRESETN" "CoreGPIO_IN:PRESETN" "CoreAXITOAHBL_0:HRESETN" "CoreAXITOAHBL_0:ARESETN" "MiV_RV32IMA_L1_AXI_0:RESETN" "CoreAXITOAHBL_1:ARESETN" "CoreAXITOAHBL_1:HRESETN" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_0:TIMINT" "MiV_RV32IMA_L1_AXI_0:IRQ[29]" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:TIMINT" "MiV_RV32IMA_L1_AXI_0:IRQ[30]" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TGT_TDO_0" "MiV_RV32IMA_L1_AXI_0:TDO" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TDO_0" "MiV_RV32IMA_L1_AXI_0:TDO" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"reset_synchronizer_0:clock" "RTG4_SRAM_0:HCLK" "CoreTimer_1:PCLK" "COREAHBTOAPB3_0:HCLK" "CoreGPIO_OUT:PCLK" "CoreAHBL_0:HCLK" "CoreTimer_0:PCLK" "CoreUARTapb_0:PCLK" "CoreGPIO_IN:PCLK" "RTG4FCCC_0:GL0" "CoreAXITOAHBL_0:HCLK" "CoreAXITOAHBL_0:ACLK" "MiV_RV32IMA_L1_AXI_0:CLK" "CoreAXITOAHBL_1:ACLK" "CoreAXITOAHBL_1:HCLK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:RX" "RX" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TCK" "TCK" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TDI" "TDI" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TDO" "TDO" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TMS" "TMS" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_0:TRSTB" "TRSTB" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TCK" "TCK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TDI" "TDI" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TDO" "TDO" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TMS" "TMS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TRSTB" "TRSTB" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:TX" "TX" }
 
 # Add bus net connections

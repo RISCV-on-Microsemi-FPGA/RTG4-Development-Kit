@@ -1,6 +1,6 @@
 # Exporting core RTG4_SRAM_0 to TCL
 # Create design TCL command for core RTG4_SRAM_0
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:RTG4_SRAM_AHBL_AXI:1.0.113} -component_name {RTG4_SRAM_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:RTG4_SRAM_AHBL_AXI:1.0.115} -component_name {RTG4_SRAM_0} -params {\
 "AXI4_AWIDTH:32" \
 "AXI4_DWIDTH:32" \
 "AXI4_IDWIDTH:8" \

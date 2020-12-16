@@ -1,6 +1,6 @@
 # Exporting core CoreJTAGDebug_0 to TCL
 # Exporting Create design command for core CoreJTAGDebug_0
-create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -component_name {CoreJTAGDebug_0} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -component_name {CoreJTAGDebug_1} -params {\
 "IR_CODE_TGT_0:0x55"  \
 "IR_CODE_TGT_1:0x56"  \
 "IR_CODE_TGT_2:0x57"  \
@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -c
 "IR_CODE_TGT_14:0x63"  \
 "IR_CODE_TGT_15:0x64"  \
 "NUM_DEBUG_TGTS:1"  \
-"TGT_ACTIVE_HIGH_RESET_0:false"  \
+"TGT_ACTIVE_HIGH_RESET_0:true"  \
 "TGT_ACTIVE_HIGH_RESET_1:true"  \
 "TGT_ACTIVE_HIGH_RESET_2:true"  \
 "TGT_ACTIVE_HIGH_RESET_3:true"  \

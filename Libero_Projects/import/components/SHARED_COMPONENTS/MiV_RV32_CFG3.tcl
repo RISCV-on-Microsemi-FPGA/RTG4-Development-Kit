@@ -1,6 +1,6 @@
-# Exporting core MIV_RV32IMC_0 to TCL
-# Exporting Create design command for core MIV_RV32IMC_CFG3
-create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMC:2.1.100} -component_name {MIV_RV32IMC_CFG3} -params {\
+# Exporting core MIV_RV32_CFG3_0 to TCL
+# Exporting Create design command for core MIV_RV32_CFG3_0
+create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32:3.0.100} -component_name {MIV_RV32_CFG3} -params {\
 "AHB_END_ADDR_0:0xffff"  \
 "AHB_END_ADDR_1:0x8fff"  \
 "AHB_MASTER_TYPE:0"  \
@@ -19,10 +19,13 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMC:2.1.100} -compon
 "AXI_SLAVE_MIRROR:false"  \
 "AXI_START_ADDR_0:0x0"  \
 "AXI_START_ADDR_1:0x6000"  \
-"DAP_END_ADDR_0:0x4000"  \
-"DAP_END_ADDR_1:0x4000"  \
-"DAP_START_ADDR_0:0x0"  \
-"DAP_START_ADDR_1:0x4000"  \
+"BOOTROM_DEST_ADDR_LOWER:0x0"  \
+"BOOTROM_DEST_ADDR_UPPER:0x4000"  \
+"BOOTROM_PRESENT:false"  \
+"BOOTROM_SRC_END_ADDR_LOWER:0x3fff"  \
+"BOOTROM_SRC_END_ADDR_UPPER:0x8000"  \
+"BOOTROM_SRC_START_ADDR_LOWER:0x0"  \
+"BOOTROM_SRC_START_ADDR_UPPER:0x8000"  \
 "DEBUGGER:true"  \
 "ECC_ENABLE:false"  \
 "FWD_REGS:false"  \
@@ -32,15 +35,20 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32IMC:2.1.100} -compon
 "INTERNAL_MTIME:true"  \
 "INTERNAL_MTIME_IRQ:true"  \
 "MTIME_PRESCALER:100"  \
-"MTVEC_OFFSET:0x34"  \
-"NUM_EXT_IRQS:6"  \
+"NUM_EXT_IRQS:1"  \
+"RECONFIG_BOOTROM:false"  \
 "RESET_VECTOR_ADDR_0:0x0"  \
 "RESET_VECTOR_ADDR_1:0x8000"  \
-"TCM_DAP_PRESENT:false"  \
+"TAS_END_ADDR_0:0x3fff"  \
+"TAS_END_ADDR_1:0x4000"  \
+"TAS_START_ADDR_0:0x0"  \
+"TAS_START_ADDR_1:0x4000"  \
 "TCM_END_ADDR_0:0x7fff"  \
 "TCM_END_ADDR_1:0x8000"  \
 "TCM_PRESENT:true"  \
 "TCM_START_ADDR_0:0x0"  \
 "TCM_START_ADDR_1:0x8000"  \
+"TCM_TAS_PRESENT:false"  \
 "VECTORED_INTERRUPTS:false"   }
-# Exporting core MIV_RV32IMC_0 to TCL done
+# Exporting core MIV_RV32_CFG3_0 to TCL done
+

@@ -1,10 +1,14 @@
 set project_folder_name_CFG1 MiV_CFG1_BD
 set project_dir_CFG1 "./$project_folder_name_CFG1"
-set Libero_project_name_CFG1 RTG4_Dev_Kit_MiV_RV32IMA_CFG1_BaseDesign
+set Libero_project_name_CFG1 RTG4_Dev_Kit_MiV_RV32_CFG1_BaseDesign
 
 set project_folder_name_CFG2 MiV_CFG2_BD
 set project_dir_CFG2 "./$project_folder_name_CFG2"
-set Libero_project_name_CFG2 RTG4_Dev_Kit_MiV_RV32IMA_CFG2_BaseDesign
+set Libero_project_name_CFG2 RTG4_Dev_Kit_MiV_RV32_CFG2_BaseDesign
+
+set project_folder_name_CFG3 MiV_CFG3_BD
+set project_dir_CFG3 "./$project_folder_name_CFG3"
+set Libero_project_name_CFG3 RTG4_Dev_Kit_MiV_RV32_CFG3_BaseDesign
 
 set config [string toupper [lindex $argv 0]]
 set design_flow_stage [string toupper [lindex $argv 1]]
@@ -64,6 +68,15 @@ proc  base_design_built { }\
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 }
 
+proc config2_not_available { }\
+{
+	puts "\n---------------------------------------------------------------------------------------------------------"
+    puts "RTG4_Dev_Kit_MiV_RV32_CFG2_BaseDesign is not available in this release."
+    puts "Try a different BaseDesign configuration that uses MiV_RV32."
+	puts "--------------------------------------------------------------------------------------------------------- \n"
+}
+
+
 proc download_cores_all_cfgs  { }\
 {
 	download_core -vlnv {Actel:DirectCore:CoreAPB3:4.1.100} -location {www.microchip-ip.com/repositories/DirectCore}
@@ -84,10 +97,18 @@ proc download_cores_all_cfgs  { }\
 	download_core -vlnv {Microsemi:MiV:MIV_RV32IMAF_L1_AHB:2.1.100} -location {www.microchip-ip.com/repositories/DirectCore} 
 }
 
-proc pre_configure_place_and_route { }\
+proc pre_configure_place_and_route {config}\
 {
-    # Configuring Place_and_Route tool for a timing pass.
-    configure_tool -name {PLACEROUTE} -params {TDPR:true} -params {IOREG_COMBINING:true} -params {INCRPLACEANDROUTE:false} -params {REPAIR_MIN_DELAY:true}
+	if {"$config" == "CFG1"} then {
+		# Configuring Place_and_Route tool for a timing pass CFG1
+		configure_tool -name {PLACEROUTE} -params {DELAY_ANALYSIS:MAX} -params {EFFORT_LEVEL:true} -params {INCRPLACEANDROUTE:false} -params {IOREG_COMBINING:true} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:2} -params {RANDOM_SEED:0} -params {TDPR:true}
+	# } elseif {"$config" == "CFG2"} then {
+		# # Configuring Place_and_Route tool for a timing pass CFG2
+		# configure_tool -name {PLACEROUTE} -params {DELAY_ANALYSIS:MAX} -params {EFFORT_LEVEL:true} -params {INCRPLACEANDROUTE:false} -params {IOREG_COMBINING:true} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:7} -params {RANDOM_SEED:5} -params {TDPR:true}
+	} else {
+		#Configuring Place_and_Route tool for a timing pass CFG3
+		configure_tool -name {PLACEROUTE} -params {DELAY_ANALYSIS:MAX} -params {EFFORT_LEVEL:true} -params {INCRPLACEANDROUTE:false} -params {IOREG_COMBINING:true} -params {REPAIR_MIN_DELAY:true} -params {START_SEED_INDEX:6} -params {RANDOM_SEED:4} -params {TDPR:true}
+	}
 }
 
 proc run_verify_timing { }\
@@ -101,19 +122,34 @@ if {"$config" == "CFG1"} then {
 	} else {
 		create_new_project_label
 		new_project -location  $project_dir_CFG1 -name $Libero_project_name_CFG1 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
+		project_settings -enable_set_mitigation 0
 		download_cores_all_cfgs
-		source ./import/components/IMA_CFG1/import_component_and_constraints_rtg4_dev_kit_rv32ima_cfg1.tcl
+		source ./import/components/IMC_CFG1/import_component_and_constraints_rtg4_dev_kit_rv32imc_cfg1.tcl
 		save_project
         base_design_built
 	}
 } elseif {"$config" == "CFG2"} then {
-	if {[file exists $project_dir_CFG2] == 1} then {
+	# if {[file exists $project_dir_CFG2] == 1} then {
+		# project_exists
+	# } else {
+		# create_new_project_label
+		# new_project -location  $project_dir_CFG2 -name $Libero_project_name_CFG2 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
+		# project_settings -enable_set_mitigation 0
+		# download_cores_all_cfgs
+		# source ./import/components/IMC_CFG2/import_component_and_constraints_rtg4_dev_kit_rv32imc_cfg2.tcl
+		# save_project
+        # base_design_built
+	#}
+		config2_not_available
+} elseif {"$config" == "CFG3"} then {
+	if {[file exists $project_dir_CFG3] == 1} then {
 		project_exists
 	} else {
 		create_new_project_label
-		new_project -location  $project_dir_CFG2 -name $Libero_project_name_CFG2 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
+		new_project -location  $project_dir_CFG3 -name $Libero_project_name_CFG3 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
+		project_settings -enable_set_mitigation 0
 		download_cores_all_cfgs
-		source ./import/components/IMA_CFG2/import_component_and_constraints_rtg4_dev_kit_rv32ima_cfg2.tcl
+		source ./import/components/IMC_CFG3/import_component_and_constraints_rtg4_dev_kit_rv32imc_cfg3.tcl
 		save_project
         base_design_built
 	}
@@ -126,21 +162,24 @@ if {"$config" == "CFG1"} then {
 		no_first_argument_entered
 		create_new_project_label
 		new_project -location  $project_dir_CFG1 -name $Libero_project_name_CFG1 -project_description {} -block_mode 0 -standalone_peripheral_initialization 0 -instantiate_in_smartdesign 1 -ondemand_build_dh 1 -hdl {VERILOG} -family {RTG4} -die {RT4G150} -package {1657 CG} -speed {STD} -die_voltage {1.2} -part_range {MIL} -adv_options {IO_DEFT_STD:LVCMOS 2.5V} -adv_options {RESTRICTPROBEPINS:1} -adv_options {RESTRICTSPIPINS:0} -adv_options {TEMPR:MIL} -adv_options {VCCI_1.2_VOLTR:MIL} -adv_options {VCCI_1.5_VOLTR:MIL} -adv_options {VCCI_1.8_VOLTR:MIL} -adv_options {VCCI_2.5_VOLTR:MIL} -adv_options {VCCI_3.3_VOLTR:MIL} -adv_options {VOLTR:MIL}
+		project_settings -enable_set_mitigation 1
 		download_cores_all_cfgs
-		source ./import/components/IMA_CFG1/import_component_and_constraints_rtg4_dev_kit_rv32ima_cfg1.tcl
+		source ./import/components/IMC_CFG1/import_component_and_constraints_rtg4_dev_kit_rv32imc_cfg1.tcl
 		save_project
         base_design_built
 	}
+} 
+
+if {"$config" != "CFG2"} then {
+	configure_tool -name {SYNTHESIZE} -params {BLOCK_MODE:false} -params {BLOCK_PLACEMENT_CONFLICTS:ERROR} -params {BLOCK_ROUTING_CONFLICTS:LOCK} -params {CLOCK_ASYNC:60} -params {CLOCK_DATA:5000} -params {CLOCK_GLOBAL:2} -params {PA4_GB_COUNT:16} -params {PA4_GB_MAX_RCLKINT_INSERTION:16} -params {PA4_GB_MIN_GB_FANOUT_TO_USE_RCLKINT:300} -params {RAM_OPTIMIZED_FOR_POWER:0} -params {RETIMING:true} -params {SYNPLIFY_OPTIONS:} -params {SYNPLIFY_TCL_FILE:}
 }
- 
-	configure_tool -name {SYNTHESIZE} -params {BLOCK_MODE:false} -params {BLOCK_PLACEMENT_CONFLICTS:ERROR} -params {BLOCK_ROUTING_CONFLICTS:LOCK} -params {CLOCK_ASYNC:150} -params {CLOCK_DATA:5000} -params {CLOCK_GLOBAL:2} -params {PA4_GB_COUNT:16} -params {PA4_GB_MAX_RCLKINT_INSERTION:16} -params {PA4_GB_MIN_GB_FANOUT_TO_USE_RCLKINT:300} -params {RAM_OPTIMIZED_FOR_POWER:0} -params {RETIMING:false} -params {SYNPLIFY_OPTIONS:} -params {SYNPLIFY_TCL_FILE:}
 
 if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "\n---------------------------------------------------------------------------------------------------------"
     puts "Begin Synthesis..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-	pre_configure_place_and_route
+	pre_configure_place_and_route $config
     run_tool -name {SYNTHESIZE}
     save_project
 
@@ -155,7 +194,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
     puts "Begin Place and Route..."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
-	pre_configure_place_and_route
+	pre_configure_place_and_route $config
 	run_verify_timing
 	save_project
 
@@ -172,7 +211,7 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
 
-	pre_configure_place_and_route
+	pre_configure_place_and_route $config
 	run_verify_timing
     run_tool -name {GENERATEPROGRAMMINGDATA}
     run_tool -name {GENERATEPROGRAMMINGFILE}
@@ -191,28 +230,34 @@ if {"$design_flow_stage" == "SYNTHESIZE"} then {
 	puts "--------------------------------------------------------------------------------------------------------- \n"
 
 
-	pre_configure_place_and_route
+	pre_configure_place_and_route $config
 	run_verify_timing
 	run_tool -name {GENERATEPROGRAMMINGDATA}
 	run_tool -name {GENERATEPROGRAMMINGFILE}
 
 	if {"$config" == "CFG1"} then {
-          export_prog_job \
-         -job_file_name {RTG4_Dev_Kit_MiV_RV32IMA_CFG1_BaseDesign} \
-		 -export_dir {./MiV_CFG1_BD/designer/BaseDesign/export} \
-         -force_rtg4_otp 0 \
-         -design_bitstream_format {PPD} 
+		export_prog_job \
+			-job_file_name {RTG4_Dev_Kit_MiV_RV32_CFG1_BaseDesign} \
+			-export_dir {./MiV_CFG1_BD/designer/BaseDesign/export} \
+			-force_rtg4_otp 0 \
+			-design_bitstream_format {PPD} 
 		save_project
-
+	# } elseif {"$config" == "CFG2"} then {
+		# export_prog_job \
+			# -job_file_name {RTG4_Dev_Kit_MiV_RV32_CFG2_BaseDesign} \
+			# -export_dir {./MiV_CFG2_BD/designer/BaseDesign/export} \
+			# -force_rtg4_otp 0 \
+			# -design_bitstream_format {PPD} 
+		# save_project
 	} else {
-          export_prog_job \
-         -job_file_name {RTG4_Dev_Kit_MiV_RV32IMA_CFG2_BaseDesign} \
-		 -export_dir {./MiV_CFG2_BD/designer/BaseDesign/export} \
-         -force_rtg4_otp 0 \
-         -design_bitstream_format {PPD} 
+		export_prog_job \
+			-job_file_name {RTG4_Dev_Kit_MiV_RV32_CFG3_BaseDesign} \
+			-export_dir {./MiV_CFG3_BD/designer/BaseDesign/export} \
+			-force_rtg4_otp 0 \
+			-design_bitstream_format {PPD} 
 		save_project
 	}
-	
+
 	puts "\n---------------------------------------------------------------------------------------------------------"
     puts "Programming Files Exported."
 	puts "--------------------------------------------------------------------------------------------------------- \n"
