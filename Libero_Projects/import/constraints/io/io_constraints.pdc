@@ -25,115 +25,54 @@
 # User Locked I/O settings
 # 
 
-set_io {GPIO_IN[0]}   \
-    -pinname V33      \
+
+# -- User PushButtons I/O -- #
+
+set_io {PUSH_BTN_1}   \
+    -pinname AA30      \
+    -fixed yes        \
+    -DIRECTION INPUT
+
+set_io {PUSH_BTN_2}   \
+    -pinname AB31      \
     -fixed yes        \
     -DIRECTION INPUT
 
 
-set_io {GPIO_IN[1]}   \
-    -pinname V34      \
-    -fixed yes        \
-    -DIRECTION INPUT
+# -- LEDs I/O --#
 
-
-# Additional GPIOs
-# set_io {GPIO_IN[2]}   \
-    # -pinname U34      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[3]}   \
-    # -pinname W36      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[4]}   \
-    # -pinname AA30     \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[5]}   \
-    # -pinname AB31     \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[6]}   \
-    # -pinname AB30     \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[7]}   \
-    # -pinname AB32     \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-set_io {GPIO_OUT[0]}   \
+set_io {LED_1}   \
     -pinname W35       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-
-set_io {GPIO_OUT[1]}   \
+set_io {LED_2}   \
     -pinname W34       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-
-set_io {GPIO_OUT[2]}   \
+set_io {LED_3}   \
     -pinname V30       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-
-set_io {GPIO_OUT[3]}   \
+set_io {LED_4}   \
     -pinname W33       \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-# Additional GPIOs
-# set_io {GPIO_OUT[4]}   \
-    # -pinname T33       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[5]}   \
-    # -pinname U35       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[6]}   \
-    # -pinname R36       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[7]}   \
-    # -pinname T34       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
+# -- UART RX/TX -- #
 
 set_io RX             \
     -pinname E27      \
     -fixed yes        \
     -DIRECTION INPUT
 
-
 set_io TX              \
     -pinname E28       \
     -fixed yes         \
     -DIRECTION OUTPUT
-
 
 
 # 
@@ -147,3 +86,68 @@ set_io TX              \
 # the other listed attributes have been applied
 # 
 
+
+# Additional GPIOs IN
+
+# set_io {GPIO_IN[0]}   \
+    # -pinname V33      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[1]}   \
+    # -pinname V34      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[2]}   \
+    # -pinname U34      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[3]}   \
+    # -pinname W36      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[4]}   \
+    # -pinname AA30     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[5]}   \
+    # -pinname AB31     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[6]}   \
+    # -pinname AB30     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[7]}   \
+    # -pinname AB32     \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+	
+	
+# Additional GPIOs OUT
+
+# set_io {GPIO_OUT[4]}   \
+    # -pinname T33       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[5]}   \
+    # -pinname U35       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[6]}   \
+    # -pinname R36       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[7]}   \
+    # -pinname T34       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
