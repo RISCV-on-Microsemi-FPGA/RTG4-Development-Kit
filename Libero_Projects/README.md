@@ -5,15 +5,15 @@ This folder contains Tcl scripts that build Libero SoC v12.6 design projects for
 
 | Config  | Description |
 | :------:|:------------|
-| CFG1    |This design uses the MiV_RV32IMA_L1_AHB core with an **AHB** interface for memory and peripherals|
-| CFG2    |This design uses the MiV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals|
+| CFG1    |This design uses the MIV_RV32IMA_L1_AHB core with an **AHB** interface for memory and peripherals|
+| CFG2    |This design uses the MIV_RV32IMA_L1_AXI core with an **AXI3** interface for memory and peripherals|
 
 
 #### RTG4_Dev_Kit_MiV_RV32IMAF_BaseDesign
 
 | Config  |Description |
 | :------:|:-----------|
-| CFG1    |  This design uses the MiV_RV32IMAF_L1_AHB core with an **AHB** interface for memory and peripherals|
+| CFG1    |  This design uses the MIV_RV32IMAF_L1_AHB core with an **AHB** interface for memory and peripherals|
 
 
 #### RTG4_Dev_Kit_MiV_RV32_BaseDesign
@@ -21,9 +21,9 @@ This folder contains Tcl scripts that build Libero SoC v12.6 design projects for
 
 | Config  | Description|
 | :------:|:----------------------------------------|
-| CFG1    | This design uses the MiV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
-| CFG2    | **Not available in this release**<ul> *This design uses the MiV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled* </li></ul>|
-| CFG3    | This design uses the MiV_RV32 core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
+| CFG1    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IMC</li><li>Multiplier: MACC (Pipelined)</li><li>Interfaces: AHB Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
+| CFG2    | **Not available in this release**<ul> *This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: IM</li><li>Multiplier: Fabric</li><li>Interfaces: AXI4 Master (mirrored), APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Disabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled* </li></ul>|
+| CFG3    | This design uses the MIV_RV32 core configured as follows: <ul><li>RISC-V Extensions: I</li><li>Multiplier: none</li><li>Interfaces: APB3 Master</li><li>Internal IRQs: 6</li><li>TCM: Enabled</li><li>System Timer: Internal MTIME enabled, Internal MTIME IRQ enabled</li><li>Debug: enabled</li></ul>|
 
 
 ## <a name="quick"></a> Instructions

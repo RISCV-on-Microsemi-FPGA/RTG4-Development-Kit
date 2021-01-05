@@ -1,4 +1,4 @@
-# RTG4 Development Kit Mi-V Sample Designs
+## RTG4 Development Kit Mi-V Sample Designs
 
 This repository contains Libero projects for the following soft core RISC-V processors:
 * MIV_RV32
@@ -18,7 +18,7 @@ To download or clone the repository:
 
 
 # Libero Projects
-The Libero_Projects folder contains sample Mi-V Libero designs for Libero v12.6. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/RISCV-on-Microsemi-FPGA/Future-Avalanche-Board/releases) in this repository.
+The Libero_Projects folder contains sample Mi-V Libero designs for Libero v12.6. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/RISCV-on-Microsemi-FPGA/RTG4-Development-Kit/releases) in this repository.
 
 ## Design Features
 The Libero designs include the following features:
